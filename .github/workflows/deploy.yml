@@ -1,4 +1,4 @@
-# /.github/workflows/deploy.yml (CORRIGIDO para a Landing Page)
+# a/.github/workflows/deploy.yml (CORRIGIDO para a Landing Page)
 
 name: Deploy Landing Page to Production
 
