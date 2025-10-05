@@ -1,4 +1,4 @@
-# /.github/workflows/deploy.yml (para a Landing Page)
+# /.github/workflows/deploy.yml (CORRIGIDO para a Landing Page)
 
 name: Deploy Landing Page to Production
 
@@ -27,17 +27,15 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ steps.string_utils.outputs.owner_lc }}
-          password: ${{ secrets.GH_PAT }} # Mantém o uso do seu Personal Access Token
+          password: ${{ secrets.GH_PAT }}
 
       - name: Build and push landing page image
         uses: docker/build-push-action@v4
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ steps.string_utils.outputs.owner_lc }}/weppy-landingpage:latest # <-- NOME DA IMAGEM ATUALIZADO
-          build-args: |
-            NEXT_PUBLIC_API_BASE_URL=${{ secrets.VITE_API_BASE_URL }}
-            # Adicione aqui outras variáveis de ambiente se a landing page precisar
+          tags: ghcr.io/${{ steps.string_utils.outputs.owner_lc }}/weppy-landingpage:latest
+          # A secção "build-args" foi removida, pois não é necessária.
 
       - name: Deploy to Server
         uses: appleboy/ssh-action@master
@@ -51,10 +49,10 @@ jobs:
             
             echo ">>> Logging in and pulling new landing page image..."
             echo ${{ secrets.GH_PAT }} | docker login ghcr.io -u ${{ steps.string_utils.outputs.owner_lc }} --password-stdin
-            docker-compose pull landing_page # <-- ATUALIZADO para o nome do novo serviço
+            docker-compose pull landing_page
             
             echo ">>> Restarting landing page service..."
-            docker-compose up -d --no-deps landing_page # <-- ATUALIZADO para o nome do novo serviço
+            docker-compose up -d --no-deps landing_page
             
             echo ">>> Cleaning up old images..."
             docker image prune -af
