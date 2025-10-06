@@ -26,6 +26,15 @@ export const TestimonialsSection: React.FC = () => {
             className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-500/5 to-red-500/5 relative"
             ref={testimonialsRef.ref}
         >
+            {/* Aurora Background */}
+            <div className="absolute inset-0 overflow-hidden">
+                <div className="aurora-bg">
+                    <div className="aurora-gradient aurora-1"></div>
+                    <div className="aurora-gradient aurora-2"></div>
+                    <div className="aurora-gradient aurora-3"></div>
+                </div>
+            </div>
+
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className={`text-3xl sm:text-4xl font-bold text-white font-['Poppins'] mb-4 transition-all duration-700 ${testimonialsRef.isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
@@ -46,8 +55,8 @@ export const TestimonialsSection: React.FC = () => {
                                     <Star key={i} className="w-6 h-6 text-yellow-400 fill-current animate-twinkle" style={{ animationDelay: `${i * 0.1}s` }}/>
                                 ))}
                             </div>
-                            <blockquote className="text-2xl text-gray-300 font-['Inter'] mb-8 leading-relaxed italic">
-                                "{testimonials[currentTestimonial].content}"
+                            <blockquote className="text-2xl text-gray-300 font-['Inter'] mb-8 leading-relaxed italic min-h-[190px] flex items-center justify-center">
+                                <span className="max-w-3xl">{testimonials[currentTestimonial].content}</span>
                             </blockquote>
                             <div className="flex items-center justify-center space-x-6">
                                 <img

@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react';
 
 import { LandingHeader } from '@/components/LandingPage/LandingHeader';
 import { HeroSection } from '@/components/LandingPage/HeroSection';
-import { StatsSection } from '@/components/LandingPage/StatsSection';
+import { VslSection } from '@/components/LandingPage/VslSection';
 import { CompaniesSection } from '@/components/LandingPage/CompaniesSection';
 import { FeaturesSection } from '@/components/LandingPage/FeaturesSection';
 import { ComparisonSection } from '@/components/LandingPage/ComparisonSection';
@@ -38,6 +38,12 @@ export default function Home() {
 
     return (
         <div className="min-h-screen bg-[#0A0A0A] text-white relative overflow-x-hidden">
+
+            <div className="absolute top-0 left-0 h-full w-full overflow-hidden -z-10">
+                <div className="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-orange-500/20 rounded-full filter blur-3xl animate-blob opacity-50"></div>
+                <div className="absolute -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-red-500/20 rounded-full filter blur-3xl animate-blob animation-delay-4000 opacity-50"></div>
+            </div>
+
             <LandingHeader
                 isMenuOpen={isMenuOpen}
                 setIsMenuOpen={setIsMenuOpen}
@@ -46,12 +52,11 @@ export default function Home() {
             <main className="relative z-10">
                 <FloatingWhatsAppButton />
                 <HeroSection onLoginClick={handleLoginClick} />
-                <StatsSection />
+                <HowItWorksSection />
                 <CompaniesSection />
                 <FeaturesSection />
-                <ComparisonSection />
-                <HowItWorksSection />
                 <TestimonialsSection />
+                <ComparisonSection />
                 <PricingSection />
                 <UrgencySection onLoginClick={handleLoginClick} />
                 <FaqSection />

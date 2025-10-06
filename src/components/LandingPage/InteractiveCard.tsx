@@ -32,8 +32,7 @@ export const InteractiveCard: React.FC<InteractiveCardProps> = ({
 
   return (
       <div
-          className={`group relative bg-[#0A0A0A] border border-gray-800 rounded-2xl p-6 transition-all duration-300 cursor-pointer overflow-hidden transform hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/10 animate-fade-in-up`}
-          style={{ animationDelay: `${index * 0.1}s` }}
+          className={`group relative bg-gray-500/10 backdrop-blur-lg border border-white/10 rounded-2xl p-6 transition-all duration-300 cursor-pointer overflow-hidden transform hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/10 animate-fade-in-up`}          style={{ animationDelay: `${index * 0.1}s` }}
           onMouseMove={handleMouseMove} // Atualiza a posição do rato
       >
         {/* ===== O NOVO EFEITO DE HOVER ESTÁ AQUI ===== */}

@@ -1,8 +1,8 @@
 // src/components/LandingPage/landingPageData.ts
 
 import {
-    Brain, BarChart3, Inbox, Zap, Workflow, Users, TrendingUp, Shield,
-    MessageSquare, Star, Clock, Target, Smartphone,
+    Brain, BarChart3, Inbox, Zap, Workflow, Users, TrendingUp, Sparkles,
+    MessageSquare, Star, Clock, Target, Smartphone, Images
 } from 'lucide-react';
 
 export const features = [
@@ -45,10 +45,11 @@ export const features = [
 ];
 
 export const benefits = [
-    {icon: TrendingUp, text: "Aumente suas conversões em até 300%", color: "text-green-400"},
-    {icon: Users, text: "Atenda milhares de clientes simultaneamente", color: "text-red-400"},
-    {icon: Shield, text: "Segurança e privacidade garantidas", color: "text-orange-400"},
-    {icon: Zap, text: "Integração em menos de 5 minutos", color: "text-yellow-400"}
+    {icon: Users, text: "Atendimentos simultâneos", color: "text-green-400"},
+    {icon: Images, text: "Envio de mídias", color: "text-pink-400"},
+    {icon: Sparkles, text: "IA Humanizada", color: "text-purple-400"},
+    {icon: TrendingUp, text: "Follow Up inteligente", color: "text-orange-400"},
+    {icon: Zap, text: "Integração em 5 minutos", color: "text-yellow-400"}
 ];
 
 export const testimonials = [

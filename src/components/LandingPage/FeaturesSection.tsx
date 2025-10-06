@@ -11,7 +11,7 @@ export const FeaturesSection: React.FC = () => {
     return (
         <section
             id="features"
-            className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0A0A0A]/50 to-[#111111]/50 backdrop-blur-sm relative"
+            className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 backdrop-blur-sm relative"
             ref={featuresRef.ref}
         >
             <div className="max-w-7xl mx-auto">
