@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google"; // 1. Importa as fontes do Google
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
+import Script from 'next/script'; // 1. Importe o componente otimizado do Next.js
 
-// 2. Configura as fontes, definindo pesos e subsets
 const inter = Inter({
     subsets: ["latin"],
-    variable: "--font-inter", // Cria uma variável CSS para a fonte
+    variable: "--font-inter",
 });
 
 const poppins = Poppins({
     subsets: ["latin"],
-    weight: ["400", "500", "600", "700", "800"], // Define os pesos que você usa
-    variable: "--font-poppins", // Cria outra variável CSS
+    weight: ["400", "500", "600", "700", "800"],
+    variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +25,39 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="pt-br">
+        <html lang="pt-br" suppressHydrationWarning>
+        <head>
+            {/* O Next.js irá gerir o <title> e outras metatags aqui */}
+        </head>
         <body className={`${inter.variable} ${poppins.variable}`}>
         {children}
+
+        {/* --- SCRIPTS DE RASTREAMENTO ADICIONADOS DE FORMA OTIMIZADA --- */}
+
+        {/* Script UTML Externo */}
+        <Script
+            id="utmify-base"
+            src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+            strategy="afterInteractive" // <-- A CHAVE PARA A PERFORMANCE
+            data-utmify-prevent-xcod-sck
+            data-utmify-prevent-subids
+        />
+
+        {/* Script UTML Inline (Pixel ID) */}
+        <Script
+            id="utmify-pixel"
+            strategy="afterInteractive" // <-- A CHAVE PARA A PERFORMANCE
+            dangerouslySetInnerHTML={{
+                __html: `
+                            window.pixelId = "68d6e463b3cc7954fc1faceb";
+                            var a = document.createElement("script");
+                            a.setAttribute("async", "");
+                            a.setAttribute("defer", "");
+                            a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+                            document.head.appendChild(a);
+                        `,
+            }}
+        />
         </body>
         </html>
     );
