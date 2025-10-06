@@ -53,6 +53,7 @@ export default function Home() {
                 <FloatingWhatsAppButton />
                 <HeroSection onLoginClick={handleLoginClick} />
                 <HowItWorksSection />
+                <VslSection />
                 <CompaniesSection />
                 <FeaturesSection />
                 <TestimonialsSection />
