@@ -1,30 +1,30 @@
-// src/components/LandingPage/VslSection.tsx (Versão Simplificada com Panda Embed Direto)
+// src/components/LandingPage/VslSection.tsx (Carregamento Automático ao Rolar)
+'use client';
 
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 export const VslSection: React.FC = () => {
-    const sectionRef = useScrollAnimation(0.3);
+    const { ref, isVisible } = useScrollAnimation(0.3);
+    const videoId = '12c49cb7-89af-40cf-9d83-89dd3f031e35';
+    const videoUrl = `https://player-vz-3efb57d2-c4e.tv.pandavideo.com.br/embed/?v=${videoId}&autoplay=true`;
 
     return (
         <section
             id="vsl"
             className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#111111] to-[#0A0A0A] relative"
-            ref={sectionRef.ref}
+            ref={ref}
         >
-            {/* Aurora Background */}
             <div className="absolute inset-0 overflow-hidden">
                 <div className="aurora-bg">
-                    <div className="aurora-gradient aurora-1"></div>
-                    <div className="aurora-gradient aurora-2"></div>
-                    <div className="aurora-gradient aurora-3"></div>
+                    <div className="aurora-gradient aurora-1" />
+                    <div className="aurora-gradient aurora-2" />
+                    <div className="aurora-gradient aurora-3" />
                 </div>
             </div>
-
             <div className="max-w-4xl mx-auto text-center">
-                {/* Título da Secção */}
-                <div className={`transition-all duration-700 ${sectionRef.isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
+                <div className={`transition-all duration-700 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
                     <h2 className="text-3xl sm:text-4xl font-bold text-white font-['Poppins'] mb-4">
                         Veja como o Weppy pode transformar seu negócio em 2 minutos
                     </h2>
@@ -32,23 +32,20 @@ export const VslSection: React.FC = () => {
                         Assista à nossa demonstração rápida e descubra o poder da automação.
                     </p>
                 </div>
-
-                {/* Vídeo Player com Embed Direto do Panda */}
-                <div
-                    className={`relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-orange-500/10 border-2 border-orange-500/30 transition-all duration-1000 delay-300 ${sectionRef.isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}
-                >
-                    <iframe
-                        src="https://player-vz-3efb57d2-c4e.tv.pandavideo.com.br/embed/?v=12c49cb7-89af-40cf-9d83-89dd3f031e35"
-                        title="Weppy Video Player"
-                        style={{ border: 'none' }}
-                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
-                        allowFullScreen
-                        className="absolute top-0 left-0 w-full h-full"
-                    ></iframe>
+                <div className={`relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-orange-500/10 border-2 border-orange-500/30 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+                    {/* O Iframe só é renderizado QUANDO a secção se torna visível */}
+                    {isVisible && (
+                        <iframe
+                            src={videoUrl}
+                            title="Weppy Video Player"
+                            style={{ border: 'none' }}
+                            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                            allowFullScreen
+                            className="absolute top-0 left-0 w-full h-full"
+                        />
+                    )}
                 </div>
-
-                {/* Call to Action (Botão) */}
-                <div className={`mt-12 transition-all duration-700 delay-500 ${sectionRef.isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
+                <div className={`mt-12 transition-all duration-700 delay-500 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
                     <a
                         href="#pricing"
                         className="group bg-gradient-to-r from-orange-500 via-red-500 to-red-500 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all duration-500 inline-flex items-center space-x-2 hover:scale-110"
