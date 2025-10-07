@@ -56,8 +56,8 @@ export default function Home() {
                 <VslSection />
                 <FeaturesSection />
                 <HowItWorksSection />
-                <TestimonialsSection />
                 <ComparisonSection />
+                <TestimonialsSection />
                 <PricingSection />
                 <UrgencySection onLoginClick={handleLoginClick} />
                 <FaqSection />

@@ -1,4 +1,5 @@
-// src/components/LandingPage/TestimonialsSection.tsx
+// src/components/LandingPage/TestimonialsSection.tsx (Tema Roxo)
+'use client';
 
 import React, { useState, useEffect } from 'react';
 import { Star } from 'lucide-react';
@@ -7,26 +8,24 @@ import { testimonials } from './LandingPageData';
 
 export const TestimonialsSection: React.FC = () => {
     const testimonialsRef = useScrollAnimation(0.2);
-    // Estado para controlar o depoimento atualmente em destaque no carrossel
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-    // Efeito para rodar automaticamente os depoimentos a cada 5 segundos
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentTestimonial((prevIndex) => (prevIndex + 1) % testimonials.length);
-        }, 5000); // Muda a cada 5 segundos
+        }, 5000);
 
-        // Limpa o intervalo quando o componente é desmontado para evitar leaks de memória
         return () => clearInterval(interval);
     }, []);
 
     return (
+        // --- ALTERAÇÃO NO FUNDO DA SECÇÃO ---
         <section
             id="results"
-            className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-500/5 to-red-500/5 relative"
+            className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0A0A0A] via-purple-900/10 to-[#0A0A0A] relative"
             ref={testimonialsRef.ref}
         >
-            {/* Aurora Background */}
+            {/* O Aurora Background já tem tons de roxo, o que é perfeito */}
             <div className="absolute inset-0 overflow-hidden">
                 <div className="aurora-bg">
                     <div className="aurora-gradient aurora-1"></div>
@@ -47,8 +46,9 @@ export const TestimonialsSection: React.FC = () => {
 
                 {/* Depoimento em Destaque (Carrossel) */}
                 <div className="mb-12">
-                    <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/40 border border-gray-700/50 rounded-3xl p-8 backdrop-blur-xl relative overflow-hidden group hover:border-orange-500/50 transition-all duration-500">
-                        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
+                    {/* --- ALTERAÇÕES NO CARD EM DESTAQUE --- */}
+                    <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/40 border border-gray-700/50 rounded-3xl p-8 backdrop-blur-xl relative overflow-hidden group hover:border-purple-500/50 transition-all duration-500">
+                        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
                         <div className="relative z-10 text-center">
                             <div className="flex items-center justify-center space-x-1 mb-6">
                                 {[...Array(5)].map((_, i) => (
@@ -62,7 +62,8 @@ export const TestimonialsSection: React.FC = () => {
                                 <img
                                     src={testimonials[currentTestimonial].avatar}
                                     alt={testimonials[currentTestimonial].name}
-                                    className="w-16 h-16 rounded-full object-cover border-4 border-orange-500/50 shadow-lg"
+                                    // --- ALTERAÇÃO NA BORDA DO AVATAR ---
+                                    className="w-16 h-16 rounded-full object-cover border-4 border-purple-500/50 shadow-lg"
                                 />
                                 <div className="text-left">
                                     <div className="text-white font-bold text-xl font-['Poppins']">{testimonials[currentTestimonial].name}</div>
@@ -78,9 +79,10 @@ export const TestimonialsSection: React.FC = () => {
                             <button
                                 key={index}
                                 onClick={() => setCurrentTestimonial(index)}
+                                // --- ALTERAÇÃO NA COR DO INDICADOR ATIVO ---
                                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                                     currentTestimonial === index
-                                        ? 'bg-gradient-to-r from-orange-500 to-red-500'
+                                        ? 'bg-gradient-to-r from-purple-500 to-purple-700'
                                         : 'bg-gray-600 hover:bg-gray-500'
                                 }`}
                             />
@@ -91,9 +93,10 @@ export const TestimonialsSection: React.FC = () => {
                 {/* Grelha com todos os depoimentos */}
                 <div className="grid md:grid-cols-3 gap-8">
                     {testimonials.map((testimonial, index) => (
+                        // --- ALTERAÇÕES NOS CARDS DA GRELHA ---
                         <div
                             key={index}
-                            className={`bg-gray-800/30 border border-gray-700 rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-500 hover:scale-105 hover:bg-gray-800/50 animate-fade-in-up ${currentTestimonial === index ? 'ring-2 ring-orange-500/50' : ''}`}
+                            className={`bg-gray-800/30 border border-gray-700 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-500 hover:scale-105 hover:bg-gray-800/50 animate-fade-in-up ${currentTestimonial === index ? 'ring-2 ring-purple-500/50' : ''}`}
                             style={{ animationDelay: `${index * 200}ms` }}
                         >
                             <div className="flex items-center space-x-1 mb-4">
