@@ -12,7 +12,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onLoginClick }) => {
 
     return (
         <section
-            className="min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden text-center"
+            // --- ALTERAÇÕES AQUI ---
+            // Adicionado pt-28 (padding-top) para criar espaço para o menu fixo
+            // Adicionado pb-12 (padding-bottom) para melhor espaçamento em ecrãs pequenos
+            className="min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-28 pb-12 relative overflow-hidden text-center"
+            // --------------------
             ref={heroRef.ref}
         >
             {/* Aurora Background */}
