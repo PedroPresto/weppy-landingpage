@@ -1,7 +1,7 @@
-// src/components/LandingPage/VslSection.tsx
+// src/components/LandingPage/VslSection.tsx (Versão Simplificada com Panda Embed Direto)
 
 import React from 'react';
-import { PlayCircle, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 export const VslSection: React.FC = () => {
@@ -33,15 +33,15 @@ export const VslSection: React.FC = () => {
                     </p>
                 </div>
 
-                {/* Vídeo Player */}
+                {/* Vídeo Player com Embed Direto do Panda */}
                 <div
                     className={`relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-orange-500/10 border-2 border-orange-500/30 transition-all duration-1000 delay-300 ${sectionRef.isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}
                 >
                     <iframe
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" // <-- SUBSTITUA PELO LINK DO SEU VÍDEO
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        src="https://player-vz-3efb57d2-c4e.tv.pandavideo.com.br/embed/?v=12c49cb7-89af-40cf-9d83-89dd3f031e35"
+                        title="Weppy Video Player"
+                        style={{ border: 'none' }}
+                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
                         allowFullScreen
                         className="absolute top-0 left-0 w-full h-full"
                     ></iframe>

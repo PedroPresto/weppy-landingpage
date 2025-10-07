@@ -52,9 +52,10 @@ export default function Home() {
             <main className="relative z-10">
                 <FloatingWhatsAppButton />
                 <HeroSection onLoginClick={handleLoginClick} />
-                <HowItWorksSection />
                 <CompaniesSection />
+                <VslSection />
                 <FeaturesSection />
+                <HowItWorksSection />
                 <TestimonialsSection />
                 <ComparisonSection />
                 <PricingSection />
