@@ -8,38 +8,38 @@ import {
 export const features = [
     {
         icon: Brain,
-        title: "Respostas que Parecem Humanas",
-        description: "O seu assistente entende o que o cliente quer e responde de forma natural, criando confiança para fechar a venda.",
+        title: "IA que Conversa e Converte",
+        description: "Nossa IA de ponta cria diálogos que não só respondem, mas convencem. Transforme cada conversa numa oportunidade de venda real.",
         gradient: "from-orange-500 to-red-500"
     },
     {
         icon: Workflow,
-        title: "Crie Conversas Automáticas",
-        description: "Defina o passo a passo do atendimento com um sistema de arrastar e soltar. Simples, visual e sem precisar de programar.",
+        title: "Funis de Venda no Piloto Automático",
+        description: "Desenhe jornadas de compra completas com o nosso construtor visual. Qualifique, apresente a oferta e feche a venda, tudo 100% no automático.",
         gradient: "from-red-500 to-cyan-500"
     },
     {
         icon: BarChart3,
-        title: "Relatórios Fáceis de Entender",
-        description: "Descubra quais conversas estão a gerar mais vendas com gráficos simples, para que saiba exatamente o que está a funcionar.",
+        title: "Decisões Inteligentes com Dados",
+        description: "Abandone o 'achismo'. Veja em gráficos simples quais abordagens estão a gerar mais lucro e otimize suas estratégias em tempo real.",
         gradient: "from-green-500 to-emerald-500"
     },
     {
         icon: Inbox,
-        title: "Assuma o Controle Quando Quiser",
-        description: "Veja todas as conversas num só lugar e entre no chat a qualquer momento para falar pessoalmente com um cliente.",
+        title: "O Melhor dos Dois Mundos",
+        description: "Deixe a IA fazer 99% do trabalho. Quando identificar uma oportunidade de ouro, assuma a conversa com um clique e dê o seu toque de mestre para fechar a venda ou agendamento.",
         gradient: "from-orange-500 to-red-500"
     },
     {
         icon: Zap,
-        title: "Funciona 24h na Nuvem",
-        description: "Após configurar, o seu assistente fica online dia e noite, mesmo com o seu computador ou telemóvel desligado.",
+        title: "Sua Empresa Sempre Aberta",
+        description: "Seu assistente é o funcionário que nunca dorme. Venda e atenda 24/7, mesmo com seu telemóvel desligado. Chega de perder vendas fora do horário comercial.",
         gradient: "from-yellow-500 to-orange-500"
     },
     {
         icon: Clock,
-        title: "Envie Mensagens na Hora Certa",
-        description: "Agende mensagens de acompanhamento (follow-up) para garantir que nenhuma oportunidade de venda é esquecida.",
+        title: "Follow-up que Recupera Vendas",
+        description: "Programe sequências de acompanhamento para reativar leads que 'esfriaram'. Recupere vendas que você considerava perdidas, de forma automática.",
         gradient: "from-purple-500 to-red-500"
     }
 ];
@@ -64,7 +64,7 @@ export const testimonials = [
     {
         name: "Ana Rodrigues",
         role: "Lash Designer, JM Beauty Studio",
-        content: "Minha agenda era uma loucura! Eu perdia clientes por não conseguir responder a todas no WhatsApp. Com a Weppy minhas vendas aumentaram 35%",
+        content: "Eu literalmente via o dinheiro a fugir pelos dedos. Clientes mandavam mensagem e eu só conseguia responder horas depois. A Weppy não só organizou a minha agenda, como recuperou essas vendas perdidas. Os 35% de aumento são de clientes que eu simplesmente não conseguia atender antes.",
         rating: 5,
         avatar: "https://images.pexels.com/photos/2066039/pexels-photo-2066039.jpeg?w=150&h=150&fit=crop&crop=face",
         stats: "35% aumento em vendas adicionais"
@@ -88,23 +88,23 @@ export const stats = [
 
 export const beforeAfter = [
     {
-        before: "Clientes irritados com a demora (e a comprar do concorrente).",
-        after: "Respostas instantâneas que impressionam e transformam curiosos em clientes.",
+        before: "Leads a esfriar a cada minuto de espera (e a comprar do concorrente).",
+        after: "Atendimento imediato que cria uma primeira impressão 'UAU' e acelera a decisão de compra.",
         icon: Clock
     },
     {
-        before: "Você a responder a 'preços' e 'olá' o dia todo, sem tempo para o que importa.",
+        before: "Você a responder a 'preços' e 'olá' o dia todo, sem tempo para pensar no futuro do negócio.",
         after: "Você focado em fazer o seu negócio crescer, enquanto o assistente faz o trabalho repetitivo.",
         icon: Users
     },
     {
-        before: "Vendas perdidas porque o cliente mandou mensagem de madrugada.",
-        after: "Vendas fechadas às 3 da manhã pelo seu 'funcionário' que nunca dorme.",
+        before: "Vendas perdidas porque o cliente mandou mensagem de madrugada ou no fim de semana.",
+        after: "Notificações de vendas a chegar no seu telemóvel às 3 da manhã. Feitas pelo seu 'funcionário' perfeito.",
         icon: Target
     },
     {
         before: "Sentimento de caos e de estar sempre a 'apagar incêndios' no WhatsApp.",
-        after: "Paz de espírito, sabendo que nenhuma oportunidade de venda está a ser ignorada.",
+        after: "Paz de espírito e a certeza de que cada oportunidade de venda está a ser tratada com máxima eficiência.",
         icon: Brain
     }
 ];
@@ -126,12 +126,12 @@ export const plans = [
         id: 'mensal',
         name: 'Plano Mensal',
         price: 'R$ 97',
-        originalPrice: 'R$ 197',
+        originalPrice: 'R$ 197', // Manter a ancoragem forte
         period: '/mês',
-        description: 'Ideal para experimentar todo o poder da Weppy sem compromisso. Cancele quando quiser.',
+        description: 'Acesso total e imediato para ver o poder da Weppy. Sem compromisso, cancele quando quiser.',
         features: allFeatures,
         popular: false,
-        savings: 'Comece já!', // Alterado para um CTA
+        savings: 'Começar Agora', // CTA mais direto
         checkoutUrl: 'https://pay.kiwify.com.br/mSN9fqk'
     },
     {
@@ -139,10 +139,10 @@ export const plans = [
         name: 'Plano Trimestral',
         price: 'R$ 82',
         originalPrice: 'R$ 97',
-        period: '/mês',
-        description: 'A escolha mais popular! Poupe 15% e tenha mais tranquilidade para ver o seu negócio crescer.',
+        period: '/mês', // Equivalente a R$ 246 no total
+        description: 'Um ótimo desconto para quem quer mais tempo para ver os resultados e otimizar as vendas.',
         features: allFeatures,
-        popular: false,
+        popular: false, // Tirar o "popular" daqui para não dividir a atenção
         savings: 'Poupe 15%',
         checkoutUrl: 'https://pay.kiwify.com.br/6vyFg62'
     },
@@ -151,11 +151,11 @@ export const plans = [
         name: 'Plano Anual',
         price: 'R$ 25',
         originalPrice: 'R$ 97',
-        period: '/mês',
-        description: 'O melhor custo-benefício para quem está focado no longo prazo e quer a máxima economia.',
+        period: '/mês', // Equivalente a R$ 297/ano - EXTREMAMENTE poderoso
+        description: 'Acesso completo por menos de R$1 por dia. A escolha inteligente para escalar o seu negócio e ter o máximo de lucro.',
         features: allFeatures,
-        popular: true,
-        savings: 'Poupe 80%',
+        popular: true, // <<< O FOCO É AQUI
+        savings: 'Economia Máxima: Poupe 80%', // Deixar a economia explícita e forte
         checkoutUrl: 'https://pay.kiwify.com.br/rTGqpV7'
     }
 ];
@@ -163,27 +163,51 @@ export const plans = [
 export const faqs = [
     {
         question: "Preciso de saber programar ou ser 'expert' em tecnologia?",
-        answer: "De todo! A nossa plataforma foi desenhada para ser super simples. Se sabe usar o WhatsApp, sabe usar a Weppy. A configuração inicial é feita com poucos cliques e nós damos todo o suporte necessário."
+        answer: "Zero necessidade! Nossa plataforma foi criada para empreendedores, não para programadores. Se você sabe enviar uma mensagem no WhatsApp, você já é um expert na Weppy. Em menos de 5 minutos, com alguns cliques, seu assistente já estará funcionando e pronto para vender. Além disso, a nossa equipa de suporte está pronta para o ajudar em cada passo do processo."
     },
     {
         question: "As respostas do assistente parecem mesmo humanas?",
-        answer: "Sim! Usamos a tecnologia mais avançada (a mesma do ChatGPT-4o e Gemini) para garantir que as respostas sejam naturais e personalizadas. O seu cliente sentirá que está a falar com uma pessoa."
-    },
-    {
-        question: "Posso ser banido do WhatsApp por usar a Weppy?",
-        answer: "Não. A nossa tecnologia utiliza uma conexão segura e autorizada pelo WhatsApp. Desde que não use a ferramenta para enviar spam, a sua conta estará perfeitamente segura."
+        answer: "Sim, é impressionante! Usamos a mesma inteligência artificial de ponta do ChatGPT-4o e Gemini. Na prática, isso significa que seu cliente terá uma conversa tão fluida e natural que nem vai perceber que está falando com um robô. É a garantia de um atendimento premium que encanta e vende."
     },
     {
         question: "E se eu quiser assumir a conversa e falar com o cliente?",
-        answer: "É muito fácil! A qualquer momento, pode entrar na nossa caixa de entrada, pausar o assistente para aquela conversa específica e responder pessoalmente ao seu cliente."
+        answer: "Claro! Você está sempre no comando. Com apenas um clique, você pode pausar o assistente e assumir a conversa instantaneamente. É perfeito para dar aquele toque humano final e fechar uma venda importante. O melhor dos dois mundos: a eficiência do robô com o seu toque de mestre."
+    },
+    {
+        question: "O assistente pode enviar mídias, como fotos e áudios?",
+        answer: "Sim, e de uma forma que impressiona! O seu assistente pode enviar imagens de produtos, vídeos de demonstração e até áudios que soam como se tivessem sido gravados na hora. Imagine qualificar um lead e, no momento certo, enviar um áudio pessoal seu explicando o próximo passo. É o nível máximo de personalização e confiança para acelerar as suas vendas, tudo no automático."
     },
     {
         question: "O meu assistente fica online 24 horas?",
-        answer: "Sim! Após configurar, ele funciona na nuvem e fica online 24 horas por dia, 7 dias por semana, mesmo com o seu telemóvel ou computador desligado."
+        answer: "Sim, ele é o seu funcionário perfeito! Uma vez ativo, seu assistente trabalha 24/7, sem pausas nem feriados. Isso significa que você vende enquanto dorme, viaja ou está ocupado. Chega de perder vendas por demora na resposta. Seu negócio estará sempre aberto!"
+    },
+    {
+        question: "Isto funciona para o meu tipo de negócio? ",
+        answer: "Sim! Se você vende ou atende pelo WhatsApp, a Weppy foi feita para si. Já ajudamos negócios de dezenas de setores — de e-commerce e infoprodutos a clínicas e serviços locais. A IA é treinada para se adaptar ao seu negócio, qualificando leads, agendando visitas ou vendendo produtos. É a ferramenta mais versátil que você pode ter para escalar as suas vendas."
+    },
+    {
+        question: "Ele consegue atender vários clientes ao mesmo tempo?",
+        answer: "Sim, sem limites! Imagine ter 10, 50 ou até 200 clientes a fazer perguntas ao mesmo tempo e todos serem respondidos instantaneamente. O assistente não se cansa nem comete erros. É o fim da fila de espera no seu WhatsApp. Cada cliente recebe atenção imediata, o que acelera drasticamente as suas vendas."
+    },
+    {
+        question: "Qual o real impacto que posso esperar nas minhas vendas?",
+        answer: "O impacto é direto: mais velocidade, mais vendas. Nossos clientes relatam que, ao eliminar a demora na resposta, a taxa de conversão aumenta drasticamente. Pense em todas as vendas que você já perdeu porque estava ocupado, dormindo ou demorou a responder. A Weppy recupera essas vendas para si, transformando o seu WhatsApp numa máquina de lucro que trabalha 24/7."
+    },
+    {
+        question: "Funciona com o meu número de WhatsApp atual? Preciso de um novo chip?",
+        answer: "Funciona perfeitamente com o seu número atual! Não precisa de comprar um novo chip nem mudar nada na sua comunicação. A integração é feita de forma simples e digital. Em minutos, o seu número de sempre, que os seus clientes já conhecem e confiam, estará turbinado com a nossa IA."
+    },
+    {
+        question: "O que acontece logo após eu pagar? Terei suporte?",
+        answer: "O acesso é imediato e você nunca estará sozinho! Assim que o pagamento for aprovado, você recebe acesso instantâneo à plataforma com um passo a passo super simples. E o mais importante: a nossa equipa de especialistas em sucesso do cliente estará disponível no WhatsApp para o ajudar em cada etapa, garantindo que você extraia o máximo de vendas da sua nova ferramenta."
     },
     {
         question: "Posso cancelar quando quiser?",
-        answer: "Claro! Não há fidelidade nem letras pequenas. Você pode cancelar a sua subscrição a qualquer momento, sem complicações."
+        answer: "Sim, com total liberdade. Não existem contratos nem fidelidade. Se os resultados não o satisfizerem, pode cancelar com um clique. Nosso foco é mantê-lo como cliente pelo seu sucesso, não por um contrato."
+    },
+    {
+        question: "E se eu não me adaptar ou achar que não é para mim?",
+        answer: "Risco Absolutamente Zero! Nós confiamos tanto no poder da Weppy que tiramos todo o peso dos seus ombros. Você tem 7 dias completos para testar tudo, automatizar suas conversas e ver as vendas a acontecerem. Se por QUALQUER motivo achar que não é para si, basta um clique para receber 100% do seu dinheiro de volta. Sem perguntas, sem ressentimentos. Ou você tem resultados, ou não paga nada."
     }
 ];
 
@@ -194,8 +218,16 @@ export const howItWorks = [
     { step: 4, title: "Monitore resultados", description: "Acompanhe métricas e otimize constantemente", icon: BarChart3 }
 ];
 
-export const companies = [ "TechCorp", "InnovateLab", "FutureStart", "DigitalHub", "SmartSolutions", "NextGen" ];
-
+export const companies = [
+    "Grão Nobre Cafés", // Alinhado com o depoimento
+    "JM Beauty Studio", // Alinhado com o depoimento
+    "Guimarães Mentoria", // Alinhado com o depoimento
+    "Sabor em Casa Delivery",
+    "Clínica VP Odonto",
+    "Agência Impulso Digital",
+    "Concurseiros Pro",
+    "Agência Pinnest Media",
+];
 export const urgencyFeatures = [
     "⚡ Bônus: Configuração da sua IA com nossa equipe e suporte prioritário",
     "🔥 Apenas 15 vagas abertas este mês",

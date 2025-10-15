@@ -51,13 +51,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onLoginClick }) => {
                 </p>
 
                 <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${heroRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-                    <button
-                        onClick={onLoginClick}
+                    <a
+                        href="#vsl"
                         className="group bg-gradient-to-r from-orange-500 via-red-500 to-red-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all duration-300 inline-flex items-center justify-center space-x-2 hover:scale-105"
                     >
                         <span>Começar a Automatizar</span>
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </button>
+                    </a>
                     <a
                         href="#vsl"
                         className="group text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center space-x-2 hover:scale-105 hover:bg-gray-800/50"
