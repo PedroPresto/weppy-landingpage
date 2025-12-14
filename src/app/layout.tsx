@@ -1,7 +1,10 @@
+// src/app/layout.tsx
+
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
-import Script from 'next/script'; // 1. Importe o componente otimizado do Next.js
+import Script from 'next/script';
+import { Toaster } from 'react-hot-toast'; // 1. IMPORTE O TOASTER
 
 const inter = Inter({
     subsets: ["latin"],
@@ -27,26 +30,23 @@ export default function RootLayout({
     return (
         <html lang="pt-br" suppressHydrationWarning>
         <head>
-            {/* O Next.js irá gerir o <title> e outras metatags aqui */}
+            {/* ... */}
         </head>
         <body className={`${inter.variable} ${poppins.variable}`}>
+        <Toaster /> {/* 2. ADICIONE O TOASTER AQUI */}
         {children}
 
-        {/* --- SCRIPTS DE RASTREAMENTO ADICIONADOS DE FORMA OTIMIZADA --- */}
-
-        {/* Script UTML Externo */}
+        {/* --- SCRIPTS DE RASTREAMENTO --- */}
         <Script
             id="utmify-base"
             src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-            strategy="afterInteractive" // <-- A CHAVE PARA A PERFORMANCE
+            strategy="afterInteractive"
             data-utmify-prevent-xcod-sck
             data-utmify-prevent-subids
         />
-
-        {/* Script UTML Inline (Pixel ID) */}
         <Script
             id="utmify-pixel"
-            strategy="afterInteractive" // <-- A CHAVE PARA A PERFORMANCE
+            strategy="afterInteractive"
             dangerouslySetInnerHTML={{
                 __html: `
                             window.pixelId = "68d6e463b3cc7954fc1faceb";

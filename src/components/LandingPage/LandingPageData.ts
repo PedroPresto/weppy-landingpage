@@ -252,3 +252,46 @@ export const footerLinks = {
         { name: "LGPD", href: "#" },
     ]
 };
+
+export const purchaseToasts = [
+    {
+        icon: "💅",
+        message: "Uma Lash Designer de Lisboa, PT acabou de garantir o Plano Anual.",
+        time: "agora mesmo"
+    },
+    {
+        icon: "☕",
+        message: "Carlos S. de São Paulo, BR colocou o seu café para vender no piloto automático.",
+        time: "há 2 minutos"
+    },
+    {
+        icon: "🧠",
+        message: "Uma terapeuta do Porto, PT acabou de poupar 10 horas semanais com o Plano Anual.",
+        time: "há 45 segundos"
+    },
+    {
+        icon: "🛍️",
+        message: "O dono de um e-commerce no Rio de Janeiro, BR assinou o Plano Anual para vender 24/7.",
+        time: "há 3 minutos"
+    },
+    {
+        icon: "🏡",
+        message: "Um corretor de imóveis de Faro, PT acabou de se juntar à Weppy.",
+        time: "agora mesmo"
+    },
+    {
+        icon: "🦷",
+        message: "A Clínica VP Odonto de Belo Horizonte, BR garantiu o Plano Anual com 80% de desconto.",
+        time: "há 1 minuto"
+    },
+    {
+        icon: "🚀",
+        message: "A Agência Pinnest Media de Brasília, DF acabou de automatizar o seu funil de vendas.",
+        time: "há 4 minutos"
+    },
+    {
+        icon: "🍽️",
+        message: "O dono de um delivery em Braga, PT não vai perder mais nenhuma venda de madrugada.",
+        time: "há 2 minutos"
+    }
+];

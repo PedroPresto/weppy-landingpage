@@ -1,10 +1,8 @@
-// src/app/page.tsx (NOVA VERSÃO PARA O NEXT.JS)
+// src/app/page.tsx
 
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
-
 import { LandingHeader } from '@/components/LandingPage/LandingHeader';
 import { HeroSection } from '@/components/LandingPage/HeroSection';
 import { VslSection } from '@/components/LandingPage/VslSection';
@@ -19,6 +17,7 @@ import { FaqSection } from '@/components/LandingPage/FaqSection';
 import { CtaSection } from '@/components/LandingPage/CtaSection';
 import { LandingFooter } from '@/components/LandingPage/LandingFooter';
 import { FloatingWhatsAppButton } from '@/components/LandingPage/FloatingWhatsAppButton';
+import { PurchaseToastController } from '@/components/LandingPage/PurchaseToastController'; // 1. IMPORTE O NOVO COMPONENTE
 
 export default function Home() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,6 +37,8 @@ export default function Home() {
 
     return (
         <div className="min-h-screen bg-[#0A0A0A] text-white relative overflow-x-hidden">
+
+            <PurchaseToastController /> {/* 2. ADICIONE O COMPONENTE AQUI */}
 
             <div className="absolute top-0 left-0 h-full w-full overflow-hidden -z-10">
                 <div className="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-orange-500/20 rounded-full filter blur-3xl animate-blob opacity-50"></div>
