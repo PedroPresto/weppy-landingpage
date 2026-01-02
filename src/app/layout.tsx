@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Script from 'next/script';
-import { Toaster } from 'react-hot-toast'; // 1. IMPORTE O TOASTER
+import { Toaster } from 'react-hot-toast';
 
 const inter = Inter({
     subsets: ["latin"],
@@ -33,28 +33,40 @@ export default function RootLayout({
             {/* ... */}
         </head>
         <body className={`${inter.variable} ${poppins.variable}`}>
-        <Toaster /> {/* 2. ADICIONE O TOASTER AQUI */}
+        <Toaster />
         {children}
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17701970698">
-        </script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        {/* CORREÇÃO 1: Comentário estilo JSX e uso do componente Script para o Google Ads */}
+        <Script
+            strategy="afterInteractive"
+            src="https://www.googletagmanager.com/gtag/js?id=AW-17701970698"
+        />
 
-            gtag('config', 'AW-17701970698');
-        </script>
+        {/* CORREÇÃO 2: Script inline do Google Ads formatado corretamente para Next.js */}
+        <Script
+            id="google-ads-tag"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+                __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'AW-17701970698');
+                `,
+            }}
+        />
 
         {/* --- SCRIPTS DE RASTREAMENTO --- */}
         <Script
             id="utmify-base"
             src="https://cdn.utmify.com.br/scripts/utms/latest.js"
             strategy="afterInteractive"
-            data-utmify-prevent-xcod-sck
-            data-utmify-prevent-subids
+            data-utmify-prevent-xcod-sck="true"
+            data-utmify-prevent-subids="true"
         />
+        {/* Nota: Adicionei ="true" nos atributos data- acima, pois o JSX exige valores para props,
+            embora alguns parsers aceitem boolean shorthand, é mais seguro assim em TSX estrito */}
+
         <Script
             id="utmify-pixel"
             strategy="afterInteractive"
@@ -69,8 +81,6 @@ export default function RootLayout({
                         `,
             }}
         />
-
-
         </body>
         </html>
     );
