@@ -36,6 +36,17 @@ export default function RootLayout({
         <Toaster /> {/* 2. ADICIONE O TOASTER AQUI */}
         {children}
 
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17701970698">
+        </script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-17701970698');
+        </script>
+
         {/* --- SCRIPTS DE RASTREAMENTO --- */}
         <Script
             id="utmify-base"
@@ -58,6 +69,8 @@ export default function RootLayout({
                         `,
             }}
         />
+
+
         </body>
         </html>
     );
