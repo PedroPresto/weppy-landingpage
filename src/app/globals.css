@@ -141,6 +141,20 @@ h1, .display {
   letter-spacing: 0;
 }
 
+/* Removido — Fraunces fica só no blog. Mantemos classes inertes para evitar quebras temporárias. */
+.serif-italic {
+  font-family: var(--font-geist), 'Geist', ui-sans-serif, sans-serif;
+  font-style: normal;
+  color: var(--orange);
+}
+
+.editorial-number {
+  font-family: ui-monospace, 'JetBrains Mono', SFMono-Regular, Menlo, monospace;
+  font-size: 0.8125rem;
+  letter-spacing: 0;
+  color: var(--ink-3);
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: var(--surface-2); }
