@@ -124,6 +124,8 @@ Componente React reusável que aparece em hero, features, how-it-works, comparis
 - `from="bot" agent="ai"` → balão à direita, fundo branco com badge purple "IA" no canto
 - `from="bot" agent="human"` → balão à direita, fundo `--wa-green` com check duplo (handoff humano)
 
+**Slot opcional — preview card de link:** balões podem renderizar um "preview" de link estilo WhatsApp (retângulo com ícone, título, subtítulo e botão "Toque para pagar"). Usado em mensagens com link de pagamento Pix, confirmação de agendamento ou catálogo.
+
 **Estrutura visual:**
 - Frame externo simulando celular (cantos arredondados, shadow sutil)
 - Header com avatar circular, nome do contato, ponto verde pulsando "online"
@@ -210,13 +212,18 @@ P:  A Weppy conecta uma IA — treinada com o seu negócio — direto
 
 **Coluna direita (col-span-5):**
 
-`<ChatMockup>` em tamanho `lg`, em loop, demonstrando:
-1. Cliente: "Olá, vocês entregam aqui no Pinheiros?"
+`<ChatMockup>` em tamanho `lg`, contato "Studio Luma Beleza", em loop, demonstrando agendamento + dúvida + link de pagamento:
+1. Cliente: "Oi! Vocês atendem alongamento de cílios no sábado?"
 2. TypingIndicator (IA)
-3. Bot/AI: "Olá! Entregamos sim 🛵 — fica no mesmo bairro?"
-4. Cliente: "Sim! Quero uma calabresa grande"
+3. Bot/AI: "Oi, Marina! 💛 Atendemos sim. Tenho horário sábado às 10h, 14h ou 16h — qual prefere?"
+4. Cliente: "14h tá ótimo. Quanto fica o volume russo?"
 5. TypingIndicator (IA)
-6. Bot/AI: "Anotado! Confirmo R$ 49,90 + R$ 8 de entrega. Pix?"
+6. Bot/AI: "Volume russo R$ 180 (dura 4–5 semanas). Posso já reservar seu horário?"
+7. Cliente: "Sim, pode confirmar!"
+8. TypingIndicator (IA)
+9. Bot/AI: "Reservado ✅ Sábado, 14h. Para garantir o horário, segue o Pix de sinal R$ 50: [link de pagamento]"
+
+A última mensagem inclui um "preview card" de link de pagamento (estilo prévia do WhatsApp): retângulo com ícone Pix, valor R$ 50, "Toque para pagar".
 
 Atrás do mockup: blob gradient orange→purple, opacity 0.1, blur lg, sem animação.
 
