@@ -105,8 +105,7 @@ html {
 
 body {
   font-family: var(--font-geist), 'Geist', ui-sans-serif, system-ui, sans-serif;
-  font-feature-settings: 'ss01', 'cv11';
-  background-color: var(--paper);
+  background-color: var(--bg);
   color: var(--ink);
   min-height: 100vh;
   font-size: 16px;
@@ -114,35 +113,17 @@ body {
   letter-spacing: -0.005em;
 }
 
-/* Subtle paper grain — invisible but warm */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.4;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0.05 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-}
-.dark body::before {
-  mix-blend-mode: screen;
-  opacity: 0.25;
-}
-
-/* Typography — Fraunces for display, Geist for body */
+/* Typography — Geist como família única, hierarquia por peso */
 h1, h2, h3, h4, h5, h6, .display {
-  font-family: var(--font-fraunces), 'Fraunces', ui-serif, Georgia, serif;
-  font-feature-settings: 'ss01', 'ss03';
-  font-optical-sizing: auto;
-  letter-spacing: -0.025em;
+  font-family: var(--font-geist), 'Geist', ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.03em;
   color: var(--ink);
 }
 
-.serif-italic {
-  font-family: var(--font-fraunces), 'Fraunces', ui-serif, Georgia, serif;
-  font-style: italic;
-  font-variation-settings: 'opsz' 144, 'SOFT' 100;
+h1, .display {
+  letter-spacing: -0.04em;
+  line-height: 1.0;
 }
 
 .eyebrow {
@@ -151,34 +132,28 @@ h1, h2, h3, h4, h5, h6, .display {
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--ink-3);
+  color: var(--purple-deep);
 }
 
-.editorial-number {
-  font-family: var(--font-fraunces), 'Fraunces', ui-serif, Georgia, serif;
-  font-variation-settings: 'opsz' 144, 'SOFT' 0, 'wght' 400;
-  font-style: italic;
-  font-size: 0.875rem;
-  letter-spacing: 0.05em;
-  color: var(--ink-3);
+.mono {
+  font-family: ui-monospace, 'JetBrains Mono', SFMono-Regular, Menlo, monospace;
+  font-size: 0.8125rem;
+  letter-spacing: 0;
 }
 
 /* Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-::-webkit-scrollbar-track { background: var(--paper-2); }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--surface-2); }
 ::-webkit-scrollbar-thumb {
   background: var(--line-strong);
-  border-radius: 0;
-  border: 3px solid var(--paper-2);
+  border-radius: 8px;
+  border: 3px solid var(--surface-2);
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--ink-3); }
 
 ::selection {
-  background: var(--accent);
-  color: var(--accent-ink);
+  background: var(--orange);
+  color: #FFFFFF;
 }
 
 /* =====================================================================
