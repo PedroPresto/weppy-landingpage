@@ -416,7 +416,7 @@ h1, .display {
 .aurora-bg, .aurora-gradient, .aurora-1, .aurora-2, .aurora-3 { display: none !important; }
 
 /* =====================================================================
-   ANIMATIONS — restrained, editorial
+   ANIMATIONS
    ===================================================================== */
 
 @keyframes fade-in {
@@ -452,6 +452,20 @@ h1, .display {
   50% { opacity: 0.4; }
 }
 
+/* Chat-specific */
+@keyframes bubble-pop {
+  from { opacity: 0; transform: scale(0.95) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes typing-dot {
+  0%, 60%, 100% { opacity: 0.3; transform: scale(0.85); }
+  30% { opacity: 1; transform: scale(1); }
+}
+@keyframes pulse-online {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(37, 211, 102, 0); }
+}
+
 .animate-fade-in { animation: fade-in 600ms cubic-bezier(0.32, 0.72, 0, 1) forwards; opacity: 0; }
 .animate-fade-in-up { animation: fade-in-up 700ms cubic-bezier(0.32, 0.72, 0, 1) forwards; opacity: 0; }
 .animate-fade-in-left { animation: fade-in-left 700ms cubic-bezier(0.32, 0.72, 0, 1) forwards; opacity: 0; }
@@ -461,8 +475,12 @@ h1, .display {
 .animate-scroll { animation: marquee 40s linear infinite; }
 .animate-pulse-soft { animation: ticker-pulse 2.4s ease-in-out infinite; }
 
+.animate-bubble-pop { animation: bubble-pop 320ms cubic-bezier(0.32, 0.72, 0, 1) forwards; opacity: 0; }
+
 /* Kill legacy noisy animations */
-.animate-blob, .animate-gradient-x, .animate-twinkle, .animate-spin-slow, .animate-float, .animate-float-delayed, .animate-border-spin, .animate-line-move, .animate-line-move-reverse, .animate-sutil { animation: none !important; }
+.animate-blob, .animate-gradient-x, .animate-twinkle, .animate-spin-slow,
+.animate-float, .animate-float-delayed, .animate-border-spin,
+.animate-line-move, .animate-line-move-reverse, .animate-sutil { animation: none !important; }
 
 .animation-delay-100 { animation-delay: 100ms; }
 .animation-delay-200 { animation-delay: 200ms; }
@@ -473,6 +491,16 @@ h1, .display {
 .animation-delay-700 { animation-delay: 700ms; }
 .animation-delay-800 { animation-delay: 800ms; }
 .animation-delay-1000 { animation-delay: 1000ms; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 /* =====================================================================
    BLOG CONTENT
