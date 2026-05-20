@@ -1,53 +1,59 @@
-// src/components/LandingPage/LandingFooter.tsx
-
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { footerLinks } from './LandingPageData';
 
 export const LandingFooter: React.FC = () => {
     return (
-        <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800/50 bg-gradient-to-b from-[#0A0A0A] to-[#050505] relative">
-            <div className="max-w-7xl mx-auto">
-                <div className="grid md:grid-cols-4 gap-8 mb-8">
-                    {/* Coluna da Marca */}
-                    <div className="animate-fade-in-up">
-                        <div className="flex items-center space-x-3 mb-4 group cursor-pointer">
+        <footer className="bg-[var(--paper-2)] border-t border-[var(--line)]">
+            <div className="container-editorial py-20">
+                <div className="grid grid-cols-12 gap-8 mb-16">
+                    <div className="col-span-12 md:col-span-5 lg:col-span-6">
+                        <Link href="/" className="inline-flex items-center gap-3 group">
                             <Image
-                                src="/weppy_logo_render.svg" // O caminho é direto a partir da pasta 'public'
-                                alt="Weppy Logo"
-                                width={40} // Especifique a largura
-                                height={40} // Especifique a altura
-                                className="transition-transform duration-300"
-                            />                            <span className="text-xl font-bold text-white font-['Poppins'] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange-400 group-hover:to-red-400 transition-all duration-300">
+                                src="/weppy_logo_render.svg"
+                                alt="Weppy"
+                                width={36}
+                                height={36}
+                                className="transition-transform duration-500 group-hover:rotate-[-8deg]"
+                            />
+                            <span className="text-2xl text-[var(--ink)] font-semibold tracking-[-0.02em]">
                                 Weppy
                             </span>
-                        </div>
-                        <p className="text-gray-400 font-['Inter'] mb-4">
-                            A plataforma de automação de WhatsApp mais completa do Brasil.
+                        </Link>
+                        <p className="mt-6 max-w-md text-[var(--ink-2)] text-base leading-relaxed">
+                            Automação inteligente para WhatsApp. Pensada para empresas que vivem em conversas e querem parar de perder vendas por demora.
                         </p>
+                        <div className="mt-8 inline-flex items-center gap-3 px-4 py-2 border border-[var(--line)] text-xs text-[var(--ink-3)]">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--wa-green)] animate-pulse-soft" />
+                            <span className="uppercase tracking-[0.15em]">Operando · Brasília, DF</span>
+                        </div>
                     </div>
 
-                    {/* Coluna de Produto */}
-                    <div className="animate-fade-in-up animation-delay-200">
-                        <h4 className="text-white font-semibold font-['Poppins'] mb-4">Produto</h4>
-                        <ul className="space-y-2 text-gray-400 font-['Inter']">
+                    <div className="col-span-6 md:col-span-2">
+                        <p className="eyebrow mb-5">Produto</p>
+                        <ul className="space-y-3 text-sm">
                             {footerLinks.product.map((link) => (
                                 <li key={link.name}>
-                                    <a href={link.href} className="hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">
+                                    <a href={link.href} className="text-[var(--ink-2)] hover:text-[var(--ink)] transition-colors">
                                         {link.name}
                                     </a>
                                 </li>
                             ))}
+                            <li>
+                                <Link href="/blog" className="text-[var(--ink-2)] hover:text-[var(--ink)] transition-colors">
+                                    Diário
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
-                    {/* Coluna de Suporte */}
-                    <div className="animate-fade-in-up animation-delay-400">
-                        <h4 className="text-white font-semibold font-['Poppins'] mb-4">Suporte</h4>
-                        <ul className="space-y-2 text-gray-400 font-['Inter']">
+                    <div className="col-span-6 md:col-span-2">
+                        <p className="eyebrow mb-5">Suporte</p>
+                        <ul className="space-y-3 text-sm">
                             {footerLinks.support.map((link) => (
                                 <li key={link.name}>
-                                    <a href={link.href} className="hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">
+                                    <a href={link.href} className="text-[var(--ink-2)] hover:text-[var(--ink)] transition-colors">
                                         {link.name}
                                     </a>
                                 </li>
@@ -55,13 +61,12 @@ export const LandingFooter: React.FC = () => {
                         </ul>
                     </div>
 
-                    {/* Coluna Legal */}
-                    <div className="animate-fade-in-up animation-delay-600">
-                        <h4 className="text-white font-semibold font-['Poppins'] mb-4">Legal</h4>
-                        <ul className="space-y-2 text-gray-400 font-['Inter']">
+                    <div className="col-span-12 md:col-span-3 lg:col-span-2">
+                        <p className="eyebrow mb-5">Legal</p>
+                        <ul className="space-y-3 text-sm">
                             {footerLinks.legal.map((link) => (
                                 <li key={link.name}>
-                                    <a href={link.href} className="hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">
+                                    <a href={link.href} className="text-[var(--ink-2)] hover:text-[var(--ink)] transition-colors">
                                         {link.name}
                                     </a>
                                 </li>
@@ -70,9 +75,13 @@ export const LandingFooter: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Direitos Autorais */}
-                <div className="pt-8 border-t border-gray-800/50 text-center text-gray-400 font-['Inter'] animate-fade-in-up animation-delay-800">
-                    <p>&copy; {new Date().getFullYear()} Weppy. Todos os direitos reservados.</p>
+                <div className="pt-8 border-t border-[var(--line)] flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                    <p className="text-xs text-[var(--ink-3)]">
+                        © {new Date().getFullYear()} Weppy. Todos os direitos reservados.
+                    </p>
+                    <p className="text-xs text-[var(--ink-3)]">
+                        Feito com cuidado em Brasília.
+                    </p>
                 </div>
             </div>
         </footer>
