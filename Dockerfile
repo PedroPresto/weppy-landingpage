@@ -2,7 +2,7 @@
 
 # --- Estágio 1: Dependências e Build ---
 # Usamos a imagem 'builder' para instalar dependências e construir o projeto.
-FROM node:18-alpine AS builder
+FROM node:20-alpine AS builder
 WORKDIR /app
 
 # Copia os ficheiros de manifesto e instala as dependências
@@ -21,7 +21,7 @@ RUN npm run build
 
 # --- Estágio 2: Imagem Final de Produção ---
 # Começamos com uma imagem limpa para manter o tamanho final pequeno
-FROM node:18-alpine
+FROM node:20-alpine
 WORKDIR /app
 
 # Copia apenas os ficheiros necessários da 'builder' para a imagem final
