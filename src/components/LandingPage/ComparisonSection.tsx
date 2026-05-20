@@ -1,57 +1,61 @@
-// src/components/LandingPage/ComparisonSection.tsx
+'use client';
 
 import React from 'react';
-import { beforeAfter } from './LandingPageData';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
+import { ChatMockup } from './ChatMockup';
+import { beforeAfterChats } from './LandingPageData';
 
 export const ComparisonSection: React.FC = () => {
+    const ref = useScrollAnimation(0.1);
+
     return (
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 relative">
-            <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-white font-['Poppins'] mb-4 animate-fade-in-up">
-                        Antes vs Depois da Weppy
+        <section id="results" ref={ref.ref} className="py-24 md:py-32 bg-[var(--surface-2)] border-y border-[var(--line)]">
+            <div className="container-editorial">
+                <div className="max-w-3xl mb-16 md:mb-20">
+                    <p className={`eyebrow mb-4 ${ref.isVisible ? 'animate-fade-in' : 'opacity-0'}`}>Antes e depois</p>
+                    <h2 className={`text-balance text-3xl md:text-5xl leading-[1.05] tracking-[-0.03em] text-[var(--ink)] font-semibold ${ref.isVisible ? 'animate-fade-in-up animation-delay-100' : 'opacity-0'}`}>
+                        O mesmo cliente. <span className="text-[var(--orange)]">Resultados opostos.</span>
                     </h2>
-                    <p className="text-xl text-gray-400 font-['Inter'] animate-fade-in-up animation-delay-300">
-                        Veja a transformação completa do seu atendimento
+                    <p className={`mt-5 text-lg text-[var(--ink-2)] ${ref.isVisible ? 'animate-fade-in-up animation-delay-200' : 'opacity-0'}`}>
+                        A diferença entre perder a venda e fechar a venda mora no tempo da primeira resposta.
                     </p>
                 </div>
-                <div className="grid md:grid-cols-2 gap-12">
-                    {/* Coluna "Sem o Weppy" */}
-                    <div className="space-y-6">
-                        <h3 className="text-2xl font-bold text-red-400 font-['Poppins'] text-center mb-8 animate-fade-in-left">
-                            ❌ Sem a Weppy
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                    <div className={`${ref.isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-red-700 text-xs font-semibold mb-5 ring-1 ring-red-100">
+                            ANTES — sem IA
+                        </div>
+                        <h3 className="text-xl font-semibold text-[var(--ink)] mb-2">
+                            Cliente espera. E vai pro concorrente.
                         </h3>
-                        {beforeAfter.map((item, index) => (
-                            <div
-                                key={index}
-                                className="group bg-red-500/30 border border-red-500/30 rounded-xl p-6 hover:border-red-400/50 transition-all duration-500 hover:scale-105 animate-fade-in-left"
-                                style={{ animationDelay: `${index * 150}ms` }}
-                            >
-                                <div className="flex items-center space-x-3">
-                                    <item.icon className="w-6 h-6 text-red-400 group-hover:scale-110 transition-transform" />
-                                    <p className="text-gray-300 font-['Inter']">{item.before}</p>
-                                </div>
-                            </div>
-                        ))}
+                        <p className="text-sm text-[var(--ink-2)] mb-6 leading-relaxed">
+                            Três mensagens sem resposta. Em 6 minutos, o lead morre.
+                        </p>
+                        <ChatMockup
+                            contactName="João Mendes"
+                            contactSubtitle="visto por último às 23:14"
+                            steps={beforeAfterChats.before}
+                            size="md"
+                        />
                     </div>
 
-                    {/* Coluna "Com o Weppy" */}
-                    <div className="space-y-6">
-                        <h3 className="text-2xl font-bold text-green-400 font-['Poppins'] text-center mb-8 animate-fade-in-right">
-                            ✅ Com a Weppy
+                    <div className={`${ref.isVisible ? 'animate-fade-in-up animation-delay-200' : 'opacity-0'}`}>
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--orange-soft)] text-[var(--orange)] text-xs font-semibold mb-5 ring-1 ring-[var(--orange)]/20">
+                            DEPOIS — com Weppy
+                        </div>
+                        <h3 className="text-xl font-semibold text-[var(--ink)] mb-2">
+                            IA responde em segundos. Pedido fechado.
                         </h3>
-                        {beforeAfter.map((item, index) => (
-                            <div
-                                key={index}
-                                className="group bg-green-500/30 border border-green-500/30 rounded-xl p-6 hover:border-green-400/50 transition-all duration-500 hover:scale-105 animate-fade-in-right"
-                                style={{ animationDelay: `${index * 150}ms` }}
-                            >
-                                <div className="flex items-center space-x-3">
-                                    <item.icon className="w-6 h-6 text-green-400 group-hover:scale-110 transition-transform" />
-                                    <p className="text-gray-300 font-['Inter']">{item.after}</p>
-                                </div>
-                            </div>
-                        ))}
+                        <p className="text-sm text-[var(--ink-2)] mb-6 leading-relaxed">
+                            Primeira resposta em &lt;1s. Cliente engaja, pedido sai.
+                        </p>
+                        <ChatMockup
+                            contactName="João Mendes"
+                            contactSubtitle="online · IA respondendo"
+                            steps={beforeAfterChats.after}
+                            size="md"
+                        />
                     </div>
                 </div>
             </div>
