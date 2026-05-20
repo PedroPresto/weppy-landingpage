@@ -78,29 +78,6 @@ export const heroChatSteps: ChatStep[] = [
     },
 ];
 
-export const featureChatSteps: Record<string, ChatStep[]> = {
-    'ia-converte': [
-        { id: 'c', from: 'customer', text: 'Vocês entregam aqui no Pinheiros?', holdMs: 1200 },
-        { id: 't', type: 'typing', agent: 'ai', durationMs: 900 },
-        { id: 'b', from: 'bot', agent: 'ai', text: 'Entregamos sim! 🛵 Em ~35min. Posso te mandar o cardápio?', holdMs: 1800 },
-    ],
-    'agendamento': [
-        { id: 'c', from: 'customer', text: 'Quero remarcar pra terça', holdMs: 1100 },
-        { id: 't', type: 'typing', agent: 'ai', durationMs: 800 },
-        { id: 'b', from: 'bot', agent: 'ai', text: 'Tenho terça 9h, 11h ou 15h livre. Qual prefere?', holdMs: 1600 },
-    ],
-    'follow-up': [
-        { id: 't', type: 'typing', agent: 'ai', durationMs: 800 },
-        { id: 'b', from: 'bot', agent: 'ai', text: 'Oi João! Vi que você se interessou pelo combo. Posso te enviar o link de pagamento com 10% de desconto se fechar hoje?', holdMs: 2200 },
-        { id: 'c', from: 'customer', text: 'Pode mandar!', holdMs: 1100 },
-    ],
-    'rag': [
-        { id: 'c', from: 'customer', text: 'Vocês fazem nota fiscal?', holdMs: 1200 },
-        { id: 't', type: 'typing', agent: 'ai', durationMs: 900 },
-        { id: 'b', from: 'bot', agent: 'ai', text: 'Sim! Emitimos NF-e automaticamente após a confirmação do pagamento, no e-mail cadastrado.', holdMs: 1800 },
-    ],
-};
-
 export const beforeAfterChats: { before: ChatStep[]; after: ChatStep[] } = {
     before: [
         { id: 'c1', from: 'customer', text: 'Boa noite, vocês entregam ainda?', holdMs: 2200 },
