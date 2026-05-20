@@ -16,14 +16,22 @@ export const Bubble: React.FC<BubbleProps> = ({ message }) => {
     const isHuman = !isCustomer && message.agent === 'human';
 
     const alignment = isCustomer ? 'justify-start' : 'justify-end';
+    // Authentic WhatsApp palette — works in both light and dark themes.
+    // Customer (incoming): white in light, dark gray in dark.
+    // AI bot (outgoing, white-ish): white in light, deep gray in dark, with purple ring.
+    // Human bot (outgoing, green): always green (--wa-green).
     const bubbleColor = isCustomer
-        ? 'bg-white text-[var(--ink)]'
+        ? 'bg-white dark:bg-[#202C33] text-[#111B21] dark:text-[#E9EDEF]'
         : isHuman
             ? 'bg-[var(--wa-green)] text-white'
-            : 'bg-white text-[var(--ink)] ring-1 ring-[var(--purple-soft)]';
+            : 'bg-white dark:bg-[#202C33] text-[#111B21] dark:text-[#E9EDEF] ring-1 ring-[var(--purple-soft)]';
     const tail = isCustomer
         ? 'rounded-tr-2xl rounded-br-2xl rounded-bl-2xl rounded-tl-md'
         : 'rounded-tl-2xl rounded-bl-2xl rounded-br-md rounded-tr-2xl';
+
+    const metaColor = isHuman
+        ? 'text-white/80'
+        : 'text-[#667781] dark:text-[#8696A0]';
 
     return (
         <div className={`flex ${alignment} animate-bubble-pop`}>
@@ -39,13 +47,13 @@ export const Bubble: React.FC<BubbleProps> = ({ message }) => {
                 </p>
                 {message.preview && <PaymentPreview data={message.preview} />}
                 <div className="flex items-center justify-end gap-1 mt-1 -mb-0.5">
-                    <span className={`text-[0.625rem] ${isHuman ? 'text-white/80' : 'text-[var(--ink-3)]'}`}>
+                    <span className={`text-[0.625rem] ${metaColor}`}>
                         {timeLabel()}
                     </span>
                     {!isCustomer && (
                         isHuman
                             ? <CheckCheck className="w-3 h-3 text-white/80" strokeWidth={2.5} />
-                            : <Check className="w-3 h-3 text-[var(--ink-3)]" strokeWidth={2.5} />
+                            : <Check className={`w-3 h-3 ${metaColor}`} strokeWidth={2.5} />
                     )}
                 </div>
             </div>

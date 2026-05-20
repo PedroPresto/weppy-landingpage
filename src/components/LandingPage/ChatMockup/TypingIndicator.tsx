@@ -14,7 +14,7 @@ export const TypingIndicator: React.FC<TypingIndicatorProps> = ({ agent }) => {
 
     return (
         <div className="flex justify-end animate-bubble-pop">
-            <div className={`relative px-4 py-3 rounded-tl-2xl rounded-bl-2xl rounded-br-md rounded-tr-2xl ${isAI ? 'bg-white ring-1 ring-[var(--purple-soft)]' : 'bg-[var(--wa-green)]'} shadow-[0_1px_2px_rgba(0,0,0,0.08)]`}>
+            <div className={`relative px-4 py-3 rounded-tl-2xl rounded-bl-2xl rounded-br-md rounded-tr-2xl ${isAI ? 'bg-white dark:bg-[#202C33] ring-1 ring-[var(--purple-soft)]' : 'bg-[var(--wa-green)]'} shadow-[0_1px_2px_rgba(0,0,0,0.08)]`}>
                 {isAI && (
                     <span className="badge-ai absolute -top-2 -left-2 text-[0.625rem] px-1.5 py-0.5">
                         <Sparkles className="w-2.5 h-2.5" strokeWidth={2.5} />
