@@ -30,8 +30,8 @@ export const PricingSection: React.FC = () => {
                                 key={plan.id}
                                 className={`relative p-8 md:p-10 rounded-2xl transition-all duration-500
                                     ${isPopular
-                                        ? 'bg-white ring-2 ring-[var(--orange)] shadow-[0_24px_60px_-20px_rgba(255,89,2,0.25)]'
-                                        : 'bg-white border border-[var(--line)] hover:border-[var(--line-strong)]'}
+                                        ? 'bg-[var(--surface)] ring-2 ring-[var(--orange)] shadow-[0_24px_60px_-20px_rgba(255,89,2,0.25)]'
+                                        : 'bg-[var(--surface)] border border-[var(--line)] hover:border-[var(--line-strong)]'}
                                     ${ref.isVisible ? 'animate-fade-in-up' : 'opacity-0'}
                                 `}
                                 style={{ animationDelay: `${index * 120}ms` }}

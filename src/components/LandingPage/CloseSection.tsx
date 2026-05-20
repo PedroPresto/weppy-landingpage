@@ -45,7 +45,7 @@ export const CloseSection: React.FC<CloseSectionProps> = ({ onLoginClick }) => {
                             {urgencyFeatures.map((item, i) => (
                                 <li
                                     key={i}
-                                    className="flex items-start gap-3 p-4 rounded-2xl bg-white border border-[var(--line)] text-sm text-[var(--ink)]"
+                                    className="flex items-start gap-3 p-4 rounded-2xl bg-[var(--surface)] border border-[var(--line)] text-sm text-[var(--ink)]"
                                 >
                                     <span className="w-1.5 h-1.5 rounded-full bg-[var(--orange)] mt-2 flex-shrink-0" />
                                     <span className="leading-relaxed">{item}</span>
