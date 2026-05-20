@@ -55,8 +55,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onLoginClick }) => {
                         </h1>
 
                         <p className={`mt-6 text-base md:text-lg text-[var(--ink-2)] leading-relaxed max-w-xl ${heroRef.isVisible ? 'animate-fade-in-up animation-delay-300' : 'opacity-0'}`}>
-                            A Weppy conecta uma IA — treinada com o seu negócio — direto ao WhatsApp Business.
-                            Ela qualifica, responde e vende 24h por dia. Sem chip novo. Sem complicação.
+                            A Weppy conecta uma IA, treinada com o seu negócio, direto ao WhatsApp Business.
+                            Ela qualifica, responde e vende 24h por dia. Configure sem conhecimento técnico em menos de 15 min.
                         </p>
 
                         <div className={`mt-8 flex flex-col sm:flex-row gap-3 ${heroRef.isVisible ? 'animate-fade-in-up animation-delay-500' : 'opacity-0'}`}>

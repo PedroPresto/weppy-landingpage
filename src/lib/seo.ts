@@ -1,6 +1,6 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SERVER_URL || "https://weppy.com.br";
 export const SITE_NAME = "Weppy";
-export const SITE_TITLE = "Weppy — Automação Inteligente para WhatsApp";
+export const SITE_TITLE = "Weppy · Automação Inteligente para WhatsApp";
 export const SITE_DESCRIPTION =
   "Não perca mais vendas por demorar a responder. Tenha um assistente virtual que vende por você, dia e noite.";
 export const SITE_LOCALE = "pt-BR";

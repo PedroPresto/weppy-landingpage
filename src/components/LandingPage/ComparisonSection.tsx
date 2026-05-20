@@ -24,7 +24,7 @@ export const ComparisonSection: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                     <div className={`${ref.isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-red-700 text-xs font-semibold mb-5 ring-1 ring-red-100">
-                            ANTES — sem IA
+                            ANTES · sem IA
                         </div>
                         <h3 className="text-xl font-semibold text-[var(--ink)] mb-2">
                             Cliente espera. E vai pro concorrente.
@@ -42,7 +42,7 @@ export const ComparisonSection: React.FC = () => {
 
                     <div className={`${ref.isVisible ? 'animate-fade-in-up animation-delay-200' : 'opacity-0'}`}>
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--orange-soft)] text-[var(--orange)] text-xs font-semibold mb-5 ring-1 ring-[var(--orange)]/20">
-                            DEPOIS — com Weppy
+                            DEPOIS · com Weppy
                         </div>
                         <h3 className="text-xl font-semibold text-[var(--ink)] mb-2">
                             IA responde em segundos. Pedido fechado.

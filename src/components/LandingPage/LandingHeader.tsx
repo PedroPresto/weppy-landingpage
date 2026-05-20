@@ -43,7 +43,7 @@ export const LandingHeader: React.FC<LandingHeaderProps> = ({ isMenuOpen, setIsM
         >
             <div className="container-editorial">
                 <div className="flex items-center justify-between h-16 md:h-20">
-                    <Link href="/" className="group flex items-center gap-3" aria-label="Weppy — início">
+                    <Link href="/" className="group flex items-center gap-3" aria-label="Weppy · início">
                         <Image
                             src="/weppy_logo_render.svg"
                             alt="Weppy"

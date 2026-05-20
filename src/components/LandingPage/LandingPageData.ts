@@ -17,7 +17,7 @@ export const features = [
         id: 'funis',
         icon: Workflow,
         title: "Funis de Venda no Piloto Automático",
-        description: "Desenhe jornadas de compra completas com construtor visual. Qualifica, apresenta a oferta e fecha a venda — tudo automático.",
+        description: "Desenhe jornadas de compra completas com construtor visual. Qualifica, apresenta a oferta e fecha a venda, tudo automático.",
     },
     {
         id: 'dados',
@@ -47,7 +47,7 @@ export const features = [
         id: 'rag',
         icon: Database,
         title: "IA Treinada com o Seu Negócio",
-        description: "Alimente a IA com FAQs, políticas e produtos. Ela aprende o seu tom — uma IA que responde como você.",
+        description: "Alimente a IA com FAQs, políticas e produtos. Ela aprende o seu tom, uma IA que responde como você.",
     },
     {
         id: 'agendamento',
@@ -62,7 +62,7 @@ export const features = [
 export const heroChatSteps: ChatStep[] = [
     { id: 'c1', from: 'customer', text: 'Oi! Vocês atendem alongamento de cílios no sábado?', holdMs: 1400 },
     { id: 't1', type: 'typing', agent: 'ai', durationMs: 1100 },
-    { id: 'b1', from: 'bot', agent: 'ai', text: 'Oi, Marina! 💛 Atendemos sim. Tenho horário sábado às 10h, 14h ou 16h — qual prefere?', holdMs: 1600 },
+    { id: 'b1', from: 'bot', agent: 'ai', text: 'Oi, Marina! 💛 Atendemos sim. Tenho horário sábado às 10h, 14h ou 16h. Qual prefere?', holdMs: 1600 },
     { id: 'c2', from: 'customer', text: '14h tá ótimo. Quanto fica o volume russo?', holdMs: 1400 },
     { id: 't2', type: 'typing', agent: 'ai', durationMs: 1000 },
     { id: 'b2', from: 'bot', agent: 'ai', text: 'Volume russo R$ 180 (dura 4–5 semanas). Posso já reservar seu horário?', holdMs: 1600 },
@@ -73,7 +73,7 @@ export const heroChatSteps: ChatStep[] = [
         from: 'bot',
         agent: 'ai',
         text: 'Reservado ✅ Sábado, 14h.\nPara garantir o horário, segue o Pix de sinal R$ 50:',
-        preview: { title: 'Sinal — Volume Russo', subtitle: 'R$ 50,00 · Pix', cta: 'Toque para pagar' },
+        preview: { title: 'Sinal · Volume Russo', subtitle: 'R$ 50,00 · Pix', cta: 'Toque para pagar' },
         holdMs: 2800,
     },
 ];
@@ -234,7 +234,7 @@ export const faqs = [
     },
     {
         question: "Isto funciona para o meu tipo de negócio? ",
-        answer: "Sim! Se você vende ou atende pelo WhatsApp, a Weppy foi feita para si. Já ajudamos negócios de dezenas de setores — de e-commerce e infoprodutos a clínicas e serviços locais. A IA é treinada para se adaptar ao seu negócio, qualificando leads, agendando visitas ou vendendo produtos. É a ferramenta mais versátil que você pode ter para escalar as suas vendas."
+        answer: "Sim! Se você vende ou atende pelo WhatsApp, a Weppy foi feita para si. Já ajudamos negócios de dezenas de setores, de e-commerce e infoprodutos a clínicas e serviços locais. A IA é treinada para se adaptar ao seu negócio, qualificando leads, agendando visitas ou vendendo produtos. É a ferramenta mais versátil que você pode ter para escalar as suas vendas."
     },
     {
         question: "Ele consegue atender vários clientes ao mesmo tempo?",
@@ -270,12 +270,13 @@ export const howItWorks = [
 ];
 
 export const companies = [
-    "Grão Nobre Cafés", // Alinhado com o depoimento
     "JM Beauty Studio", // Alinhado com o depoimento
     "Guimarães Mentoria", // Alinhado com o depoimento
     "Sabor em Casa Delivery",
-    "Clínica VP Odonto",
+    "Una Parque",
+    "Clínica Pediátrica",
     "Agência Impulso Digital",
+    "Clínica VP Odonto",
     "Concurseiros Pro",
     "Agência Pinnest Media",
 ];
