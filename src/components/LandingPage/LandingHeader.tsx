@@ -95,7 +95,7 @@ export const LandingHeader: React.FC<LandingHeaderProps> = ({ isMenuOpen, setIsM
                         </button>
                         <button
                             onClick={onLoginClick}
-                            className="text-sm font-medium text-[var(--ink-2)] hover:text-[var(--ink)] transition-colors"
+                            className="cursor-pointer text-sm font-medium text-[var(--ink-2)] hover:text-[var(--ink)] transition-colors"
                         >
                             Entrar
                         </button>

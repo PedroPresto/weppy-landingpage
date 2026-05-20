@@ -36,7 +36,7 @@ export function useChatLoop({ steps, loop, startDelayMs = 400, loopGapMs = 2500 
 
                 if (nextCount < steps.length) {
                     const current = steps[index];
-                    const nextDelay = current.type === 'typing'
+                    const nextDelay = isTypingStep(current)
                         ? current.durationMs
                         : (current.holdMs ?? 1100);
                     scheduleNext(nextCount, nextDelay);
