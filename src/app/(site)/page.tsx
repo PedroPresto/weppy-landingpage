@@ -35,9 +35,9 @@ export default function Home() {
             <main>
                 <HeroSection onLoginClick={handleLoginClick} />
                 <CompaniesSection />
-                <VslSection />
-                <HowItWorksSection />
                 <FeaturesSection />
+                <HowItWorksSection />
+                <VslSection />
                 <ComparisonSection />
                 <TestimonialsSection />
                 <PricingSection />

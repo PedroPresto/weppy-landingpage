@@ -49,9 +49,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onLoginClick }) => {
                         <h1
                             className={`mt-6 text-balance text-[2.5rem] leading-[1.02] sm:text-5xl md:text-6xl lg:text-[4.5rem] lg:leading-[1.0] tracking-[-0.04em] text-[var(--ink)] font-semibold ${heroRef.isVisible ? 'animate-fade-in-up animation-delay-100' : 'opacity-0'}`}
                         >
-                            <span className="text-[var(--orange)]">Vendas</span> no piloto automático.
+                            <span className="text-[var(--orange)]">Venda</span> no piloto automático.
                             <br className="hidden md:block" />
-                            Direto do seu <span className="text-[var(--orange)]">WhatsApp</span>.
+                            <span className="text-[var(--orange)]"> Com IA</span> no WhatsApp.
                         </h1>
 
                         <p className={`mt-6 text-base md:text-lg text-[var(--ink-2)] leading-relaxed max-w-xl ${heroRef.isVisible ? 'animate-fade-in-up animation-delay-300' : 'opacity-0'}`}>
@@ -85,7 +85,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onLoginClick }) => {
                     {/* Coluna direita — mockup */}
                     <div className={`col-span-12 lg:col-span-5 flex justify-center lg:justify-end ${heroRef.isVisible ? 'animate-fade-in-right animation-delay-300' : 'opacity-0'}`}>
                         <ChatMockup
-                            contactName="Studio Luma Beleza"
+                            contactName="Clínica Maringá"
                             contactSubtitle="online · IA respondendo"
                             steps={heroChatSteps}
                             size="lg"

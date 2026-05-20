@@ -122,7 +122,7 @@ export const CloseSection: React.FC<CloseSectionProps> = ({ onLoginClick }) => {
                         <div className="mt-8 pt-8 border-t border-white/15 grid grid-cols-3 gap-4 text-white/90 text-sm">
                             <div className="flex flex-col items-center gap-1.5">
                                 <Zap className="w-5 h-5" />
-                                <span>Setup 5 min</span>
+                                <span>Setup 15 min</span>
                             </div>
                             <div className="flex flex-col items-center gap-1.5">
                                 <Shield className="w-5 h-5" />

@@ -40,7 +40,7 @@ export default function BlogPostHero({ title, publishedAt, modifiedAt, category,
             </li>
             <li aria-hidden="true">·</li>
             <li>
-              <Link href="/blog" className="hover:text-[var(--ink)] transition-colors">Diário</Link>
+              <Link href="/blog" className="hover:text-[var(--ink)] transition-colors">Blog</Link>
             </li>
           </ol>
         </nav>

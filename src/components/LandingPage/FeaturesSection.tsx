@@ -17,7 +17,7 @@ export const FeaturesSection: React.FC = () => {
                         <span className="text-[var(--orange)]">só que sem dormir</span>.
                     </h2>
                     <p className={`mt-5 text-lg text-[var(--ink-2)] ${ref.isVisible ? 'animate-fade-in-up animation-delay-200' : 'opacity-0'}`}>
-                        Oito ferramentas pensadas para empresas que vivem no WhatsApp e querem parar de perder venda por demora, despreparo ou falta de gente.
+                        Tudo que você precisa para automatizar o atendimento, fechar vendas e gerenciar sua operação direto do WhatsApp.
                     </p>
                 </div>
 

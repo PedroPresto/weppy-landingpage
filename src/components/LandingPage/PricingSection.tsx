@@ -15,14 +15,14 @@ export const PricingSection: React.FC = () => {
                     <p className={`eyebrow mb-4 ${ref.isVisible ? 'animate-fade-in' : 'opacity-0'}`}>Planos</p>
                     <h2 className={`text-balance text-3xl md:text-5xl leading-[1.05] tracking-[-0.03em] text-[var(--ink)] font-semibold ${ref.isVisible ? 'animate-fade-in-up animation-delay-100' : 'opacity-0'}`}>
                         Um plano completo.{' '}
-                        <span className="text-[var(--orange)]">Três jeitos</span> de poupar.
+                        <span className="text-[var(--orange)]">Dois jeitos</span> de poupar.
                     </h2>
                     <p className={`mt-5 text-lg text-[var(--ink-2)] ${ref.isVisible ? 'animate-fade-in-up animation-delay-200' : 'opacity-0'}`}>
                         Todas as funcionalidades em qualquer plano. A diferença é o quanto você economiza ao se comprometer com prazos maiores.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start max-w-2xl mx-auto lg:max-w-3xl">
                     {plans.map((plan, index) => {
                         const isPopular = plan.popular;
                         return (

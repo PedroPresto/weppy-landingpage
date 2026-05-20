@@ -33,7 +33,7 @@ export const ComparisonSection: React.FC = () => {
                             Três mensagens sem resposta. Em 6 minutos, o lead morre.
                         </p>
                         <ChatMockup
-                            contactName="João Mendes"
+                            contactName="Maria Mendes"
                             contactSubtitle="visto por último às 23:14"
                             steps={beforeAfterChats.before}
                             size="md"
@@ -51,7 +51,7 @@ export const ComparisonSection: React.FC = () => {
                             Primeira resposta em &lt;1s. Cliente engaja, pedido sai.
                         </p>
                         <ChatMockup
-                            contactName="João Mendes"
+                            contactName="Maria Mendes"
                             contactSubtitle="online · IA respondendo"
                             steps={beforeAfterChats.after}
                             size="md"

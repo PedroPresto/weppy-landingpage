@@ -28,9 +28,9 @@ export const LandingHeader: React.FC<LandingHeaderProps> = ({ isMenuOpen, setIsM
 
     const navLinks = [
         { href: '#features', label: 'Recursos' },
-        { href: '#results', label: 'Casos' },
+       // { href: '#results', label: 'Casos' },
         { href: '#pricing', label: 'Planos' },
-        { href: '/blog', label: 'Diário', external: false, isLink: true },
+        { href: '/blog', label: 'Blog', external: false, isLink: true },
     ];
 
     return (

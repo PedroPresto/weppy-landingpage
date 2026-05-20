@@ -6,8 +6,7 @@ import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 export const VslSection: React.FC = () => {
     const { ref, isVisible } = useScrollAnimation(0.2);
-    const videoId = '12c49cb7-89af-40cf-9d83-89dd3f031e35';
-    const videoUrl = `https://player-vz-3efb57d2-c4e.tv.pandavideo.com.br/embed/?v=${videoId}&autoplay=true`;
+    const videoUrl = 'https://www.youtube.com/embed/4PNlI2Svlho?rel=0&modestbranding=1&color=white';
 
     return (
         <section id="vsl" ref={ref} className="relative py-24 md:py-32">
@@ -21,14 +20,14 @@ export const VslSection: React.FC = () => {
                         <h2
                             className="text-balance text-3xl md:text-5xl leading-[1.1] tracking-[-0.03em] text-[var(--ink)]"
                         >
-                            Em <span className="text-[var(--orange)]">dois minutos</span>, entenda como a Weppy transforma cada mensagem em oportunidade.
+                            Em <span className="text-[var(--orange)]">oito minutos</span>, entenda como a Weppy transforma cada mensagem em oportunidade.
                         </h2>
                     </div>
                 </div>
 
                 <div
-                    className={`relative w-full aspect-video bg-[var(--ink)] overflow-hidden border border-[var(--line-strong)] transition-all duration-700 ${
-                        isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'
+                    className={`group relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-[var(--line)] transition-all duration-700 ${
+                        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                     }`}
                 >
                     {isVisible && (
@@ -36,18 +35,24 @@ export const VslSection: React.FC = () => {
                             src={videoUrl}
                             title="Weppy Demonstração"
                             style={{ border: 'none' }}
-                            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
                             className="absolute inset-0 w-full h-full"
                         />
                     )}
+                    {/* Overlay that appears with the YouTube control bar to hide total duration */}
+                    <div
+                        aria-hidden="true"
+                        className="absolute bottom-0 left-0 z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                        style={{ height: 40, width: 130, background: '#212121' }}
+                    />
                 </div>
 
                 <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
                     <p className="text-sm text-[var(--ink-3)] max-w-md">
                         Demonstração gravada com uma conta real, sem cortes nem efeitos. Veja exatamente o que vai funcionar para você.
                     </p>
-                    <a href="#pricing" className="btn-primary">
+                    <a href="#pricing" className="btn-orange">
                         <span>Quero automatizar</span>
                         <ArrowUpRight className="w-4 h-4" />
                     </a>

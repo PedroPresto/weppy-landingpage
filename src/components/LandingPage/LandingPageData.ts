@@ -2,93 +2,142 @@
 
 import {
     Brain, BarChart3, Inbox, Zap, Workflow, Users, TrendingUp, Sparkles,
-    MessageSquare, Star, Clock, Target, Smartphone, Images, Database, CalendarCheck
+    MessageSquare, Star, Clock, Target, Smartphone, Images, Database, CalendarCheck,
+    Megaphone, MousePointerClick, PauseCircle
 } from 'lucide-react';
 import type { ChatStep } from './ChatMockup/types';
 
 export const features = [
     {
-        id: 'ia-converte',
-        icon: Brain,
-        title: "IA que Conversa e Converte",
-        description: "Nossa IA cria diálogos que não só respondem, mas convencem. Cada conversa vira oportunidade de venda real.",
-    },
-    {
-        id: 'funis',
-        icon: Workflow,
-        title: "Funis de Venda no Piloto Automático",
-        description: "Desenhe jornadas de compra completas com construtor visual. Qualifica, apresenta a oferta e fecha a venda, tudo automático.",
-    },
-    {
-        id: 'dados',
-        icon: BarChart3,
-        title: "Decisões Inteligentes com Dados",
-        description: "Veja em gráficos simples quais abordagens estão a gerar mais lucro e otimize suas estratégias em tempo real.",
-    },
-    {
-        id: 'handoff',
-        icon: Inbox,
-        title: "O Melhor dos Dois Mundos",
-        description: "Deixe a IA fazer 99% do trabalho. Em conversas-chave, assuma com um clique e dê seu toque de mestre pra fechar.",
-    },
-    {
-        id: '24-7',
-        icon: Zap,
-        title: "Sua Empresa Sempre Aberta",
-        description: "Seu assistente é o funcionário que nunca dorme. Venda e atenda 24/7, mesmo com o celular desligado.",
-    },
-    {
-        id: 'follow-up',
-        icon: Clock,
-        title: "Follow-up que Recupera Vendas",
-        description: "Sequências automáticas reativam leads que esfriaram. Recupere vendas que você considerava perdidas.",
-    },
-    {
         id: 'rag',
         icon: Database,
-        title: "IA Treinada com o Seu Negócio",
-        description: "Alimente a IA com FAQs, políticas e produtos. Ela aprende o seu tom, uma IA que responde como você.",
+        title: "Treinamento RAG",
+        description: "Treine a IA com documentos do seu negócio, como PDFs, FAQs e catálogos. Ela aprende o seu tom e responde com as suas informações.",
+    },
+    {
+        id: 'disparo',
+        icon: Megaphone,
+        title: "Disparo em Massa",
+        description: "Dispare mensagens para uma lista de leads e deixe a IA conduzir cada conversa individualmente a partir daí.",
     },
     {
         id: 'agendamento',
         icon: CalendarCheck,
-        title: "Agendamento Automático via IA",
-        description: "A IA agenda compromissos no WhatsApp consultando horários em tempo real. Gerencie a agenda pela plataforma.",
+        title: "Sistema de Agendamento",
+        description: "Cadastre seus serviços e horários. A IA mostra a disponibilidade em tempo real e confirma o agendamento direto no WhatsApp.",
+    },
+    {
+        id: 'handoff',
+        icon: PauseCircle,
+        title: "Assuma a Conversa",
+        description: "Desative a IA quando quiser e retome o atendimento manualmente. Ou ensine-a a identificar quando deve chamar um humano.",
+    },
+    {
+        id: 'fluxo',
+        icon: Workflow,
+        title: "Criação de Fluxo Visual",
+        description: "Crie fluxos de conversa com um criador de arrastar e soltar. Monte jornadas completas sem escrever uma linha de código.",
+    },
+    {
+        id: 'metricas',
+        icon: BarChart3,
+        title: "Análise de Métricas",
+        description: "Acompanhe taxa de resposta, conversões e volume de atendimentos. Veja o que está funcionando e otimize em tempo real.",
     },
 ];
 
 // ===== MOCKUPS DE CHAT =====
 
 export const heroChatSteps: ChatStep[] = [
-    { id: 'c1', from: 'customer', text: 'Oi! Vocês atendem alongamento de cílios no sábado?', holdMs: 1400 },
-    { id: 't1', type: 'typing', agent: 'ai', durationMs: 1100 },
-    { id: 'b1', from: 'bot', agent: 'ai', text: 'Oi, Marina! 💛 Atendemos sim. Tenho horário sábado às 10h, 14h ou 16h. Qual prefere?', holdMs: 1600 },
-    { id: 'c2', from: 'customer', text: '14h tá ótimo. Quanto fica o volume russo?', holdMs: 1400 },
-    { id: 't2', type: 'typing', agent: 'ai', durationMs: 1000 },
-    { id: 'b2', from: 'bot', agent: 'ai', text: 'Volume russo R$ 180 (dura 4–5 semanas). Posso já reservar seu horário?', holdMs: 1600 },
-    { id: 'c3', from: 'customer', text: 'Sim, pode confirmar!', holdMs: 1300 },
-    { id: 't3', type: 'typing', agent: 'ai', durationMs: 900 },
+    {
+        id: 'c1',
+        from: 'customer',
+        text: 'Oi! Vocês fazem clareamento dental?',
+        holdMs: 1400
+    },
+
+    {
+        id: 't1',
+        type: 'typing',
+        agent: 'ai',
+        durationMs: 1100
+    },
+
+    {
+        id: 'b1',
+        from: 'bot',
+        agent: 'ai',
+        text: 'Fazemos sim 🦷✨ Temos avaliação disponível amanhã às 15h ou quinta às 10h. Qual horário prefere?',
+        holdMs: 1600
+    },
+
+    {
+        id: 'c2',
+        from: 'customer',
+        text: 'Quinta às 10h fica melhor. Qual o valor?',
+        holdMs: 1400
+    },
+
+    {
+        id: 't2',
+        type: 'typing',
+        agent: 'ai',
+        durationMs: 1000
+    },
+
+    {
+        id: 'b2',
+        from: 'bot',
+        agent: 'ai',
+        text: 'O clareamento começa em R$ 690 😊 Posso reservar sua avaliação agora?',
+        holdMs: 1600
+    },
+
+    {
+        id: 'c3',
+        from: 'customer',
+        text: 'Pode reservar 👍',
+        holdMs: 1300
+    },
+
+    {
+        id: 't3',
+        type: 'typing',
+        agent: 'ai',
+        durationMs: 900
+    },
+
     {
         id: 'b3',
         from: 'bot',
         agent: 'ai',
-        text: 'Reservado ✅ Sábado, 14h.\nPara garantir o horário, segue o Pix de sinal R$ 50:',
-        preview: { title: 'Sinal · Volume Russo', subtitle: 'R$ 50,00 · Pix', cta: 'Toque para pagar' },
+        text: 'Agendamento confirmado ✅ Quinta-feira às 10h.\nSegue o sinal da avaliação:',
+        preview: {
+            title: 'Reserva · Avaliação Odontológica',
+            subtitle: 'R$ 50,00 · Pix',
+            cta: 'Toque para pagar'
+        },
         holdMs: 2800,
     },
 ];
 
 export const beforeAfterChats: { before: ChatStep[]; after: ChatStep[] } = {
     before: [
-        { id: 'c1', from: 'customer', text: 'Boa noite, vocês entregam ainda?', holdMs: 2200 },
-        { id: 'c2', from: 'customer', text: 'Alô?', holdMs: 2200 },
-        { id: 'c3', from: 'customer', text: 'Desisti, vou pedir no concorrente.', holdMs: 2800 },
+        { id: 'c1', from: 'customer', text: 'Oi! Quanto fica preenchimento labial?', holdMs: 2200 },
+        { id: 'c2', from: 'customer', text: 'Consegue me passar valores?', holdMs: 2200 },
+        { id: 'c3', from: 'customer', text: 'Tudo bem 😊 vou procurar outra clínica.', holdMs: 2800 },
     ],
     after: [
-        { id: 'c1', from: 'customer', text: 'Boa noite, vocês entregam ainda?', holdMs: 900 },
+        { id: 'c1', from: 'customer', text: 'Oi! Quanto fica preenchimento labial?', holdMs: 900 },
         { id: 't', type: 'typing', agent: 'ai', durationMs: 700 },
-        { id: 'b1', from: 'bot', agent: 'ai', text: 'Entregamos sim! 🛵 Funcionamos até 23h. Qual o seu pedido?', holdMs: 1500 },
-        { id: 'c2', from: 'customer', text: 'Que rápido! Quero uma pizza grande de calabresa.', holdMs: 1500 },
+        {
+            id: 'b1',
+            from: 'bot',
+            agent: 'ai',
+            text: 'Oi Maria! 💖 O preenchimento labial começa em R$ 790. Quer que eu te envie fotos de resultados e horários disponíveis?',
+            holdMs: 1500
+        },
+        { id: 'c2', from: 'customer', text: 'Quero sim 😍', holdMs: 1500 },
     ],
 };
 
@@ -102,12 +151,12 @@ export const benefits = [
 
 export const testimonials = [
     {
-        name: "Carlos Silva",
-        role: "Dono, Café Especial Grão Nobre",
-        content: "Eu sou o 'faz-tudo': torro o café, empacoto e vendo. A Weppy se tornou minha equipe de vendas. Ela responde sobre os tipos de grãos, calcula o frete e manda o link do Pix. É surreal!",
+        name: "Dr. Ricardo Almeida",
+        role: "Dentista, Clínica Almeida Odontologia",
+        content: "Antes da Weppy, muitos pacientes mandavam mensagem e acabavam sem resposta durante o atendimento. Hoje a IA responde instantaneamente, agenda avaliações e organiza tudo no WhatsApp. A clínica ficou muito mais profissional.",
         rating: 5,
         avatar: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?w=150&h=150&fit=crop&crop=face",
-        stats: "Aumento de 40% em vendas"
+        stats: "Aumento de 32% nos agendamentos"
     },
     {
         name: "Ana Rodrigues",
@@ -186,18 +235,6 @@ export const plans = [
         checkoutUrl: 'https://pay.kiwify.com.br/mSN9fqk'
     },
     {
-        id: 'trimestral',
-        name: 'Plano Trimestral',
-        price: 'R$ 82',
-        originalPrice: 'R$ 97',
-        period: '/mês', // Equivalente a R$ 246 no total
-        description: 'Um ótimo desconto para quem quer mais tempo para ver os resultados e otimizar as vendas.',
-        features: allFeatures,
-        popular: false, // Tirar o "popular" daqui para não dividir a atenção
-        savings: 'Poupe 15%',
-        checkoutUrl: 'https://pay.kiwify.com.br/6vyFg62'
-    },
-    {
         id: 'anual',
         name: 'Plano Anual',
         price: 'R$ 25',
@@ -272,13 +309,13 @@ export const howItWorks = [
 export const companies = [
     "JM Beauty Studio", // Alinhado com o depoimento
     "Guimarães Mentoria", // Alinhado com o depoimento
-    "Sabor em Casa Delivery",
     "Una Parque",
     "Clínica Pediátrica",
-    "Agência Impulso Digital",
     "Clínica VP Odonto",
     "Concurseiros Pro",
     "Agência Pinnest Media",
+    "Rodrigues Advocacia",
+    "Método VTSD",
 ];
 export const urgencyFeatures = [
     "⚡ Bônus: Configuração da sua IA com nossa equipe e suporte prioritário",
@@ -307,43 +344,53 @@ export const footerLinks = {
 
 export const purchaseToasts = [
     {
-        icon: "💅",
-        message: "Uma Lash Designer de Lisboa, PT acabou de garantir o Plano Anual.",
+        icon: "✨",
+        message: "Mariana Brandão assinou o Plano Mensal.",
         time: "agora mesmo"
     },
     {
-        icon: "☕",
-        message: "Carlos S. de São Paulo, BR colocou o seu café para vender no piloto automático.",
-        time: "há 2 minutos"
-    },
-    {
-        icon: "🧠",
-        message: "Uma terapeuta do Porto, PT acabou de poupar 10 horas semanais com o Plano Anual.",
-        time: "há 45 segundos"
-    },
-    {
-        icon: "🛍️",
-        message: "O dono de um e-commerce no Rio de Janeiro, BR assinou o Plano Anual para vender 24/7.",
-        time: "há 3 minutos"
-    },
-    {
-        icon: "🏡",
-        message: "Um corretor de imóveis de Faro, PT acabou de se juntar à Weppy.",
-        time: "agora mesmo"
-    },
-    {
-        icon: "🦷",
-        message: "A Clínica VP Odonto de Belo Horizonte, BR garantiu o Plano Anual com 80% de desconto.",
+        icon: "✨",
+        message: "Lucas Felipe assinou o Plano Anual.",
         time: "há 1 minuto"
     },
     {
-        icon: "🚀",
-        message: "A Agência Pinnest Media de Brasília, DF acabou de automatizar o seu funil de vendas.",
+        icon: "✨",
+        message: "Camila Rocha assinou o Plano Mensal.",
+        time: "há 2 minutos"
+    },
+    {
+        icon: "✨",
+        message: "Rafael Martins assinou o Plano Anual.",
+        time: "há 3 minutos"
+    },
+    {
+        icon: "✨",
+        message: "Juliana Alves assinou o Plano Mensal.",
         time: "há 4 minutos"
     },
     {
-        icon: "🍽️",
-        message: "O dono de um delivery em Braga, PT não vai perder mais nenhuma venda de madrugada.",
+        icon: "✨",
+        message: "Thiago Henrique assinou o Plano Anual.",
+        time: "agora mesmo"
+    },
+    {
+        icon: "✨",
+        message: "Fernanda Lima assinou o Plano Mensal.",
+        time: "há 5 minutos"
+    },
+    {
+        icon: "✨",
+        message: "Gabriel Costa assinou o Plano Anual.",
         time: "há 2 minutos"
+    },
+    {
+        icon: "✨",
+        message: "Amanda Freitas assinou o Plano Mensal.",
+        time: "há 6 minutos"
+    },
+    {
+        icon: "✨",
+        message: "Bruno Carvalho assinou o Plano Anual.",
+        time: "há 7 minutos"
     }
 ];

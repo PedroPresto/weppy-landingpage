@@ -66,11 +66,11 @@ const SEED_POSTS: SeedPost[] = [
     keywords: "automação whatsapp, whatsapp business, vendas pelo whatsapp, chatbot whatsapp, ia whatsapp, automatizar atendimento",
     category: "automacao-vendas",
     content: doc([
-      p(text("A automação de WhatsApp para vendas deixou de ser um diferencial e se tornou requisito básico para empresas que querem competir em 2026. Segundo dados da Meta, 76% dos brasileiros preferem se comunicar com marcas via WhatsApp — e responder em até 5 minutos aumenta as chances de conversão em 9x.")),
+      p(text("A automação de WhatsApp para vendas deixou de ser um diferencial e se tornou requisito básico para empresas que querem competir em 2026. Segundo dados da Meta, 76% dos brasileiros preferem se comunicar com marcas via WhatsApp e responder em até 5 minutos aumenta as chances de conversão em 9x.")),
       p(text("Neste guia, você vai entender exatamente como funciona a automação inteligente de WhatsApp, quanto custa, e por que negócios que adotam essa estratégia faturam, em média, 47% mais que concorrentes que ainda dependem de atendimento 100% humano.")),
 
       h2("O que é automação de WhatsApp?"),
-      p(text("Automação de WhatsApp é o uso de software com inteligência artificial para responder mensagens, qualificar leads, enviar lembretes, processar pedidos e fechar vendas de forma automática — sem intervenção humana em cada interação. Diferente de um chatbot tradicional baseado em árvore de decisão, a automação moderna usa modelos de linguagem (LLMs) capazes de entender contexto, intenção e personalizar respostas.")),
+      p(text("Automação de WhatsApp é o uso de software com inteligência artificial para responder mensagens, qualificar leads, enviar lembretes, processar pedidos e fechar vendas de forma automática sem intervenção humana em cada interação. Diferente de um chatbot tradicional baseado em árvore de decisão, a automação moderna usa modelos de linguagem (LLMs) capazes de entender contexto, intenção e personalizar respostas.")),
 
       h3("Por que automatizar o WhatsApp em 2026?"),
       ul([
