@@ -2,8 +2,7 @@
 
 import React from 'react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
-import { features, featureChatSteps } from './LandingPageData';
-import { ChatMockup } from './ChatMockup';
+import { features } from './LandingPageData';
 
 export const FeaturesSection: React.FC = () => {
     const ref = useScrollAnimation(0.05);
@@ -25,7 +24,6 @@ export const FeaturesSection: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {features.map((feature, index) => {
                         const Icon = feature.icon;
-                        const mockupSteps = featureChatSteps[feature.id];
                         return (
                             <div
                                 key={feature.id}
@@ -43,21 +41,9 @@ export const FeaturesSection: React.FC = () => {
                                 <h3 className="text-lg font-semibold text-[var(--ink)] mb-2 leading-tight">
                                     {feature.title}
                                 </h3>
-                                <p className="text-sm text-[var(--ink-2)] leading-relaxed mb-5">
+                                <p className="text-sm text-[var(--ink-2)] leading-relaxed">
                                     {feature.description}
                                 </p>
-                                {mockupSteps && (
-                                    <div className="-mx-2 -mb-2 mt-4 pt-4 border-t border-[var(--line)]">
-                                        <ChatMockup
-                                            contactName="Conversa de exemplo"
-                                            contactSubtitle="IA · em ação"
-                                            steps={mockupSteps}
-                                            size="sm"
-                                            framed={false}
-                                            loop
-                                        />
-                                    </div>
-                                )}
                             </div>
                         );
                     })}
