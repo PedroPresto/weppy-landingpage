@@ -32,7 +32,7 @@ export const InteractiveCard: React.FC<InteractiveCardProps> = ({
 
   return (
       <div
-          className={`group relative bg-gray-500/10 backdrop-blur-lg border border-white/10 rounded-2xl p-6 transition-all duration-300 cursor-pointer overflow-hidden transform hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/10 animate-fade-in-up`}          style={{ animationDelay: `${index * 0.1}s` }}
+          className={`group relative dark:bg-gray-500/10 bg-white/80 backdrop-blur-lg dark:border-white/10 border-black/[0.06] border rounded-2xl p-6 transition-all duration-300 cursor-pointer overflow-hidden transform hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/10 animate-fade-in-up`}          style={{ animationDelay: `${index * 0.1}s` }}
           onMouseMove={handleMouseMove} // Atualiza a posição do rato
       >
         {/* ===== O NOVO EFEITO DE HOVER ESTÁ AQUI ===== */}
@@ -50,12 +50,12 @@ export const InteractiveCard: React.FC<InteractiveCardProps> = ({
           </div>
 
           {/* Título */}
-          <h3 className={`text-xl font-semibold text-white font-['Poppins'] mb-3 transition-colors duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r ${gradient}`}>
+          <h3 className={`text-xl font-semibold text-[var(--text-primary)] font-['Poppins'] mb-3 transition-colors duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r ${gradient}`}>
             {title}
           </h3>
 
           {/* Descrição */}
-          <p className="text-gray-400 font-['Inter'] leading-relaxed transition-colors duration-300 group-hover:text-gray-300">
+          <p className="text-[var(--text-secondary)] font-['Inter'] leading-relaxed transition-colors duration-300 group-hover:text-[var(--text-primary)]">
             {description}
           </p>
         </div>

@@ -1,0 +1,30 @@
+# Weppy
+
+> Weppy é uma plataforma brasileira de automação inteligente para WhatsApp que conecta um agente de IA treinado ao número oficial do WhatsApp Business da empresa. O assistente atende, qualifica leads e vende 24/7, com integração ao CRM, agendas e meios de pagamento.
+
+## Visão geral
+
+- **Produto**: Agente de IA para WhatsApp Business
+- **Mercado-alvo**: Pequenas e médias empresas no Brasil que recebem pedidos, dúvidas ou agendamentos via WhatsApp
+- **Diferenciais**: IA conversacional (não chatbot de árvore), homologação oficial Meta, integração sem código, suporte em português
+- **Site**: https://weppy.com.br
+- **Aplicação**: https://app.weppy.com.br
+
+## Conteúdo principal
+
+- [Página inicial](https://weppy.com.br): apresentação do produto, benefícios, preços, depoimentos
+- [Blog](https://weppy.com.br/blog): guias e estratégias sobre automação de WhatsApp, IA conversacional e vendas
+
+## Tópicos cobertos no blog
+
+- Automação de WhatsApp para vendas
+- Chatbot vs IA conversacional
+- WhatsApp Business API
+- Estratégias para aumentar vendas no WhatsApp
+- Atendimento ao cliente automatizado
+- Integração de IA com CRM
+- Cases de uso em diferentes segmentos (clínicas, e-commerce, imobiliárias, escolas, serviços)
+
+## Política de uso por IA
+
+O conteúdo deste site pode ser indexado, citado e usado como referência por assistentes de IA, mecanismos de busca generativos e plataformas de pesquisa, desde que mantenham atribuição clara ao Weppy e link para a fonte original.
