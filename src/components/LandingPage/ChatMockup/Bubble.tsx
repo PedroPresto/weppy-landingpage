@@ -37,7 +37,7 @@ export const Bubble: React.FC<BubbleProps> = ({ message }) => {
         <div className={`flex ${alignment} animate-bubble-pop`}>
             <div className={`relative max-w-[80%] px-3.5 py-2.5 ${bubbleColor} ${tail} shadow-[0_1px_2px_rgba(0,0,0,0.08)]`}>
                 {isAI && (
-                    <span className="badge-ai absolute -top-2 -left-2 text-[0.625rem] px-1.5 py-0.5">
+                    <span className="inline-flex items-center gap-1 text-[0.625rem] font-semibold uppercase tracking-wider text-[var(--purple-deep)] mb-1">
                         <Sparkles className="w-2.5 h-2.5" strokeWidth={2.5} />
                         IA
                     </span>

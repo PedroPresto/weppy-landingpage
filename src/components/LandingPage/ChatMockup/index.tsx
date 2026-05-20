@@ -34,7 +34,10 @@ export const ChatMockup: React.FC<ChatMockupProps> = ({
 }) => {
     const { visibleCount } = useChatLoop({ steps, loop });
 
-    const visibleSteps = steps.slice(0, visibleCount);
+    // Typing indicator só aparece enquanto é o último step visível.
+    // Quando a mensagem subsequente entra, o typing some (substituído pela resposta).
+    const rawVisible = steps.slice(0, visibleCount);
+    const visibleSteps = rawVisible.filter((step, i) => !(isTypingStep(step) && i < rawVisible.length - 1));
 
     return (
         <div
@@ -45,7 +48,7 @@ export const ChatMockup: React.FC<ChatMockupProps> = ({
                 <ChatHeader contactName={contactName} contactSubtitle={contactSubtitle} />
 
                 <div
-                    className="px-3 py-4 space-y-2.5 min-h-[360px] max-h-[460px] overflow-hidden"
+                    className="px-3 py-4 flex flex-col justify-end gap-2.5 min-h-[420px] max-h-[520px] overflow-hidden"
                     style={{
                         backgroundImage:
                             'radial-gradient(circle at 20% 20%, rgba(255,89,2,0.04) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(194,122,255,0.04) 0%, transparent 50%)',
@@ -60,8 +63,8 @@ export const ChatMockup: React.FC<ChatMockupProps> = ({
                     )}
                 </div>
 
-                <div className="px-3 py-2 bg-[var(--surface-2)] border-t border-black/5 flex items-center gap-2">
-                    <div className="flex-1 px-3 py-1.5 rounded-full bg-white text-[0.75rem] text-[var(--ink-3)]">
+                <div className="px-3 py-2 bg-[var(--surface-2)] border-t border-black/5 dark:border-white/5 flex items-center gap-2">
+                    <div className="flex-1 px-3 py-1.5 rounded-full bg-[var(--surface)] text-[0.75rem] text-[var(--ink-3)]">
                         Digite uma mensagem
                     </div>
                     <div className="w-7 h-7 rounded-full bg-[var(--wa-green-deep)] flex items-center justify-center">
