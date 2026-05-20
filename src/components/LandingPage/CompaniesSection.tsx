@@ -1,34 +1,29 @@
-// src/components/LandingPage/CompaniesSection.tsx
-
 import React from 'react';
 import { companies } from './LandingPageData';
 
 export const CompaniesSection: React.FC = () => {
     return (
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto text-center">
-                <p className="text-gray-400 font-['Inter'] mb-8 animate-fade-in">
-                    Empresas que já confiam no Weppy:
-                </p>
-                {/* O contêiner 'relative overflow-hidden' esconde as barras de scroll
-                  e garante que a animação não "vaze" para fora da área designada.
-                */}
+        <section className="py-16 md:py-20 border-y border-[var(--line)] bg-[var(--paper-2)]">
+            <div className="container-editorial">
+                <div className="flex items-center gap-6 mb-10">
+                    <span className="eyebrow">Confiam na Weppy</span>
+                    <span className="flex-1 h-px bg-[var(--line)]" />
+                </div>
+
                 <div className="relative overflow-hidden">
-                    {/* A classe 'animate-scroll' vem do seu ficheiro index.css e move o
-                      elemento da direita para a esquerda. Duplicamos a lista de empresas
-                      para que, quando a primeira metade sair da tela, a segunda metade
-                      (que é idêntica) já esteja a entrar, criando um loop perfeito.
-                    */}
-                    <div className="flex animate-scroll">
+                    <div className="flex animate-scroll items-center" style={{ width: 'max-content' }}>
                         {[...companies, ...companies].map((company, index) => (
-                            <div
+                            <span
                                 key={index}
-                                className="flex-shrink-0 mx-8 text-xl font-bold text-gray-500 hover:text-gray-300 transition-colors duration-300"
+                                className="flex-shrink-0 mx-6 inline-flex items-center px-4 py-2 rounded-full bg-[var(--surface)] border border-[var(--line)] text-sm font-medium text-[var(--ink-2)]"
                             >
                                 {company}
-                            </div>
+                            </span>
                         ))}
                     </div>
+                    {/* Edge gradients for elegant fade */}
+                    <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[var(--paper-2)] to-transparent" />
+                    <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[var(--paper-2)] to-transparent" />
                 </div>
             </div>
         </section>
