@@ -2,47 +2,118 @@
 
 import {
     Brain, BarChart3, Inbox, Zap, Workflow, Users, TrendingUp, Sparkles,
-    MessageSquare, Star, Clock, Target, Smartphone, Images
+    MessageSquare, Star, Clock, Target, Smartphone, Images, Database, CalendarCheck
 } from 'lucide-react';
+import type { ChatStep } from './ChatMockup/types';
 
 export const features = [
     {
+        id: 'ia-converte',
         icon: Brain,
         title: "IA que Conversa e Converte",
-        description: "Nossa IA de ponta cria diálogos que não só respondem, mas convencem. Transforme cada conversa numa oportunidade de venda real.",
-        gradient: "from-orange-500 to-red-500"
+        description: "Nossa IA cria diálogos que não só respondem, mas convencem. Cada conversa vira oportunidade de venda real.",
     },
     {
+        id: 'funis',
         icon: Workflow,
         title: "Funis de Venda no Piloto Automático",
-        description: "Desenhe jornadas de compra completas com o nosso construtor visual. Qualifique, apresente a oferta e feche a venda, tudo 100% no automático.",
-        gradient: "from-red-500 to-cyan-500"
+        description: "Desenhe jornadas de compra completas com construtor visual. Qualifica, apresenta a oferta e fecha a venda — tudo automático.",
     },
     {
+        id: 'dados',
         icon: BarChart3,
         title: "Decisões Inteligentes com Dados",
-        description: "Abandone o 'achismo'. Veja em gráficos simples quais abordagens estão a gerar mais lucro e otimize suas estratégias em tempo real.",
-        gradient: "from-green-500 to-emerald-500"
+        description: "Veja em gráficos simples quais abordagens estão a gerar mais lucro e otimize suas estratégias em tempo real.",
     },
     {
+        id: 'handoff',
         icon: Inbox,
         title: "O Melhor dos Dois Mundos",
-        description: "Deixe a IA fazer 99% do trabalho. Quando identificar uma oportunidade de ouro, assuma a conversa com um clique e dê o seu toque de mestre para fechar a venda ou agendamento.",
-        gradient: "from-orange-500 to-red-500"
+        description: "Deixe a IA fazer 99% do trabalho. Em conversas-chave, assuma com um clique e dê seu toque de mestre pra fechar.",
     },
     {
+        id: '24-7',
         icon: Zap,
         title: "Sua Empresa Sempre Aberta",
-        description: "Seu assistente é o funcionário que nunca dorme. Venda e atenda 24/7, mesmo com seu telemóvel desligado. Chega de perder vendas fora do horário comercial.",
-        gradient: "from-yellow-500 to-orange-500"
+        description: "Seu assistente é o funcionário que nunca dorme. Venda e atenda 24/7, mesmo com o celular desligado.",
     },
     {
+        id: 'follow-up',
         icon: Clock,
         title: "Follow-up que Recupera Vendas",
-        description: "Programe sequências de acompanhamento para reativar leads que 'esfriaram'. Recupere vendas que você considerava perdidas, de forma automática.",
-        gradient: "from-purple-500 to-red-500"
-    }
+        description: "Sequências automáticas reativam leads que esfriaram. Recupere vendas que você considerava perdidas.",
+    },
+    {
+        id: 'rag',
+        icon: Database,
+        title: "IA Treinada com o Seu Negócio",
+        description: "Alimente a IA com FAQs, políticas e produtos. Ela aprende o seu tom — uma IA que responde como você.",
+    },
+    {
+        id: 'agendamento',
+        icon: CalendarCheck,
+        title: "Agendamento Automático via IA",
+        description: "A IA agenda compromissos no WhatsApp consultando horários em tempo real. Gerencie a agenda pela plataforma.",
+    },
 ];
+
+// ===== MOCKUPS DE CHAT =====
+
+export const heroChatSteps: ChatStep[] = [
+    { id: 'c1', from: 'customer', text: 'Oi! Vocês atendem alongamento de cílios no sábado?', holdMs: 1400 },
+    { id: 't1', type: 'typing', agent: 'ai', durationMs: 1100 },
+    { id: 'b1', from: 'bot', agent: 'ai', text: 'Oi, Marina! 💛 Atendemos sim. Tenho horário sábado às 10h, 14h ou 16h — qual prefere?', holdMs: 1600 },
+    { id: 'c2', from: 'customer', text: '14h tá ótimo. Quanto fica o volume russo?', holdMs: 1400 },
+    { id: 't2', type: 'typing', agent: 'ai', durationMs: 1000 },
+    { id: 'b2', from: 'bot', agent: 'ai', text: 'Volume russo R$ 180 (dura 4–5 semanas). Posso já reservar seu horário?', holdMs: 1600 },
+    { id: 'c3', from: 'customer', text: 'Sim, pode confirmar!', holdMs: 1300 },
+    { id: 't3', type: 'typing', agent: 'ai', durationMs: 900 },
+    {
+        id: 'b3',
+        from: 'bot',
+        agent: 'ai',
+        text: 'Reservado ✅ Sábado, 14h.\nPara garantir o horário, segue o Pix de sinal R$ 50:',
+        preview: { title: 'Sinal — Volume Russo', subtitle: 'R$ 50,00 · Pix', cta: 'Toque para pagar' },
+        holdMs: 2800,
+    },
+];
+
+export const featureChatSteps: Record<string, ChatStep[]> = {
+    'ia-converte': [
+        { id: 'c', from: 'customer', text: 'Vocês entregam aqui no Pinheiros?', holdMs: 1200 },
+        { id: 't', type: 'typing', agent: 'ai', durationMs: 900 },
+        { id: 'b', from: 'bot', agent: 'ai', text: 'Entregamos sim! 🛵 Em ~35min. Posso te mandar o cardápio?', holdMs: 1800 },
+    ],
+    'agendamento': [
+        { id: 'c', from: 'customer', text: 'Quero remarcar pra terça', holdMs: 1100 },
+        { id: 't', type: 'typing', agent: 'ai', durationMs: 800 },
+        { id: 'b', from: 'bot', agent: 'ai', text: 'Tenho terça 9h, 11h ou 15h livre. Qual prefere?', holdMs: 1600 },
+    ],
+    'follow-up': [
+        { id: 't', type: 'typing', agent: 'ai', durationMs: 800 },
+        { id: 'b', from: 'bot', agent: 'ai', text: 'Oi João! Vi que você se interessou pelo combo. Posso te enviar o link de pagamento com 10% de desconto se fechar hoje?', holdMs: 2200 },
+        { id: 'c', from: 'customer', text: 'Pode mandar!', holdMs: 1100 },
+    ],
+    'rag': [
+        { id: 'c', from: 'customer', text: 'Vocês fazem nota fiscal?', holdMs: 1200 },
+        { id: 't', type: 'typing', agent: 'ai', durationMs: 900 },
+        { id: 'b', from: 'bot', agent: 'ai', text: 'Sim! Emitimos NF-e automaticamente após a confirmação do pagamento, no e-mail cadastrado.', holdMs: 1800 },
+    ],
+};
+
+export const beforeAfterChats: { before: ChatStep[]; after: ChatStep[] } = {
+    before: [
+        { id: 'c1', from: 'customer', text: 'Boa noite, vocês entregam ainda?', holdMs: 2200 },
+        { id: 'c2', from: 'customer', text: 'Alô?', holdMs: 2200 },
+        { id: 'c3', from: 'customer', text: 'Desisti, vou pedir no concorrente.', holdMs: 2800 },
+    ],
+    after: [
+        { id: 'c1', from: 'customer', text: 'Boa noite, vocês entregam ainda?', holdMs: 900 },
+        { id: 't', type: 'typing', agent: 'ai', durationMs: 700 },
+        { id: 'b1', from: 'bot', agent: 'ai', text: 'Entregamos sim! 🛵 Funcionamos até 23h. Qual o seu pedido?', holdMs: 1500 },
+        { id: 'c2', from: 'customer', text: 'Que rápido! Quero uma pizza grande de calabresa.', holdMs: 1500 },
+    ],
+};
 
 export const benefits = [
     {icon: Users, text: "Atendimentos simultâneos", color: "text-green-400"},
@@ -116,6 +187,9 @@ const allFeatures = [
     'Construtor de Conversas (Funis)',
     'Envio de mensagens agendadas',
     'Funciona com o telemóvel desligado',
+    'Treinamento da IA via RAG',
+    'Agendamento Automático via IA',
+    'Gestão de Agenda integrada',
     'Relatórios Simplificados',
     'Suporte individual via WhatsApp'
 ];
