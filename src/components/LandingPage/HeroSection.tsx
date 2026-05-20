@@ -1,85 +1,97 @@
+'use client';
+
 import React from 'react';
-import { ArrowRight, PlayCircle, Clock } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { benefits } from './LandingPageData';
+import { ChatMockup } from './ChatMockup';
+import { heroChatSteps } from './LandingPageData';
 
 interface HeroSectionProps {
     onLoginClick: () => void;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onLoginClick }) => {
-    const heroRef = useScrollAnimation(0.1);
+    const heroRef = useScrollAnimation(0.05);
+    void onLoginClick;
 
     return (
         <section
-            // --- ALTERAÇÕES AQUI ---
-            // Adicionado pt-28 (padding-top) para criar espaço para o menu fixo
-            // Adicionado pb-12 (padding-bottom) para melhor espaçamento em ecrãs pequenos
-            className="min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-28 pb-12 relative overflow-hidden text-center"
-            // --------------------
             ref={heroRef.ref}
+            className="relative pt-28 md:pt-36 pb-20 md:pb-28 overflow-hidden"
         >
-            {/* Aurora Background */}
-            <div className="absolute inset-0 overflow-hidden">
-                <div className="aurora-bg">
-                    <div className="aurora-gradient aurora-1"></div>
-                    <div className="aurora-gradient aurora-2"></div>
-                    <div className="aurora-gradient aurora-3"></div>
-                </div>
-            </div>
+            {/* Glow de fundo */}
+            <div
+                aria-hidden="true"
+                className="absolute -top-32 right-0 w-[44rem] h-[44rem] rounded-full opacity-50 pointer-events-none blur-3xl"
+                style={{
+                    background: 'radial-gradient(circle, rgba(255,89,2,0.12) 0%, transparent 70%)',
+                }}
+            />
+            <div
+                aria-hidden="true"
+                className="absolute bottom-0 -left-32 w-[36rem] h-[36rem] rounded-full opacity-40 pointer-events-none blur-3xl"
+                style={{
+                    background: 'radial-gradient(circle, rgba(194,122,255,0.12) 0%, transparent 70%)',
+                }}
+            />
 
-            {/* Content */}
-            <div className="max-w-5xl mx-auto relative z-10">
-
-                <div
-                    className={`inline-flex items-center bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-full px-6 py-3 mb-8 transition-all duration-700 ${heroRef.isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}
-                >
-                    <div className="animate-pulse"><Clock className="w-4 h-4 text-orange-400 mr-2" /></div>
-                    <span className="text-orange-300 text-sm font-medium">Promoção de lançamento: 50% OFF apenas nos próximos 7 dias</span>
-                    <div className="ml-2 w-2 h-2 bg-red-500 rounded-full animate-ping" />
-                </div>
-
-                <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-poppins mb-6 leading-tight transition-all duration-1000 ${heroRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-                    O seu WhatsApp vendendo no
-                    <span className="block mt-2 bg-gradient-to-r from-red-600 via-orange-500 to-red-800 bg-clip-text text-transparent animate-gradient-x">
-                        piloto automático.
-                    </span>
-                </h1>
-
-                <p className={`text-lg md:text-xl text-gray-400 font-inter max-w-3xl mx-auto mb-10 transition-all duration-1000 delay-300 ${heroRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-                    Não perca mais vendas por demorar a responder. Tenha um assistente virtual que qualifica leads, tira dúvidas e fecha vendas 24h por dia.
-                </p>
-
-                <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${heroRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-                    <a
-                        href="#vsl"
-                        className="group bg-gradient-to-r from-orange-500 via-red-500 to-red-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all duration-300 inline-flex items-center justify-center space-x-2 hover:scale-105"
-                    >
-                        <span>Começar a Automatizar</span>
-                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </a>
-                    <a
-                        href="#vsl"
-                        className="group text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center space-x-2 hover:scale-105 hover:bg-gray-800/50"
-                    >
-                        <PlayCircle className="w-6 h-6 text-purple-400" />
-                        <span>Ver Demonstração</span>
-                    </a>
-                </div>
-
-                <div className={`flex flex-wrap gap-4 justify-center mt-12 transition-all duration-1000 delay-700 ${heroRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-                    {benefits.map((benefit, index) => (
-                        <div
-                            key={index}
-                            className="group flex items-center space-x-2 glass-tag px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 animate-sutil bg-gray-950"
-                            style={{ animationDelay: `${index * 0.2}s` }}
-                        >
-                            <benefit.icon className={`w-4 h-4 ${benefit.color} group-hover:scale-110 transition-transform`} />
-                            <span className="text-sm text-gray-300 font-['Inter'] group-hover:text-white transition-colors">{benefit.text}</span>
+            <div className="container-editorial relative z-10">
+                <div className="grid grid-cols-12 gap-y-12 lg:gap-y-0 lg:gap-x-12 items-center">
+                    {/* Coluna esquerda */}
+                    <div className="col-span-12 lg:col-span-7">
+                        <div className={`inline-flex items-center gap-2 ${heroRef.isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+                            <span className="badge-ai">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[var(--purple-deep)]" />
+                                Assistente de IA para WhatsApp
+                            </span>
                         </div>
-                    ))}
-                </div>
 
+                        <h1
+                            className={`mt-6 text-balance text-[2.5rem] leading-[1.02] sm:text-5xl md:text-6xl lg:text-[4.5rem] lg:leading-[1.0] tracking-[-0.04em] text-[var(--ink)] font-semibold ${heroRef.isVisible ? 'animate-fade-in-up animation-delay-100' : 'opacity-0'}`}
+                        >
+                            <span className="text-[var(--orange)]">Vendas</span> no piloto automático.
+                            <br className="hidden md:block" />
+                            Direto do seu <span className="text-[var(--orange)]">WhatsApp</span>.
+                        </h1>
+
+                        <p className={`mt-6 text-base md:text-lg text-[var(--ink-2)] leading-relaxed max-w-xl ${heroRef.isVisible ? 'animate-fade-in-up animation-delay-300' : 'opacity-0'}`}>
+                            A Weppy conecta uma IA — treinada com o seu negócio — direto ao WhatsApp Business.
+                            Ela qualifica, responde e vende 24h por dia. Sem chip novo. Sem complicação.
+                        </p>
+
+                        <div className={`mt-8 flex flex-col sm:flex-row gap-3 ${heroRef.isVisible ? 'animate-fade-in-up animation-delay-500' : 'opacity-0'}`}>
+                            <a href="#pricing" className="btn-orange group">
+                                <span>Começar agora</span>
+                                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+                            </a>
+                            <a href="#vsl" className="btn-ghost">
+                                <span>Ver demonstração</span>
+                            </a>
+                        </div>
+
+                        <div className={`mt-10 pt-6 border-t border-[var(--line)] flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-[var(--ink-2)] ${heroRef.isVisible ? 'animate-fade-in animation-delay-700' : 'opacity-0'}`}>
+                            <span className="badge-online">
+                                +2.300 negócios automatizados
+                            </span>
+                            <span className="flex items-center gap-1.5">
+                                <Star className="w-4 h-4 fill-[var(--orange)] text-[var(--orange)]" />
+                                <span className="font-semibold text-[var(--ink)]">4.9</span>
+                                <span className="text-[var(--ink-3)]">/ 5 satisfação</span>
+                            </span>
+                            <span className="mono text-[var(--ink-3)]">latência &lt; 800ms</span>
+                        </div>
+                    </div>
+
+                    {/* Coluna direita — mockup */}
+                    <div className={`col-span-12 lg:col-span-5 flex justify-center lg:justify-end ${heroRef.isVisible ? 'animate-fade-in-right animation-delay-300' : 'opacity-0'}`}>
+                        <ChatMockup
+                            contactName="Studio Luma Beleza"
+                            contactSubtitle="online · IA respondendo"
+                            steps={heroChatSteps}
+                            size="lg"
+                        />
+                    </div>
+                </div>
             </div>
         </section>
     );
