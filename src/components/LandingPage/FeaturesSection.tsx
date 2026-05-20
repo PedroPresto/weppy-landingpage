@@ -1,47 +1,66 @@
-// src/components/LandingPage/FeaturesSection.tsx
+'use client';
 
 import React from 'react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
-import { InteractiveCard } from './InteractiveCard';
-import { features } from './LandingPageData';
+import { features, featureChatSteps } from './LandingPageData';
+import { ChatMockup } from './ChatMockup';
 
 export const FeaturesSection: React.FC = () => {
-    const featuresRef = useScrollAnimation(0.1);
+    const ref = useScrollAnimation(0.05);
 
     return (
-        <section
-            id="features"
-            className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 backdrop-blur-sm relative"
-            ref={featuresRef.ref}
-        >
-            <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-16">
-                    <h2
-                        className={`text-3xl sm:text-4xl font-bold text-white font-['Poppins'] mb-4 transition-all duration-700 ${
-                            featuresRef.isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
-                        }`}
-                    >
-                        Recursos que Revolucionam seu Atendimento
+        <section id="features" ref={ref.ref} className="py-24 md:py-32 bg-[var(--bg)]">
+            <div className="container-editorial">
+                <div className="max-w-3xl mb-16 md:mb-20">
+                    <p className={`eyebrow mb-4 ${ref.isVisible ? 'animate-fade-in' : 'opacity-0'}`}>Recursos</p>
+                    <h2 className={`text-balance text-3xl md:text-5xl leading-[1.05] tracking-[-0.03em] text-[var(--ink)] font-semibold ${ref.isVisible ? 'animate-fade-in-up animation-delay-100' : 'opacity-0'}`}>
+                        Tudo que um time de vendas faz —{' '}
+                        <span className="text-[var(--orange)]">só que sem dormir</span>.
                     </h2>
-                    <p
-                        className={`text-xl text-gray-400 font-['Inter'] max-w-2xl mx-auto transition-all duration-700 delay-300 ${
-                            featuresRef.isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
-                        }`}
-                    >
-                        Descubra as funcionalidades que fazem do Weppy a escolha ideal para automatizar suas vendas
+                    <p className={`mt-5 text-lg text-[var(--ink-2)] ${ref.isVisible ? 'animate-fade-in-up animation-delay-200' : 'opacity-0'}`}>
+                        Oito ferramentas pensadas para empresas que vivem no WhatsApp e querem parar de perder venda por demora, despreparo ou falta de gente.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {features.map((feature, index) => (
-                        <InteractiveCard
-                            key={index}
-                            icon={feature.icon}
-                            title={feature.title}
-                            description={feature.description}
-                            gradient={feature.gradient}
-                            index={index}
-                        />
-                    ))}
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {features.map((feature, index) => {
+                        const Icon = feature.icon;
+                        const mockupSteps = featureChatSteps[feature.id];
+                        return (
+                            <div
+                                key={feature.id}
+                                className={`card ${ref.isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
+                                style={{ animationDelay: `${index * 80}ms` }}
+                            >
+                                <div className="flex items-start justify-between mb-5">
+                                    <div className="w-11 h-11 rounded-xl bg-[var(--purple-soft)] flex items-center justify-center">
+                                        <Icon className="w-5 h-5 text-[var(--purple-deep)]" strokeWidth={2} />
+                                    </div>
+                                    <span className="mono text-[var(--ink-3)]">
+                                        {String(index + 1).padStart(2, '0')}
+                                    </span>
+                                </div>
+                                <h3 className="text-lg font-semibold text-[var(--ink)] mb-2 leading-tight">
+                                    {feature.title}
+                                </h3>
+                                <p className="text-sm text-[var(--ink-2)] leading-relaxed mb-5">
+                                    {feature.description}
+                                </p>
+                                {mockupSteps && (
+                                    <div className="-mx-2 -mb-2 mt-4 pt-4 border-t border-[var(--line)]">
+                                        <ChatMockup
+                                            contactName="Conversa de exemplo"
+                                            contactSubtitle="IA · em ação"
+                                            steps={mockupSteps}
+                                            size="sm"
+                                            framed={false}
+                                            loop
+                                        />
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>
