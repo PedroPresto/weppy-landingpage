@@ -45,10 +45,10 @@ jobs:
           key: ${{ secrets.HOSTINGER_SSH_KEY }}
           script: |
             set -e
-            cd /home/pedro/weppy
+            cd ~
 
-            echo ">>> Writing environment variables..."
-            cat > .env << 'ENVEOF'
+            echo ">>> Writing landing page environment variables..."
+            cat > .env.landing << 'ENVEOF'
             PAYLOAD_SECRET=${{ secrets.PAYLOAD_SECRET }}
             DATABASE_URI=${{ secrets.DATABASE_URI }}
             NEXT_PUBLIC_SERVER_URL=${{ secrets.NEXT_PUBLIC_SERVER_URL }}
