@@ -20,7 +20,7 @@ export const VslSection: React.FC = () => {
                         <h2
                             className="text-balance text-3xl md:text-5xl leading-[1.1] tracking-[-0.03em] text-[var(--ink)]"
                         >
-                            Em <span className="text-[var(--orange)]">oito minutos</span>, entenda como a Weppy transforma cada mensagem em oportunidade.
+                            Veja a <span className="text-[var(--orange)]">automação WhatsApp</span> da Weppy em ação: cada mensagem vira oportunidade.
                         </h2>
                     </div>
                 </div>

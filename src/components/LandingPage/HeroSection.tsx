@@ -6,13 +6,9 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { ChatMockup } from './ChatMockup';
 import { heroChatSteps } from './LandingPageData';
 
-interface HeroSectionProps {
-    onLoginClick: () => void;
-}
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ onLoginClick }) => {
+export const HeroSection: React.FC = () => {
     const heroRef = useScrollAnimation(0.05);
-    void onLoginClick;
 
     return (
         <section

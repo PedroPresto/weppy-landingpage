@@ -6,18 +6,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 
-interface LandingHeaderProps {
-    isMenuOpen: boolean;
-    setIsMenuOpen: (isOpen: boolean) => void;
-    onLoginClick: () => void;
-}
+interface LandingHeaderProps {}
 
-export const LandingHeader: React.FC<LandingHeaderProps> = ({ isMenuOpen, setIsMenuOpen, onLoginClick }) => {
+export const LandingHeader: React.FC<LandingHeaderProps> = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { resolvedTheme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => setMounted(true), []);
+
+    const onLoginClick = () => {
+        window.location.href = 'https://app.weppy.com.br';
+    };
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 8);

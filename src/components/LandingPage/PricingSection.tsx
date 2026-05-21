@@ -14,8 +14,8 @@ export const PricingSection: React.FC = () => {
                 <div className="max-w-3xl mb-16 md:mb-20">
                     <p className={`eyebrow mb-4 ${ref.isVisible ? 'animate-fade-in' : 'opacity-0'}`}>Planos</p>
                     <h2 className={`text-balance text-3xl md:text-5xl leading-[1.05] tracking-[-0.03em] text-[var(--ink)] font-semibold ${ref.isVisible ? 'animate-fade-in-up animation-delay-100' : 'opacity-0'}`}>
-                        Um plano completo.{' '}
-                        <span className="text-[var(--orange)]">Dois jeitos</span> de poupar.
+                        Assistente Virtual WhatsApp:{' '}
+                        <span className="text-[var(--orange)]">planos e preços</span>.
                     </h2>
                     <p className={`mt-5 text-lg text-[var(--ink-2)] ${ref.isVisible ? 'animate-fade-in-up animation-delay-200' : 'opacity-0'}`}>
                         Todas as funcionalidades em qualquer plano. A diferença é o quanto você economiza ao se comprometer com prazos maiores.

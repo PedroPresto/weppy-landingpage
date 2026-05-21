@@ -1,8 +1,8 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SERVER_URL || "https://weppy.com.br";
 export const SITE_NAME = "Weppy";
-export const SITE_TITLE = "Weppy · Automação Inteligente para WhatsApp";
+export const SITE_TITLE = "Automação WhatsApp com IA · Assistente Virtual que Vende 24h | Weppy";
 export const SITE_DESCRIPTION =
-  "Não perca mais vendas por demorar a responder. Tenha um assistente virtual que vende por você, dia e noite.";
+  "Automatize seu WhatsApp Business com IA que responde, qualifica leads e vende 24/7. Setup em 5 min, sem código. +2.300 negócios usam Weppy.";
 export const SITE_LOCALE = "pt-BR";
 
 export const ORGANIZATION_JSON_LD = {
@@ -36,5 +36,28 @@ export const WEBSITE_JSON_LD = {
     "@type": "SearchAction",
     target: `${SITE_URL}/blog?q={search_term_string}`,
     "query-input": "required name=search_term_string",
+  },
+};
+
+export const SOFTWARE_APP_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: SITE_NAME,
+  url: SITE_URL,
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  description: SITE_DESCRIPTION,
+  offers: {
+    "@type": "AggregateOffer",
+    lowPrice: "25",
+    highPrice: "97",
+    priceCurrency: "BRL",
+    offerCount: 2,
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    bestRating: "5",
+    ratingCount: "2300",
   },
 };

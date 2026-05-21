@@ -251,7 +251,7 @@ export const plans = [
 export const faqs = [
     {
         question: "Preciso de saber programar ou ser 'expert' em tecnologia?",
-        answer: "Zero necessidade! Nossa plataforma foi criada para empreendedores, não para programadores. Se você sabe enviar uma mensagem no WhatsApp, você já é um expert na Weppy. Em menos de 5 minutos, com alguns cliques, seu assistente já estará funcionando e pronto para vender. Além disso, a nossa equipa de suporte está pronta para o ajudar em cada passo do processo."
+        answer: "Zero necessidade! Nossa plataforma foi criada para empreendedores, não para programadores. Se você sabe enviar uma mensagem no WhatsApp, você já é um expert na Weppy. Em menos de 5 minutos, com alguns cliques, seu assistente já estará funcionando e pronto para vender. Além disso, a nossa equipe de suporte está pronta para o ajudar em cada passo do processo."
     },
     {
         question: "As respostas do assistente parecem mesmo humanas?",
@@ -287,7 +287,7 @@ export const faqs = [
     },
     {
         question: "O que acontece logo após eu pagar? Terei suporte?",
-        answer: "O acesso é imediato e você nunca estará sozinho! Assim que o pagamento for aprovado, você recebe acesso instantâneo à plataforma com um passo a passo super simples. E o mais importante: a nossa equipa de especialistas em sucesso do cliente estará disponível no WhatsApp para o ajudar em cada etapa, garantindo que você extraia o máximo de vendas da sua nova ferramenta."
+        answer: "O acesso é imediato e você nunca estará sozinho! Assim que o pagamento for aprovado, você recebe acesso instantâneo à plataforma com um passo a passo super simples. E o mais importante: a nossa equipe de especialistas em sucesso do cliente estará disponível no WhatsApp para o ajudar em cada etapa, garantindo que você extraia o máximo de vendas da sua nova ferramenta."
     },
     {
         question: "Posso cancelar quando quiser?",
@@ -328,17 +328,17 @@ export const footerLinks = {
     product: [
         { name: "Recursos", href: "#features" },
         { name: "Preços", href: "#pricing" },
-        { name: "Integrações", href: "#" },
+        { name: "Como Funciona", href: "#how-it-works" },
     ],
     support: [
-        { name: "Central de Ajuda", href: "#" },
-        { name: "Contato", href: "#" },
-        { name: "Status", href: "#" },
+        { name: "Fale Conosco", href: "https://wa.me/5561999999999" },
+        { name: "Resultados", href: "#results" },
+        { name: "Depoimentos", href: "#testimonials" },
     ],
     legal: [
-        { name: "Termos de Uso", href: "#" },
-        { name: "Privacidade", href: "#" },
-        { name: "LGPD", href: "#" },
+        { name: "Termos de Uso", href: "/termos" },
+        { name: "Privacidade", href: "/privacidade" },
+        { name: "LGPD", href: "/lgpd" },
     ]
 };
 

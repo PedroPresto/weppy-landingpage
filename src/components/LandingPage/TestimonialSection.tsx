@@ -15,7 +15,8 @@ export const TestimonialsSection: React.FC = () => {
                 <div className="max-w-3xl mb-16 md:mb-20">
                     <p className={`eyebrow mb-4 ${ref.isVisible ? 'animate-fade-in' : 'opacity-0'}`}>Quem usa</p>
                     <h2 className={`text-balance text-3xl md:text-5xl leading-[1.05] tracking-[-0.03em] text-[var(--ink)] font-semibold ${ref.isVisible ? 'animate-fade-in-up animation-delay-100' : 'opacity-0'}`}>
-                        Negócios reais. <span className="text-[var(--orange)]">Resultados reais.</span>
+                        Quem usa automação WhatsApp.{' '}
+                        <span className="text-[var(--orange)]">Resultados reais.</span>
                     </h2>
                 </div>
 

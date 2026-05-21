@@ -1,0 +1,163 @@
+# Weppy — Automação Inteligente para WhatsApp com IA
+
+> Weppy é uma plataforma SaaS brasileira que conecta um agente de IA conversacional ao número oficial do WhatsApp Business da empresa. O assistente atende, qualifica leads e vende 24 horas por dia, 7 dias por semana, com integração ao CRM, agendas e meios de pagamento.
+
+## Visão Geral
+
+- **Produto**: Agente de IA para WhatsApp Business
+- **Mercado-alvo**: Pequenas e médias empresas no Brasil que recebem pedidos, dúvidas ou agendamentos via WhatsApp
+- **Diferenciais**: IA conversacional (não chatbot de árvore), homologação oficial Meta, integração sem código, suporte em português
+- **Site**: https://weppy.com.br
+- **Aplicação**: https://app.weppy.com.br
+- **Localização**: Brasília, DF, Brasil
+
+## Funcionalidades
+
+### Treinamento RAG
+Treine a IA com documentos do seu negócio, como PDFs, FAQs e catálogos. Ela aprende o seu tom e responde com as suas informações.
+
+### Disparo em Massa
+Dispare mensagens para uma lista de leads e deixe a IA conduzir cada conversa individualmente a partir daí.
+
+### Sistema de Agendamento
+Cadastre seus serviços e horários. A IA mostra a disponibilidade em tempo real e confirma o agendamento direto no WhatsApp.
+
+### Assuma a Conversa (Handoff Humano)
+Desative a IA quando quiser e retome o atendimento manualmente. Ou ensine-a a identificar quando deve chamar um humano.
+
+### Criação de Fluxo Visual
+Crie fluxos de conversa com um criador de arrastar e soltar. Monte jornadas completas sem escrever uma linha de código.
+
+### Análise de Métricas
+Acompanhe taxa de resposta, conversões e volume de atendimentos. Veja o que está funcionando e otimize em tempo real.
+
+### Funcionalidades Adicionais
+- Atendimentos simultâneos ilimitados
+- Envio de mídias (imagens, vídeos, áudios)
+- IA Humanizada (usando GPT-4o e Gemini)
+- Follow-up inteligente automático
+- Integração em 5 minutos
+- Funciona com o celular desligado
+
+## Como Funciona
+
+1. **Conecte seu WhatsApp** — Escaneie o QR code e conecte em segundos
+2. **Configure sua IA** — Escolha o modelo de IA e treine com suas informações via RAG
+3. **Crie seus funis** — Monte jornadas de conversa personalizadas visualmente com drag-and-drop
+4. **Monitore resultados** — Acompanhe métricas em tempo real e otimize constantemente
+
+## Planos e Preços
+
+### Plano Mensal
+- **Preço**: R$ 97/mês (de R$ 197)
+- **Descrição**: Acesso total e imediato. Sem compromisso, cancele quando quiser.
+- **Inclui**: Todas as funcionalidades listadas abaixo
+
+### Plano Anual (Mais Escolhido)
+- **Preço**: R$ 25/mês (equivalente a R$ 300/ano, de R$ 97/mês)
+- **Economia**: 80% de desconto
+- **Descrição**: Acesso completo por menos de R$ 1 por dia.
+- **Inclui**: Todas as funcionalidades listadas abaixo
+
+### O que está incluído em ambos os planos:
+- 1 Assistente Virtual 24h
+- Responde clientes e tira dúvidas
+- Qualifica interessados automaticamente
+- Construtor de Conversas (Funis)
+- Envio de mensagens agendadas
+- Funciona com o celular desligado
+- Treinamento da IA via RAG
+- Agendamento Automático via IA
+- Gestão de Agenda integrada
+- Relatórios Simplificados
+- Suporte individual via WhatsApp
+
+### Garantias:
+- Garantia integral de 7 dias (dinheiro de volta sem perguntas)
+- Pagamento via Pix ou cartão
+- Setup em 5 minutos
+- Sem necessidade de cartão de crédito para começar
+
+## Resultados e Estatísticas
+
+- +250.000 leads qualificados pela plataforma
+- 98% de taxa de satisfação dos clientes
+- 300% de aumento médio em vendas
+- Atendimento 24/7 ininterrupto
+- +2.300 negócios automatizados
+- Nota 4.9/5 de satisfação
+- Latência de resposta < 800ms
+
+## Depoimentos de Clientes
+
+### Dr. Ricardo Almeida — Dentista, Clínica Almeida Odontologia
+"Antes da Weppy, muitos pacientes mandavam mensagem e acabavam sem resposta durante o atendimento. Hoje a IA responde instantaneamente, agenda avaliações e organiza tudo no WhatsApp. A clínica ficou muito mais profissional."
+→ Resultado: Aumento de 32% nos agendamentos
+
+### Ana Rodrigues — Lash Designer, JM Beauty Studio
+"Eu literalmente via o dinheiro a fugir pelos dedos. Clientes mandavam mensagem e eu só conseguia responder horas depois. A Weppy não só organizou a minha agenda, como recuperou essas vendas perdidas."
+→ Resultado: 35% de aumento em vendas adicionais
+
+### Fernanda Guimarães — Terapeuta e Mentora de Carreira
+"Antes da Weppy, eu perdia horas com curiosos. Agora, minha IA faz as perguntas iniciais, qualifica o lead e só agenda a primeira sessão com quem realmente tem perfil."
+→ Resultado: Economia de 10 horas por semana em triagem
+
+## Empresas que Confiam na Weppy
+
+JM Beauty Studio, Guimarães Mentoria, Una Parque, Clínica Pediátrica, Clínica VP Odonto, Concurseiros Pro, Agência Pinnest Media, Rodrigues Advocacia, Método VTSD
+
+## Perguntas Frequentes
+
+### Preciso de saber programar ou ser 'expert' em tecnologia?
+Zero necessidade! Nossa plataforma foi criada para empreendedores, não para programadores. Se você sabe enviar uma mensagem no WhatsApp, você já é um expert na Weppy. Em menos de 5 minutos, com alguns cliques, seu assistente já estará funcionando.
+
+### As respostas do assistente parecem mesmo humanas?
+Sim! Usamos a mesma inteligência artificial de ponta do ChatGPT-4o e Gemini. Na prática, seu cliente terá uma conversa tão fluida e natural que nem vai perceber que está falando com um robô.
+
+### E se eu quiser assumir a conversa e falar com o cliente?
+Você está sempre no comando. Com apenas um clique, você pode pausar o assistente e assumir a conversa instantaneamente.
+
+### O assistente pode enviar mídias, como fotos e áudios?
+Sim! O assistente pode enviar imagens de produtos, vídeos de demonstração e até áudios que soam como se tivessem sido gravados na hora.
+
+### O meu assistente fica online 24 horas?
+Sim, ele é o seu funcionário perfeito! Uma vez ativo, seu assistente trabalha 24/7, sem pausas nem feriados.
+
+### Isto funciona para o meu tipo de negócio?
+Sim! Se você vende ou atende pelo WhatsApp, a Weppy foi feita para si. Já ajudamos negócios de dezenas de setores, de e-commerce e infoprodutos a clínicas e serviços locais.
+
+### Ele consegue atender vários clientes ao mesmo tempo?
+Sim, sem limites! Imagine ter 10, 50 ou até 200 clientes a fazer perguntas ao mesmo tempo e todos serem respondidos instantaneamente.
+
+### Qual o real impacto que posso esperar nas minhas vendas?
+Nossos clientes relatam que, ao eliminar a demora na resposta, a taxa de conversão aumenta drasticamente. A Weppy recupera vendas perdidas transformando o WhatsApp numa máquina de lucro 24/7.
+
+### Funciona com o meu número de WhatsApp atual? Preciso de um novo chip?
+Funciona perfeitamente com o seu número atual! Não precisa de comprar um novo chip nem mudar nada. A integração é feita de forma simples e digital.
+
+### O que acontece logo após eu pagar? Terei suporte?
+O acesso é imediato! Assim que o pagamento for aprovado, você recebe acesso instantâneo à plataforma com um passo a passo. Nossa equipe de especialistas estará disponível no WhatsApp para ajudar.
+
+### Posso cancelar quando quiser?
+Sim, com total liberdade. Não existem contratos nem fidelidade. Pode cancelar com um clique.
+
+### E se eu não me adaptar ou achar que não é para mim?
+Risco Absolutamente Zero! Você tem 7 dias completos para testar. Se por qualquer motivo achar que não é para si, basta um clique para receber 100% do seu dinheiro de volta.
+
+## Conteúdo do Blog
+
+- [Página inicial](https://weppy.com.br): apresentação do produto, benefícios, preços, depoimentos
+- [Blog](https://weppy.com.br/blog): guias e estratégias sobre automação de WhatsApp, IA conversacional e vendas
+
+### Tópicos cobertos no blog:
+- Automação de WhatsApp para vendas
+- Chatbot vs IA conversacional
+- WhatsApp Business API
+- Estratégias para aumentar vendas no WhatsApp
+- Atendimento ao cliente automatizado
+- Integração de IA com CRM
+- Cases de uso em diferentes segmentos (clínicas, e-commerce, imobiliárias, escolas, serviços)
+
+## Política de Uso por IA
+
+O conteúdo deste site pode ser indexado, citado e usado como referência por assistentes de IA, mecanismos de busca generativos e plataformas de pesquisa, desde que mantenham atribuição clara ao Weppy e link para a fonte original.

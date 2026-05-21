@@ -1,6 +1,4 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 import { LandingHeader } from '@/components/LandingPage/LandingHeader';
 import { HeroSection } from '@/components/LandingPage/HeroSection';
 import { CompaniesSection } from '@/components/LandingPage/CompaniesSection';
@@ -14,36 +12,62 @@ import { CloseSection } from '@/components/LandingPage/CloseSection';
 import { LandingFooter } from '@/components/LandingPage/LandingFooter';
 import { FloatingWhatsAppButton } from '@/components/LandingPage/FloatingWhatsAppButton';
 import { PurchaseToastController } from '@/components/LandingPage/PurchaseToastController';
+import { faqs } from '@/components/LandingPage/LandingPageData';
+import { SITE_URL } from '@/lib/seo';
+
+/* ── JSON-LD: FAQPage (rich snippets no Google) ── */
+const FAQ_JSON_LD = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+        },
+    })),
+};
+
+/* ── JSON-LD: BreadcrumbList ── */
+const BREADCRUMB_JSON_LD = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Início", item: SITE_URL },
+    ],
+};
 
 export default function Home() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    const handleLoginClick = () => {
-        window.location.href = 'https://app.weppy.com.br';
-    };
-
     return (
-        <div className="min-h-screen bg-[var(--bg)] text-[var(--ink)] relative">
-            <PurchaseToastController />
-            <FloatingWhatsAppButton />
-
-            <LandingHeader
-                isMenuOpen={isMenuOpen}
-                setIsMenuOpen={setIsMenuOpen}
-                onLoginClick={handleLoginClick}
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }}
             />
-            <main>
-                <HeroSection onLoginClick={handleLoginClick} />
-                <CompaniesSection />
-                <FeaturesSection />
-                <HowItWorksSection />
-                <VslSection />
-                <ComparisonSection />
-                <TestimonialsSection />
-                <PricingSection />
-                <CloseSection onLoginClick={handleLoginClick} />
-            </main>
-            <LandingFooter />
-        </div>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSON_LD) }}
+            />
+
+            <div className="min-h-screen bg-[var(--bg)] text-[var(--ink)] relative">
+                <PurchaseToastController />
+                <FloatingWhatsAppButton />
+
+                <LandingHeader />
+                <main>
+                    <HeroSection />
+                    <CompaniesSection />
+                    <FeaturesSection />
+                    <HowItWorksSection />
+                    <VslSection />
+                    <ComparisonSection />
+                    <TestimonialsSection />
+                    <PricingSection />
+                    <CloseSection />
+                </main>
+                <LandingFooter />
+            </div>
+        </>
     );
 }

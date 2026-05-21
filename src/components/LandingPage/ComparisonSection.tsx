@@ -14,7 +14,8 @@ export const ComparisonSection: React.FC = () => {
                 <div className="max-w-3xl mb-16 md:mb-20">
                     <p className={`eyebrow mb-4 ${ref.isVisible ? 'animate-fade-in' : 'opacity-0'}`}>Antes e depois</p>
                     <h2 className={`text-balance text-3xl md:text-5xl leading-[1.05] tracking-[-0.03em] text-[var(--ink)] font-semibold ${ref.isVisible ? 'animate-fade-in-up animation-delay-100' : 'opacity-0'}`}>
-                        O mesmo cliente. <span className="text-[var(--orange)]">Resultados opostos.</span>
+                        Atendimento WhatsApp: mesmo cliente.{' '}
+                        <span className="text-[var(--orange)]">Resultados opostos.</span>
                     </h2>
                     <p className={`mt-5 text-lg text-[var(--ink-2)] ${ref.isVisible ? 'animate-fade-in-up animation-delay-200' : 'opacity-0'}`}>
                         A diferença entre perder a venda e fechar a venda mora no tempo da primeira resposta.

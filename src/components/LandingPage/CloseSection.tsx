@@ -5,14 +5,9 @@ import { Plus, Minus, ArrowRight, Clock, Shield, Zap } from 'lucide-react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import { faqs, urgencyFeatures } from './LandingPageData';
 
-interface CloseSectionProps {
-    onLoginClick: () => void;
-}
-
-export const CloseSection: React.FC<CloseSectionProps> = ({ onLoginClick }) => {
+export const CloseSection: React.FC = () => {
     const ref = useScrollAnimation(0.05);
     const [openFaq, setOpenFaq] = useState<number | null>(0);
-    void onLoginClick;
 
     return (
         <section id="close" ref={ref.ref} className="relative py-24 md:py-32 bg-[var(--bg)] overflow-hidden">
@@ -28,7 +23,7 @@ export const CloseSection: React.FC<CloseSectionProps> = ({ onLoginClick }) => {
                     <div className={`lg:col-span-7 ${ref.isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
                         <p className="eyebrow mb-4">Última chamada</p>
                         <h2 className="text-balance text-3xl md:text-5xl leading-[1.05] tracking-[-0.03em] text-[var(--ink)] font-semibold">
-                            Cada minuto sem IA é{' '}
+                            Cada minuto sem IA no WhatsApp é{' '}
                             <span className="text-[var(--orange)]">uma venda indo embora.</span>
                         </h2>
                         <p className="mt-5 text-lg text-[var(--ink-2)] max-w-xl">
@@ -60,7 +55,7 @@ export const CloseSection: React.FC<CloseSectionProps> = ({ onLoginClick }) => {
                     <div className="lg:col-span-4">
                         <p className="eyebrow mb-4">Dúvidas frequentes</p>
                         <h3 className="text-2xl md:text-3xl font-semibold text-[var(--ink)] leading-tight tracking-[-0.02em]">
-                            Tudo que você precisa saber antes de começar.
+                            Perguntas Frequentes sobre Automação de WhatsApp
                         </h3>
                         <p className="mt-4 text-[var(--ink-2)] leading-relaxed">
                             Não achou sua dúvida? Fala com a gente direto no WhatsApp.

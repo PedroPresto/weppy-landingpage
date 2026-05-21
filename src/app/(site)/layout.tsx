@@ -4,7 +4,7 @@ import "../globals.css";
 import Script from "next/script";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { SITE_URL, SITE_TITLE, SITE_DESCRIPTION, ORGANIZATION_JSON_LD, WEBSITE_JSON_LD } from "@/lib/seo";
+import { SITE_URL, SITE_TITLE, SITE_DESCRIPTION, ORGANIZATION_JSON_LD, WEBSITE_JSON_LD, SOFTWARE_APP_JSON_LD } from "@/lib/seo";
 
 const fraunces = Fraunces({
     subsets: ["latin"],
@@ -47,6 +47,12 @@ export const metadata: Metadata = {
         siteName: "Weppy",
         title: SITE_TITLE,
         description: SITE_DESCRIPTION,
+        images: [{
+            url: `${SITE_URL}/og-image.png`,
+            width: 1200,
+            height: 630,
+            alt: "Weppy — Automação Inteligente para WhatsApp com IA",
+        }],
     },
     twitter: {
         card: "summary_large_image",
@@ -76,7 +82,6 @@ export default function SiteLayout({
     return (
         <html lang="pt-BR" suppressHydrationWarning className={`${fraunces.variable} ${geist.variable}`}>
         <head>
-            <link rel="canonical" href={SITE_URL} />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_JSON_LD) }}
@@ -84,6 +89,10 @@ export default function SiteLayout({
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_JSON_LD) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(SOFTWARE_APP_JSON_LD) }}
             />
         </head>
         <body>
