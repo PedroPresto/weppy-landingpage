@@ -33,5 +33,5 @@ COPY --from=builder /app/public ./public
 # Expõe a porta que o servidor de produção do Next.js usa
 EXPOSE 3000
 
-# O comando para iniciar o servidor de produção do Next.js
+# O comando para iniciar o servidor de produção do Next.js.
 CMD ["npm", "start"]
