@@ -45,7 +45,7 @@ jobs:
           key: ${{ secrets.HOSTINGER_SSH_KEY }}
           script: |
             set -e
-            cd ~
+            cd /home/pedro/weppy
 
             echo ">>> Writing landing page environment variables..."
             cat > .env.landing << 'ENVEOF'
