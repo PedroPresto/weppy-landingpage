@@ -46,13 +46,24 @@ jobs:
           script: |
             set -e
             cd /home/pedro/weppy
-            
+
+            echo ">>> Writing environment variables..."
+            cat > .env << 'ENVEOF'
+            PAYLOAD_SECRET=${{ secrets.PAYLOAD_SECRET }}
+            DATABASE_URI=${{ secrets.DATABASE_URI }}
+            NEXT_PUBLIC_SERVER_URL=${{ secrets.NEXT_PUBLIC_SERVER_URL }}
+            CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}
+            CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}
+            CLOUDINARY_API_SECRET=${{ secrets.CLOUDINARY_API_SECRET }}
+            CLOUDINARY_URL=${{ secrets.CLOUDINARY_URL }}
+            ENVEOF
+
             echo ">>> Logging in and pulling new landing page image..."
             echo ${{ secrets.GH_PAT }} | docker login ghcr.io -u ${{ steps.string_utils.outputs.owner_lc }} --password-stdin
             docker-compose pull landing_page
-            
+
             echo ">>> Restarting landing page service..."
             docker-compose up -d --no-deps landing_page
-            
-            echo ">>> Cleaning up old images..."
+
+            echo ">>> Cleaning up..."
             docker image prune -af
