@@ -1,4 +1,5 @@
-import type { CollectionConfig, FieldHook } from "payload";
+import type { CollectionAfterChangeHook, CollectionAfterDeleteHook, CollectionConfig, FieldHook } from "payload";
+import { revalidatePath } from "next/cache";
 
 const slugify = (value: string): string =>
   value
@@ -23,11 +24,42 @@ const setModifiedAt: FieldHook = ({ value, operation }) => {
   return value;
 };
 
+// Invalida o cache ISR sempre que um post é criado, atualizado ou excluído.
+// Sem isso, /blog/[slug] continua servindo o HTML antigo até o revalidate expirar (1h)
+// ou um redeploy. /blog (listing) é force-dynamic e já reflete na hora.
+const revalidateBlog: CollectionAfterChangeHook = ({ doc, previousDoc }) => {
+  try {
+    revalidatePath("/blog");
+    if (doc?.slug) revalidatePath(`/blog/${doc.slug}`);
+    // Se o slug mudou, invalida também o antigo
+    if (previousDoc?.slug && previousDoc.slug !== doc?.slug) {
+      revalidatePath(`/blog/${previousDoc.slug}`);
+    }
+  } catch {
+    // Em contextos sem next/cache (ex: scripts CLI), apenas ignora
+  }
+  return doc;
+};
+
+const revalidateBlogAfterDelete: CollectionAfterDeleteHook = ({ doc }) => {
+  try {
+    revalidatePath("/blog");
+    if (doc?.slug) revalidatePath(`/blog/${doc.slug}`);
+  } catch {
+    // ignore
+  }
+  return doc;
+};
+
 export const Posts: CollectionConfig = {
   slug: "posts",
   admin: {
     useAsTitle: "title",
     defaultColumns: ["title", "status", "publishedAt"],
+  },
+  hooks: {
+    afterChange: [revalidateBlog],
+    afterDelete: [revalidateBlogAfterDelete],
   },
   access: {
     read: ({ req: { user } }) => {
