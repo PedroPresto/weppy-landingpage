@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
 
 interface LandingHeaderProps {}
@@ -13,6 +14,7 @@ export const LandingHeader: React.FC<LandingHeaderProps> = () => {
     const { resolvedTheme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => setMounted(true), []);
 
@@ -27,11 +29,16 @@ export const LandingHeader: React.FC<LandingHeaderProps> = () => {
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
+    const isSecondaryPage = pathname !== '/';
+
     const navLinks = [
-        { href: '#features', label: 'Recursos' },
+        isSecondaryPage
+            ? { href: '/', label: 'Início', isLink: true }
+            : { href: '#features', label: 'Recursos' },
        // { href: '#results', label: 'Casos' },
         { href: '#pricing', label: 'Planos' },
         { href: '/blog', label: 'Blog', external: false, isLink: true },
+        { href: '/sobre', label: 'Sobre', external: false, isLink: true },
     ];
 
     return (

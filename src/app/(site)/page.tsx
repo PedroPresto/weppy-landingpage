@@ -8,6 +8,7 @@ import { FeaturesSection } from '@/components/LandingPage/FeaturesSection';
 import { ComparisonSection } from '@/components/LandingPage/ComparisonSection';
 import { TestimonialsSection } from '@/components/LandingPage/TestimonialSection';
 import { PricingSection } from '@/components/LandingPage/PricingSection';
+import { WhoUsesSection } from '@/components/LandingPage/WhoUsesSection';
 import { CloseSection } from '@/components/LandingPage/CloseSection';
 import { LandingFooter } from '@/components/LandingPage/LandingFooter';
 import { FloatingWhatsAppButton } from '@/components/LandingPage/FloatingWhatsAppButton';
@@ -61,6 +62,7 @@ export default function Home() {
                     <FeaturesSection />
                     <HowItWorksSection />
                     <VslSection />
+                    <WhoUsesSection />
                     <ComparisonSection />
                     <TestimonialsSection />
                     <PricingSection />

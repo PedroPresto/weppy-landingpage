@@ -10,7 +10,7 @@ export const CloseSection: React.FC = () => {
     const [openFaq, setOpenFaq] = useState<number | null>(0);
 
     return (
-        <section id="close" ref={ref.ref} className="relative py-24 md:py-32 bg-[var(--bg)] overflow-hidden">
+        <section id="close" ref={ref.ref} className="relative py-24 md:py-32 bg-[var(--surface-2)] border-y border-[var(--line)] overflow-hidden">
             <div
                 aria-hidden="true"
                 className="absolute top-1/4 right-1/4 w-[36rem] h-[36rem] rounded-full opacity-30 pointer-events-none blur-3xl"

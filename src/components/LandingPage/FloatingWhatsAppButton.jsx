@@ -16,7 +16,7 @@ export const FloatingWhatsAppButton = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Falar com a Weppy no WhatsApp"
-            className="fixed bottom-6 right-6 z-40 group inline-flex items-center gap-3 pl-4 pr-5 py-3 transition-all duration-500"
+            className="fixed bottom-6 right-6 z-40 group inline-flex items-center justify-center w-14 h-14 rounded-full transition-all duration-500"
             style={{
                 background: hovered ? 'var(--wa-green-deep)' : 'var(--wa-green)',
                 color: '#ffffff',
@@ -25,11 +25,7 @@ export const FloatingWhatsAppButton = () => {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >
-            <FaWhatsapp size={20} className="transition-transform duration-500 group-hover:scale-110" />
-            <span className="hidden sm:inline text-sm font-medium tracking-tight">
-                Falar com a equipe
-            </span>
-            <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-white animate-pulse-soft" />
+            <FaWhatsapp size={26} className="transition-transform duration-500 group-hover:scale-110" />
         </a>
     );
 };

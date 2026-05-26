@@ -48,7 +48,7 @@ export const ChatMockup: React.FC<ChatMockupProps> = ({
                 <ChatHeader contactName={contactName} contactSubtitle={contactSubtitle} />
 
                 <div
-                    className="px-3 py-4 flex flex-col justify-end gap-2.5 min-h-[420px] max-h-[520px] overflow-hidden"
+                    className="px-3 py-4 flex flex-col justify-end gap-2.5 h-[420px] overflow-hidden"
                     style={{
                         backgroundImage:
                             'radial-gradient(circle at 20% 20%, rgba(255,89,2,0.04) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(194,122,255,0.04) 0%, transparent 50%)',

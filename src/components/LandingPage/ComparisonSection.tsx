@@ -9,7 +9,7 @@ export const ComparisonSection: React.FC = () => {
     const ref = useScrollAnimation(0.1);
 
     return (
-        <section id="results" ref={ref.ref} className="py-24 md:py-32 bg-[var(--surface-2)] border-y border-[var(--line)]">
+        <section id="results" ref={ref.ref} className="py-24 md:py-32 bg-[var(--bg)]">
             <div className="container-editorial">
                 <div className="max-w-3xl mb-16 md:mb-20">
                     <p className={`eyebrow mb-4 ${ref.isVisible ? 'animate-fade-in' : 'opacity-0'}`}>Antes e depois</p>

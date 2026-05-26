@@ -10,7 +10,7 @@ export const TestimonialsSection: React.FC = () => {
     const ref = useScrollAnimation(0.05);
 
     return (
-        <section id="testimonials" ref={ref.ref} className="py-24 md:py-32 bg-[var(--bg)]">
+        <section id="testimonials" ref={ref.ref} className="py-24 md:py-32 bg-[var(--surface-2)] border-y border-[var(--line)]">
             <div className="container-editorial">
                 <div className="max-w-3xl mb-16 md:mb-20">
                     <p className={`eyebrow mb-4 ${ref.isVisible ? 'animate-fade-in' : 'opacity-0'}`}>Quem usa</p>
