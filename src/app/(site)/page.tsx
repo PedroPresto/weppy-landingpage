@@ -61,11 +61,11 @@ export default function Home() {
                     <HeroSection />
                     <CompaniesSection />
                     <FeaturesSection />
-                    <ConversionTrackingSection />
                     <HowItWorksSection />
                     <VslSection />
                     <WhoUsesSection />
                     <ComparisonSection />
+                    <ConversionTrackingSection />
                     <TestimonialsSection />
                     <PricingSection />
                     <CloseSection />
