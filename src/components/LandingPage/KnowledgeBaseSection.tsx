@@ -53,7 +53,7 @@ export const KnowledgeBaseSection: React.FC = () => {
                                     Treine com o seu próprio WhatsApp
                                 </p>
                                 <p className="mt-1 text-xs text-[var(--ink-2)] leading-relaxed">
-                                    Exporte o histórico das suas conversas em <span className="font-semibold text-[var(--ink)]">.txt</span> direto do WhatsApp e suba na Weppy. A IA aprende com os seus atendimentos reais — do seu jeito de vender.
+                                    Exporte o histórico das suas conversas em <span className="font-semibold text-[var(--ink)]">.txt</span> direto do WhatsApp e suba na Weppy. A IA aprende com os seus atendimentos reais, do seu jeito de vender.
                                 </p>
                             </div>
                         </div>
