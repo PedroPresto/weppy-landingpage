@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Paperclip, FileText } from 'lucide-react';
+import { Paperclip, FileText, Download } from 'lucide-react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import { knowledgeSources, knowledgeBenefits, knowledgeDemo } from './LandingPageData';
 
@@ -22,7 +22,7 @@ export const KnowledgeBaseSection: React.FC = () => {
                             <span className="text-[var(--orange)]">de cor</span>.
                         </h2>
                         <p className={`mt-5 text-lg text-[var(--ink-2)] ${ref.isVisible ? 'animate-fade-in-up animation-delay-200' : 'opacity-0'}`}>
-                            Suba seus PDFs, FAQs, catálogos e tabelas de preço. A Weppy aprende tudo sobre o seu negócio e responde cada cliente com as suas próprias informações — no seu tom, sem inventar nada.
+                            Suba seus PDFs, FAQs, catálogos e tabelas de preço. A Weppy aprende tudo sobre o seu negócio e responde cada cliente com as suas próprias informações no seu tom, sem inventar nada.
                         </p>
 
                         <ul className="mt-8 space-y-4">
@@ -71,6 +71,21 @@ export const KnowledgeBaseSection: React.FC = () => {
                                         </div>
                                     );
                                 })}
+                            </div>
+                        </div>
+
+                        {/* Destaque — treinar com o próprio WhatsApp (.txt) */}
+                        <div className="mt-5 flex items-start gap-3 rounded-2xl bg-[var(--orange-soft)] ring-1 ring-[var(--orange)]/20 p-4">
+                            <div className="w-9 h-9 rounded-lg bg-[var(--surface)] flex items-center justify-center shrink-0">
+                                <Download className="w-4 h-4 text-[var(--orange)]" strokeWidth={2} />
+                            </div>
+                            <div>
+                                <p className="text-sm font-semibold text-[var(--ink)] leading-tight">
+                                    Treine com o seu próprio WhatsApp
+                                </p>
+                                <p className="mt-1 text-xs text-[var(--ink-2)] leading-relaxed">
+                                    Exporte o histórico das suas conversas em <span className="font-semibold text-[var(--ink)]">.txt</span> direto do WhatsApp e suba na Weppy. A IA aprende com os seus atendimentos reais — do seu jeito de vender.
+                                </p>
                             </div>
                         </div>
 
