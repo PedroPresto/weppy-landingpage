@@ -97,7 +97,7 @@ export const PricingSection: React.FC = () => {
                 </div>
 
                 <p className="mt-12 text-center text-sm text-[var(--ink-3)]">
-                    Pagamento via Pix ou cartão · Garantia integral de 7 dias · Setup em 5 minutos
+                    Pagamento via Pix ou cartão · Garantia integral de 7 dias · Setup em 15 minutos
                 </p>
             </div>
         </section>

@@ -3,7 +3,8 @@
 import {
     Brain, BarChart3, Inbox, Zap, Workflow, Users, TrendingUp, Sparkles,
     MessageSquare, Star, Clock, Target, Smartphone, Images, Database, CalendarCheck,
-    Megaphone, MousePointerClick, PauseCircle
+    Megaphone, MousePointerClick, PauseCircle,
+    FileText, HelpCircle, Tag, Globe
 } from 'lucide-react';
 import type { ChatStep } from './ChatMockup/types';
 
@@ -44,7 +45,65 @@ export const features = [
         title: "Análise de Métricas",
         description: "Acompanhe taxa de resposta, conversões e volume de atendimentos. Veja o que está funcionando e otimize em tempo real.",
     },
+    {
+        id: 'tracking',
+        icon: Target,
+        title: "Rastreamento de Conversões",
+        description: "Descubra qual anúncio da Meta gerou cada venda fechada no WhatsApp. Cada conversão volta para o seu Pixel e otimiza suas campanhas com dados reais.",
+    },
 ];
+
+// ===== RASTREAMENTO DE CONVERSÕES =====
+
+export const conversionFlow = [
+    {
+        icon: Megaphone,
+        title: "Anúncio na Meta",
+        description: "O cliente clica no seu anúncio e cai direto no seu WhatsApp.",
+    },
+    {
+        icon: MessageSquare,
+        title: "Conversa no WhatsApp",
+        description: "O lead é identificado pela campanha de origem automaticamente.",
+    },
+    {
+        icon: Sparkles,
+        title: "A IA fecha a venda",
+        description: "Agenda ou converte o cliente sem você levantar um dedo.",
+    },
+    {
+        icon: Target,
+        title: "Conversão no Pixel",
+        description: "O evento volta para a Meta otimizar seus anúncios com vendas reais.",
+    },
+];
+
+export const conversionBenefits = [
+    { icon: BarChart3, text: "ROI real por campanha, sem planilha manual." },
+    { icon: Sparkles, text: "A própria IA marca a conversão na hora certa." },
+    { icon: TrendingUp, text: "A Meta otimiza com dados de venda reais, não palpites." },
+];
+
+// ===== BASE DE CONHECIMENTO (RAG) =====
+
+export const knowledgeSources = [
+    { icon: FileText, label: "PDFs", hint: "Catálogos, contratos, manuais" },
+    { icon: HelpCircle, label: "FAQs", hint: "Dúvidas frequentes dos clientes" },
+    { icon: Tag, label: "Tabela de preços", hint: "Valores e pacotes atualizados" },
+    { icon: Globe, label: "Seu site", hint: "Conteúdo das suas páginas" },
+];
+
+export const knowledgeBenefits = [
+    { icon: Brain, text: "Aprende o seu tom e fala como a sua marca." },
+    { icon: Database, text: "Responde só com as suas informações, sem inventar." },
+    { icon: Zap, text: "Atualizou um documento? A IA já responde com a novidade." },
+];
+
+export const knowledgeDemo = {
+    question: "Qual o valor do clareamento dental?",
+    answer: "O clareamento começa em R$ 690 😊 Conforme a sua tabela de preços, inclui avaliação e a sessão de moldagem.",
+    source: "Tabela de preços.pdf",
+};
 
 // ===== MOCKUPS DE CHAT =====
 
@@ -146,7 +205,7 @@ export const benefits = [
     {icon: Images, text: "Envio de mídias", color: "text-pink-400"},
     {icon: Sparkles, text: "IA Humanizada", color: "text-purple-400"},
     {icon: TrendingUp, text: "Follow Up inteligente", color: "text-orange-400"},
-    {icon: Zap, text: "Integração em 5 minutos", color: "text-yellow-400"}
+    {icon: Zap, text: "Integração em 15 minutos", color: "text-yellow-400"}
 ];
 
 export const testimonials = [
@@ -216,6 +275,8 @@ const allFeatures = [
     'Treinamento da IA via RAG',
     'Agendamento Automático via IA',
     'Gestão de Agenda integrada',
+    'Rastreamento de conversões com Pixel da Meta',
+    'Tokens ilimitados',
     'Relatórios Simplificados',
     'Suporte individual via WhatsApp'
 ];
@@ -251,7 +312,7 @@ export const plans = [
 export const faqs = [
     {
         question: "Preciso de saber programar ou ser 'expert' em tecnologia?",
-        answer: "Zero necessidade! Nossa plataforma foi criada para empreendedores, não para programadores. Se você sabe enviar uma mensagem no WhatsApp, você já é um expert na Weppy. Em menos de 5 minutos, com alguns cliques, seu assistente já estará funcionando e pronto para vender. Além disso, a nossa equipe de suporte está pronta para o ajudar em cada passo do processo."
+        answer: "Zero necessidade! Nossa plataforma foi criada para empreendedores, não para programadores. Se você sabe enviar uma mensagem no WhatsApp, você já é um expert na Weppy. Em menos de 15 minutos, com alguns cliques, seu assistente já estará funcionando e pronto para vender. Além disso, a nossa equipe de suporte está pronta para o ajudar em cada passo do processo."
     },
     {
         question: "As respostas do assistente parecem mesmo humanas?",

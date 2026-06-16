@@ -164,9 +164,9 @@ export const LandingHeader: React.FC<LandingHeaderProps> = () => {
                         <div className="pt-4 space-y-3">
                             <button
                                 onClick={() => { onLoginClick(); setIsMenuOpen(false); }}
-                                className="block w-full text-left text-sm text-[var(--ink-2)] hover:text-[var(--ink)]"
+                                className="btn-ghost w-full justify-center"
                             >
-                                Entrar →
+                                Entrar
                             </button>
                             <a href="#pricing" onClick={() => setIsMenuOpen(false)} className="btn-orange w-full justify-center">
                                 Começar agora
