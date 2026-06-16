@@ -275,6 +275,7 @@ const allFeatures = [
     'Treinamento da IA via RAG',
     'Agendamento Automático via IA',
     'Gestão de Agenda integrada',
+    'Rastreamento de conversões com Pixel da Meta',
     'Relatórios Simplificados',
     'Suporte individual via WhatsApp'
 ];
