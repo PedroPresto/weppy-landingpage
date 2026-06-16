@@ -9,7 +9,7 @@ export const KnowledgeBaseSection: React.FC = () => {
     const ref = useScrollAnimation(0.05);
 
     return (
-        <section id="knowledge" ref={ref.ref} className="py-24 md:py-32 bg-[var(--bg)]">
+        <section id="knowledge" ref={ref.ref} className="py-24 md:py-32 bg-[var(--surface-2)] border-y border-[var(--line)]">
             <div className="container-editorial">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Coluna esquerda — texto */}
