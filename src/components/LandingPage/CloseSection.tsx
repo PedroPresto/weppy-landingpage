@@ -107,10 +107,10 @@ export const CloseSection: React.FC = () => {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 justify-center">
                             <a
-                                href="#pricing"
+                                href="https://app.weppy.com.br"
                                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-[var(--orange)] font-semibold hover:bg-white/90 transition-all duration-300 group"
                             >
-                                <span>Garantir minha vaga</span>
+                                <span>Ver demo</span>
                                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
                             </a>
                         </div>
