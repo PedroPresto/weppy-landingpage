@@ -276,6 +276,7 @@ const allFeatures = [
     'Agendamento Automático via IA',
     'Gestão de Agenda integrada',
     'Rastreamento de conversões com Pixel da Meta',
+    'Tokens ilimitados',
     'Relatórios Simplificados',
     'Suporte individual via WhatsApp'
 ];
