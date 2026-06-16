@@ -5,6 +5,7 @@ import { CompaniesSection } from '@/components/LandingPage/CompaniesSection';
 import { VslSection } from '@/components/LandingPage/VslSection';
 import { HowItWorksSection } from '@/components/LandingPage/HowItWorksSection';
 import { FeaturesSection } from '@/components/LandingPage/FeaturesSection';
+import { ConversionTrackingSection } from '@/components/LandingPage/ConversionTrackingSection';
 import { ComparisonSection } from '@/components/LandingPage/ComparisonSection';
 import { TestimonialsSection } from '@/components/LandingPage/TestimonialSection';
 import { PricingSection } from '@/components/LandingPage/PricingSection';
@@ -60,6 +61,7 @@ export default function Home() {
                     <HeroSection />
                     <CompaniesSection />
                     <FeaturesSection />
+                    <ConversionTrackingSection />
                     <HowItWorksSection />
                     <VslSection />
                     <WhoUsesSection />
