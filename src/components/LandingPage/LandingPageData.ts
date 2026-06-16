@@ -3,7 +3,8 @@
 import {
     Brain, BarChart3, Inbox, Zap, Workflow, Users, TrendingUp, Sparkles,
     MessageSquare, Star, Clock, Target, Smartphone, Images, Database, CalendarCheck,
-    Megaphone, MousePointerClick, PauseCircle
+    Megaphone, MousePointerClick, PauseCircle,
+    FileText, HelpCircle, Tag, Globe
 } from 'lucide-react';
 import type { ChatStep } from './ChatMockup/types';
 
@@ -82,6 +83,27 @@ export const conversionBenefits = [
     { icon: Sparkles, text: "A própria IA marca a conversão na hora certa." },
     { icon: TrendingUp, text: "A Meta otimiza com dados de venda reais, não palpites." },
 ];
+
+// ===== BASE DE CONHECIMENTO (RAG) =====
+
+export const knowledgeSources = [
+    { icon: FileText, label: "PDFs", hint: "Catálogos, contratos, manuais" },
+    { icon: HelpCircle, label: "FAQs", hint: "Dúvidas frequentes dos clientes" },
+    { icon: Tag, label: "Tabela de preços", hint: "Valores e pacotes atualizados" },
+    { icon: Globe, label: "Seu site", hint: "Conteúdo das suas páginas" },
+];
+
+export const knowledgeBenefits = [
+    { icon: Brain, text: "Aprende o seu tom e fala como a sua marca." },
+    { icon: Database, text: "Responde só com as suas informações, sem inventar." },
+    { icon: Zap, text: "Atualizou um documento? A IA já responde com a novidade." },
+];
+
+export const knowledgeDemo = {
+    question: "Qual o valor do clareamento dental?",
+    answer: "O clareamento começa em R$ 690 😊 Conforme a sua tabela de preços, inclui avaliação e a sessão de moldagem.",
+    source: "Tabela de preços.pdf",
+};
 
 // ===== MOCKUPS DE CHAT =====
 
