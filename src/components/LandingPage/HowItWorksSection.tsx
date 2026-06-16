@@ -14,7 +14,7 @@ export const HowItWorksSection: React.FC = () => {
                     <p className={`eyebrow mb-4 ${ref.isVisible ? 'animate-fade-in' : 'opacity-0'}`}>Como funciona</p>
                     <h2 className={`text-balance text-3xl md:text-5xl leading-[1.05] tracking-[-0.03em] text-[var(--ink)] font-semibold ${ref.isVisible ? 'animate-fade-in-up animation-delay-100' : 'opacity-0'}`}>
                         Como Automatizar seu WhatsApp.{' '}
-                        <span className="text-[var(--orange)]">4 passos, menos de 5 minutos.</span>
+                        <span className="text-[var(--orange)]">4 passos, menos de 15 minutos.</span>
                     </h2>
                     <p className={`mt-5 text-lg text-[var(--ink-2)] ${ref.isVisible ? 'animate-fade-in-up animation-delay-200' : 'opacity-0'}`}>
                         Você não precisa saber programar. Se sabe usar o WhatsApp, já sabe usar a Weppy.

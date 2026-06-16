@@ -205,7 +205,7 @@ export const benefits = [
     {icon: Images, text: "Envio de mídias", color: "text-pink-400"},
     {icon: Sparkles, text: "IA Humanizada", color: "text-purple-400"},
     {icon: TrendingUp, text: "Follow Up inteligente", color: "text-orange-400"},
-    {icon: Zap, text: "Integração em 5 minutos", color: "text-yellow-400"}
+    {icon: Zap, text: "Integração em 15 minutos", color: "text-yellow-400"}
 ];
 
 export const testimonials = [
@@ -312,7 +312,7 @@ export const plans = [
 export const faqs = [
     {
         question: "Preciso de saber programar ou ser 'expert' em tecnologia?",
-        answer: "Zero necessidade! Nossa plataforma foi criada para empreendedores, não para programadores. Se você sabe enviar uma mensagem no WhatsApp, você já é um expert na Weppy. Em menos de 5 minutos, com alguns cliques, seu assistente já estará funcionando e pronto para vender. Além disso, a nossa equipe de suporte está pronta para o ajudar em cada passo do processo."
+        answer: "Zero necessidade! Nossa plataforma foi criada para empreendedores, não para programadores. Se você sabe enviar uma mensagem no WhatsApp, você já é um expert na Weppy. Em menos de 15 minutos, com alguns cliques, seu assistente já estará funcionando e pronto para vender. Além disso, a nossa equipe de suporte está pronta para o ajudar em cada passo do processo."
     },
     {
         question: "As respostas do assistente parecem mesmo humanas?",

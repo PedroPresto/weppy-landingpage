@@ -27,7 +27,7 @@ export const CloseSection: React.FC = () => {
                             <span className="text-[var(--orange)]">uma venda indo embora.</span>
                         </h2>
                         <p className="mt-5 text-lg text-[var(--ink-2)] max-w-xl">
-                            Setup em 5 minutos. Garantia integral de 7 dias. Se não der resultado, devolvemos cada centavo.
+                            Setup em 15 minutos. Garantia integral de 7 dias. Se não der resultado, devolvemos cada centavo.
                         </p>
                         <a href="#pricing" className="btn-orange mt-8 group">
                             <span>Ver planos e começar</span>
