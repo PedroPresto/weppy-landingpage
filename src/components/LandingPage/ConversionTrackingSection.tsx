@@ -20,7 +20,7 @@ export const ConversionTrackingSection: React.FC = () => {
                         <span className="text-[var(--orange)]">cada venda no WhatsApp</span>.
                     </h2>
                     <p className={`mt-5 text-lg text-[var(--ink-2)] ${ref.isVisible ? 'animate-fade-in-up animation-delay-200' : 'opacity-0'}`}>
-                        O WhatsApp sempre quebrou a sua atribuição: o anúncio gera a conversa, mas você nunca soube quais viraram venda. A Weppy fecha esse ciclo — cada conversão fechada pela IA volta para o seu Pixel da Meta, otimizando suas campanhas com dados reais.
+                        O WhatsApp sempre quebrou a sua atribuição: o anúncio gera a conversa, mas você nunca soube quais viraram venda. A Weppy fecha esse ciclo, cada conversão fechada pela IA volta para o seu Pixel da Meta, otimizando suas campanhas com dados reais.
                     </p>
                 </div>
 
