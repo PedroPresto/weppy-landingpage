@@ -42,6 +42,21 @@ export const KnowledgeBaseSection: React.FC = () => {
                                 );
                             })}
                         </ul>
+
+                        {/* Destaque — treinar com o próprio WhatsApp (.txt) */}
+                        <div className={`mt-8 flex items-start gap-3 rounded-2xl bg-[var(--orange-soft)] ring-1 ring-[var(--orange)]/20 p-4 ${ref.isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '560ms' }}>
+                            <div className="w-9 h-9 rounded-lg bg-[var(--surface)] flex items-center justify-center shrink-0">
+                                <Download className="w-4 h-4 text-[var(--orange)]" strokeWidth={2} />
+                            </div>
+                            <div>
+                                <p className="text-sm font-semibold text-[var(--ink)] leading-tight">
+                                    Treine com o seu próprio WhatsApp
+                                </p>
+                                <p className="mt-1 text-xs text-[var(--ink-2)] leading-relaxed">
+                                    Exporte o histórico das suas conversas em <span className="font-semibold text-[var(--ink)]">.txt</span> direto do WhatsApp e suba na Weppy. A IA aprende com os seus atendimentos reais — do seu jeito de vender.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Coluna direita — fontes + demo */}
@@ -71,21 +86,6 @@ export const KnowledgeBaseSection: React.FC = () => {
                                         </div>
                                     );
                                 })}
-                            </div>
-                        </div>
-
-                        {/* Destaque — treinar com o próprio WhatsApp (.txt) */}
-                        <div className="mt-5 flex items-start gap-3 rounded-2xl bg-[var(--orange-soft)] ring-1 ring-[var(--orange)]/20 p-4">
-                            <div className="w-9 h-9 rounded-lg bg-[var(--surface)] flex items-center justify-center shrink-0">
-                                <Download className="w-4 h-4 text-[var(--orange)]" strokeWidth={2} />
-                            </div>
-                            <div>
-                                <p className="text-sm font-semibold text-[var(--ink)] leading-tight">
-                                    Treine com o seu próprio WhatsApp
-                                </p>
-                                <p className="mt-1 text-xs text-[var(--ink-2)] leading-relaxed">
-                                    Exporte o histórico das suas conversas em <span className="font-semibold text-[var(--ink)]">.txt</span> direto do WhatsApp e suba na Weppy. A IA aprende com os seus atendimentos reais — do seu jeito de vender.
-                                </p>
                             </div>
                         </div>
 
