@@ -44,6 +44,43 @@ export const features = [
         title: "Análise de Métricas",
         description: "Acompanhe taxa de resposta, conversões e volume de atendimentos. Veja o que está funcionando e otimize em tempo real.",
     },
+    {
+        id: 'tracking',
+        icon: Target,
+        title: "Rastreamento de Conversões",
+        description: "Descubra qual anúncio da Meta gerou cada venda fechada no WhatsApp. Cada conversão volta para o seu Pixel e otimiza suas campanhas com dados reais.",
+    },
+];
+
+// ===== RASTREAMENTO DE CONVERSÕES =====
+
+export const conversionFlow = [
+    {
+        icon: Megaphone,
+        title: "Anúncio na Meta",
+        description: "O cliente clica no seu anúncio e cai direto no seu WhatsApp.",
+    },
+    {
+        icon: MessageSquare,
+        title: "Conversa no WhatsApp",
+        description: "O lead é identificado pela campanha de origem automaticamente.",
+    },
+    {
+        icon: Sparkles,
+        title: "A IA fecha a venda",
+        description: "Agenda ou converte o cliente sem você levantar um dedo.",
+    },
+    {
+        icon: Target,
+        title: "Conversão no Pixel",
+        description: "O evento volta para a Meta otimizar seus anúncios com vendas reais.",
+    },
+];
+
+export const conversionBenefits = [
+    { icon: BarChart3, text: "ROI real por campanha, sem planilha manual." },
+    { icon: Sparkles, text: "A própria IA marca a conversão na hora certa." },
+    { icon: TrendingUp, text: "A Meta otimiza com dados de venda reais, não palpites." },
 ];
 
 // ===== MOCKUPS DE CHAT =====
