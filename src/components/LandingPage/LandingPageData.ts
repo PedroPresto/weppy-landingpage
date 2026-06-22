@@ -49,7 +49,7 @@ export const features = [
         id: 'tracking',
         icon: Target,
         title: "Rastreamento de Conversões",
-        description: "Descubra qual anúncio da Meta gerou cada venda fechada no WhatsApp. Cada conversão volta para o seu Pixel e otimiza suas campanhas com dados reais.",
+        description: "Informe o ID do seu Pixel da Meta para que a Weppy envie e atribua corretamente as conversões aos seus anúncios.",
     },
 ];
 
