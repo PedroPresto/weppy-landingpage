@@ -12,44 +12,44 @@ export const features = [
     {
         id: 'rag',
         icon: Database,
-        title: "Treinamento RAG",
-        description: "Treine a IA com documentos do seu negócio, como PDFs, FAQs e catálogos. Ela aprende o seu tom e responde com as suas informações.",
+        title: "Uma IA que conhece seu negócio de cor",
+        description: "Suba seus PDFs, FAQs e catálogos. A IA aprende o seu tom e responde cada cliente com as suas próprias informações, sem inventar nada.",
     },
     {
         id: 'disparo',
         icon: Megaphone,
-        title: "Disparo em Massa",
-        description: "Dispare mensagens para uma lista de leads e deixe a IA conduzir cada conversa individualmente a partir daí.",
+        title: "Reative clientes parados e encha a agenda",
+        description: "Dispare uma mensagem para toda a sua lista e deixe a IA conduzir cada conversa individualmente até a venda.",
     },
     {
         id: 'agendamento',
         icon: CalendarCheck,
-        title: "Sistema de Agendamento",
+        title: "Sua agenda enche sozinha",
         description: "Cadastre seus serviços e horários. A IA mostra a disponibilidade em tempo real e confirma o agendamento direto no WhatsApp.",
     },
     {
         id: 'handoff',
         icon: PauseCircle,
-        title: "Assuma a Conversa",
-        description: "Desative a IA quando quiser e retome o atendimento manualmente. Ou ensine-a a identificar quando deve chamar um humano.",
+        title: "Assuma a conversa quando quiser",
+        description: "Pause a IA com um clique e retome o atendimento você mesmo. Ou ensine-a a te chamar na hora certa de fechar a venda.",
     },
     {
         id: 'fluxo',
         icon: Workflow,
-        title: "Criação de Fluxo Visual",
-        description: "Crie fluxos de conversa com um criador de arrastar e soltar. Monte jornadas completas sem escrever uma linha de código.",
+        title: "Monte seu funil arrastando, sem código",
+        description: "Crie jornadas de conversa completas com um construtor de arrastar e soltar. Sem escrever uma linha de código.",
     },
     {
         id: 'metricas',
         icon: BarChart3,
-        title: "Análise de Métricas",
-        description: "Acompanhe taxa de resposta, conversões e volume de atendimentos. Veja o que está funcionando e otimize em tempo real.",
+        title: "Saiba quanto a IA vendeu por você",
+        description: "Acompanhe taxa de resposta, conversões e volume de atendimentos. Veja o que funciona e otimize em tempo real.",
     },
     {
         id: 'tracking',
         icon: Target,
-        title: "Rastreamento de Conversões",
-        description: "Informe o ID do seu Pixel da Meta para que a Weppy envie e atribua corretamente as conversões aos seus anúncios.",
+        title: "Descubra qual anúncio deu venda de verdade",
+        description: "A Weppy devolve cada venda fechada pela IA para o seu Pixel da Meta, mostrando qual anúncio realmente trouxe cliente.",
     },
 ];
 
@@ -244,23 +244,23 @@ export const stats = [
 
 export const beforeAfter = [
     {
-        before: "Leads a esfriar a cada minuto de espera (e a comprar do concorrente).",
+        before: "Leads esfriando a cada minuto de espera (e comprando do concorrente).",
         after: "Atendimento imediato que cria uma primeira impressão 'UAU' e acelera a decisão de compra.",
         icon: Clock
     },
     {
-        before: "Você a responder a 'preços' e 'olá' o dia todo, sem tempo para pensar no futuro do negócio.",
+        before: "Você respondendo 'preço?' e 'oi' o dia todo, sem tempo para pensar no futuro do negócio.",
         after: "Você focado em fazer o seu negócio crescer, enquanto o assistente faz o trabalho repetitivo.",
         icon: Users
     },
     {
         before: "Vendas perdidas porque o cliente mandou mensagem de madrugada ou no fim de semana.",
-        after: "Notificações de vendas a chegar no seu telemóvel às 3 da manhã. Feitas pelo seu 'funcionário' perfeito.",
+        after: "Notificações de vendas chegando no seu celular às 3 da manhã. Feitas pelo seu 'funcionário' perfeito.",
         icon: Target
     },
     {
-        before: "Sentimento de caos e de estar sempre a 'apagar incêndios' no WhatsApp.",
-        after: "Paz de espírito e a certeza de que cada oportunidade de venda está a ser tratada com máxima eficiência.",
+        before: "Sensação de caos e de estar sempre 'apagando incêndio' no WhatsApp.",
+        after: "Paz de espírito e a certeza de que cada oportunidade de venda está sendo tratada com máxima eficiência.",
         icon: Brain
     }
 ];
@@ -271,12 +271,12 @@ const allFeatures = [
     'Qualifica interessados automaticamente',
     'Construtor de Conversas (Funis)',
     'Envio de mensagens agendadas',
-    'Funciona com o telemóvel desligado',
-    'Treinamento da IA via RAG',
+    'Funciona com o celular desligado',
+    'IA treinada com as informações do seu negócio',
     'Agendamento Automático via IA',
     'Gestão de Agenda integrada',
     'Rastreamento de conversões com Pixel da Meta',
-    'Tokens ilimitados',
+    'Mensagens ilimitadas',
     'Relatórios Simplificados',
     'Suporte individual via WhatsApp'
 ];
@@ -311,8 +311,8 @@ export const plans = [
 
 export const faqs = [
     {
-        question: "Preciso de saber programar ou ser 'expert' em tecnologia?",
-        answer: "Zero necessidade! Nossa plataforma foi criada para empreendedores, não para programadores. Se você sabe enviar uma mensagem no WhatsApp, você já é um expert na Weppy. Em menos de 15 minutos, com alguns cliques, seu assistente já estará funcionando e pronto para vender. Além disso, a nossa equipe de suporte está pronta para o ajudar em cada passo do processo."
+        question: "Preciso saber programar ou ser 'expert' em tecnologia?",
+        answer: "Zero necessidade! Nossa plataforma foi criada para empreendedores, não para programadores. Se você sabe enviar uma mensagem no WhatsApp, você já é um expert na Weppy. Em menos de 15 minutos, com alguns cliques, seu assistente já está funcionando e pronto para vender. Além disso, a nossa equipe de suporte está pronta para te ajudar em cada passo do processo."
     },
     {
         question: "As respostas do assistente parecem mesmo humanas?",
@@ -331,32 +331,32 @@ export const faqs = [
         answer: "Sim, ele é o seu funcionário perfeito! Uma vez ativo, seu assistente trabalha 24/7, sem pausas nem feriados. Isso significa que você vende enquanto dorme, viaja ou está ocupado. Chega de perder vendas por demora na resposta. Seu negócio estará sempre aberto!"
     },
     {
-        question: "Isto funciona para o meu tipo de negócio? ",
-        answer: "Sim! Se você vende ou atende pelo WhatsApp, a Weppy foi feita para si. Já ajudamos negócios de dezenas de setores, de e-commerce e infoprodutos a clínicas e serviços locais. A IA é treinada para se adaptar ao seu negócio, qualificando leads, agendando visitas ou vendendo produtos. É a ferramenta mais versátil que você pode ter para escalar as suas vendas."
+        question: "Isso funciona para o meu tipo de negócio?",
+        answer: "Sim! Se você vende ou atende pelo WhatsApp, a Weppy foi feita para você. Já ajudamos negócios de dezenas de setores, de e-commerce e infoprodutos a clínicas e serviços locais. A IA é treinada para se adaptar ao seu negócio, qualificando leads, agendando visitas ou vendendo produtos. É a ferramenta mais versátil que você pode ter para escalar as suas vendas."
     },
     {
         question: "Ele consegue atender vários clientes ao mesmo tempo?",
-        answer: "Sim, sem limites! Imagine ter 10, 50 ou até 200 clientes a fazer perguntas ao mesmo tempo e todos serem respondidos instantaneamente. O assistente não se cansa nem comete erros. É o fim da fila de espera no seu WhatsApp. Cada cliente recebe atenção imediata, o que acelera drasticamente as suas vendas."
+        answer: "Sim, sem limites! Imagine ter 10, 50 ou até 200 clientes fazendo perguntas ao mesmo tempo e todos sendo respondidos instantaneamente. O assistente não se cansa nem comete erros. É o fim da fila de espera no seu WhatsApp. Cada cliente recebe atenção imediata, o que acelera drasticamente as suas vendas."
     },
     {
         question: "Qual o real impacto que posso esperar nas minhas vendas?",
-        answer: "O impacto é direto: mais velocidade, mais vendas. Nossos clientes relatam que, ao eliminar a demora na resposta, a taxa de conversão aumenta drasticamente. Pense em todas as vendas que você já perdeu porque estava ocupado, dormindo ou demorou a responder. A Weppy recupera essas vendas para si, transformando o seu WhatsApp numa máquina de lucro que trabalha 24/7."
+        answer: "O impacto é direto: mais velocidade, mais vendas. Nossos clientes relatam que, ao eliminar a demora na resposta, a taxa de conversão aumenta drasticamente. Pense em todas as vendas que você já perdeu porque estava ocupado, dormindo ou demorou a responder. A Weppy recupera essas vendas para você, transformando o seu WhatsApp numa máquina de lucro que trabalha 24/7."
     },
     {
-        question: "Funciona com o meu número de WhatsApp atual? Preciso de um novo chip?",
-        answer: "Funciona perfeitamente com o seu número atual! Não precisa de comprar um novo chip nem mudar nada na sua comunicação. A integração é feita de forma simples e digital. Em minutos, o seu número de sempre, que os seus clientes já conhecem e confiam, estará turbinado com a nossa IA."
+        question: "Funciona com o meu número de WhatsApp atual? Preciso de um chip novo?",
+        answer: "Funciona perfeitamente com o seu número atual! Não precisa comprar um chip novo nem mudar nada na sua comunicação. A integração é feita de forma simples e digital. Em minutos, o seu número de sempre, que os seus clientes já conhecem e confiam, estará turbinado com a nossa IA."
     },
     {
         question: "O que acontece logo após eu pagar? Terei suporte?",
-        answer: "O acesso é imediato e você nunca estará sozinho! Assim que o pagamento for aprovado, você recebe acesso instantâneo à plataforma com um passo a passo super simples. E o mais importante: a nossa equipe de especialistas em sucesso do cliente estará disponível no WhatsApp para o ajudar em cada etapa, garantindo que você extraia o máximo de vendas da sua nova ferramenta."
+        answer: "O acesso é imediato e você nunca estará sozinho! Assim que o pagamento for aprovado, você recebe acesso instantâneo à plataforma com um passo a passo super simples. E o mais importante: a nossa equipe de especialistas em sucesso do cliente estará disponível no WhatsApp para te ajudar em cada etapa, garantindo que você extraia o máximo de vendas da sua nova ferramenta."
     },
     {
         question: "Posso cancelar quando quiser?",
-        answer: "Sim, com total liberdade. Não existem contratos nem fidelidade. Se os resultados não o satisfizerem, pode cancelar com um clique. Nosso foco é mantê-lo como cliente pelo seu sucesso, não por um contrato."
+        answer: "Sim, com total liberdade. Não existem contratos nem fidelidade. Se os resultados não te satisfizerem, você cancela com um clique. Nosso foco é manter você como cliente pelo seu sucesso, não por um contrato."
     },
     {
         question: "E se eu não me adaptar ou achar que não é para mim?",
-        answer: "Risco Absolutamente Zero! Nós confiamos tanto no poder da Weppy que tiramos todo o peso dos seus ombros. Você tem 7 dias completos para testar tudo, automatizar suas conversas e ver as vendas a acontecerem. Se por QUALQUER motivo achar que não é para si, basta um clique para receber 100% do seu dinheiro de volta. Sem perguntas, sem ressentimentos. Ou você tem resultados, ou não paga nada."
+        answer: "Risco Absolutamente Zero! Nós confiamos tanto no poder da Weppy que tiramos todo o peso dos seus ombros. Você tem 7 dias completos para testar tudo, automatizar suas conversas e ver as vendas acontecerem. Se por QUALQUER motivo achar que não é para você, basta um clique para receber 100% do seu dinheiro de volta. Sem perguntas, sem ressentimentos. Ou você tem resultados, ou não paga nada."
     }
 ];
 
@@ -380,7 +380,6 @@ export const companies = [
 ];
 export const urgencyFeatures = [
     "⚡ Bônus: Configuração da sua IA com nossa equipe e suporte prioritário",
-    "🔥 Apenas 15 vagas abertas este mês",
     "💰 Comece por apenas R$97 com tudo liberado (sem necessidade de cartão)",
     "🎯 Garantia de 7 dias"
 ];

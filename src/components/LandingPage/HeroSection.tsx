@@ -45,14 +45,15 @@ export const HeroSection: React.FC = () => {
                         <h1
                             className={`mt-6 text-balance text-[2.5rem] leading-[1.02] sm:text-5xl md:text-6xl lg:text-[4.5rem] lg:leading-[1.0] tracking-[-0.04em] text-[var(--ink)] font-semibold ${heroRef.isVisible ? 'animate-fade-in-up animation-delay-100' : 'opacity-0'}`}
                         >
-                            <span className="text-[var(--orange)]">Venda</span> no piloto automático.
+                            Nunca mais <span className="text-[var(--orange)]">perca uma venda</span>
                             <br className="hidden md:block" />
-                            <span className="text-[var(--orange)]"> Com IA</span> no WhatsApp.
+                            por demorar a responder.
                         </h1>
 
                         <p className={`mt-6 text-base md:text-lg text-[var(--ink-2)] leading-relaxed max-w-xl ${heroRef.isVisible ? 'animate-fade-in-up animation-delay-300' : 'opacity-0'}`}>
-                            A Weppy conecta uma IA, treinada com o seu negócio, direto ao WhatsApp Business.
-                            Ela qualifica, responde e vende 24h por dia. Configure sem conhecimento técnico em menos de 15 min.
+                            Um assistente de IA atende cada cliente na hora, tira dúvidas, agenda e fecha venda no seu
+                            WhatsApp, 24h por dia, enquanto você trabalha, dorme ou atende outra pessoa. Você configura em
+                            15 minutos, sem saber nada de tecnologia.
                         </p>
 
                         <div className={`mt-8 flex flex-col sm:flex-row gap-3 ${heroRef.isVisible ? 'animate-fade-in-up animation-delay-500' : 'opacity-0'}`}>
@@ -74,7 +75,7 @@ export const HeroSection: React.FC = () => {
                                 <span className="font-semibold text-[var(--ink)]">4.9</span>
                                 <span className="text-[var(--ink-3)]">/ 5 satisfação</span>
                             </span>
-                            <span className="mono text-[var(--ink-3)]">latência &lt; 800ms</span>
+                            <span className="mono text-[var(--ink-3)]">responde em &lt; 1 segundo</span>
                         </div>
                     </div>
 

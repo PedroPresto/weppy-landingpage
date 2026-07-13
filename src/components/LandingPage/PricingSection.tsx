@@ -88,7 +88,7 @@ export const PricingSection: React.FC = () => {
                                     rel="noopener noreferrer"
                                     className={`${isPopular ? 'btn-orange' : 'btn-ghost'} w-full group`}
                                 >
-                                    <span>{isPopular ? 'Garantir economia máxima' : 'Contratar'}</span>
+                                    <span>{isPopular ? 'Começar e economizar 80%' : 'Começar agora'}</span>
                                     <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
                                 </a>
                             </div>
