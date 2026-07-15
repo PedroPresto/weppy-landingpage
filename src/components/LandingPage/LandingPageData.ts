@@ -235,6 +235,35 @@ export const testimonials = [
     }
 ];
 
+// ===== DEPOIMENTOS EM VÍDEO (formato story) — clientes reais =====
+export const videoTestimonials = [
+    {
+        name: 'Camila Borges',
+        role: 'Clínica de Estética',
+        videoUrl: 'https://res.cloudinary.com/dsbqk9o5s/video/upload/v1781055819/depoimento_clinica_estetica_camila_borges_pm8zx6.mp4',
+    },
+    {
+        name: 'Dr. Wilton',
+        role: 'Dentista',
+        videoUrl: 'https://res.cloudinary.com/dsbqk9o5s/video/upload/v1781055022/depoimento_wilton_dentista_rgqjyc.mp4',
+    },
+    {
+        name: 'Jonathan Araújo',
+        role: 'Mentoria',
+        videoUrl: 'https://res.cloudinary.com/dsbqk9o5s/video/upload/v1781055018/depoimento_mentoria_Jonathan_Ara%C3%BAjo_ltswbb.mp4',
+    },
+    {
+        name: 'Fábio Rodrigues',
+        role: 'Loja Digital',
+        videoUrl: 'https://res.cloudinary.com/dsbqk9o5s/video/upload/v1781055018/depoimento_loja_digital_fabio_rodrigues_nzqb2g.mp4',
+    },
+    {
+        name: 'Kézia Coimbra',
+        role: 'Corretora',
+        videoUrl: 'https://res.cloudinary.com/dsbqk9o5s/video/upload/v1781055018/depoimento_corretora_kezia_coimbra_xb0xyk.mp4',
+    },
+];
+
 export const stats = [
     {number: 250000, label: "Leads Qualificados", icon: MessageSquare, suffix: "+"},
     {number: 98, label: "Taxa de Satisfação", icon: Star, suffix: "%"},

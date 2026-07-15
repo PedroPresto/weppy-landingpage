@@ -9,6 +9,7 @@ import { ConversionTrackingSection } from '@/components/LandingPage/ConversionTr
 import { KnowledgeBaseSection } from '@/components/LandingPage/KnowledgeBaseSection';
 import { ComparisonSection } from '@/components/LandingPage/ComparisonSection';
 import { TestimonialsSection } from '@/components/LandingPage/TestimonialSection';
+import { VideoTestimonialsSection } from '@/components/LandingPage/VideoTestimonialsSection';
 import { PricingSection } from '@/components/LandingPage/PricingSection';
 import { WhoUsesSection } from '@/components/LandingPage/WhoUsesSection';
 import { CloseSection } from '@/components/LandingPage/CloseSection';
@@ -69,6 +70,7 @@ export default function Home() {
                     <KnowledgeBaseSection />
                     <ConversionTrackingSection />
                     <TestimonialsSection />
+                    <VideoTestimonialsSection />
                     <PricingSection />
                     <CloseSection />
                 </main>
