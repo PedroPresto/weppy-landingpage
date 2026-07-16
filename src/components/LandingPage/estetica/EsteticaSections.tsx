@@ -48,9 +48,9 @@ export const EsteticaHero: React.FC = () => {
                         <h1
                             className={`mt-6 text-balance text-[2.5rem] leading-[1.02] sm:text-5xl md:text-6xl lg:text-[4.5rem] lg:leading-[1.0] tracking-[-0.04em] text-[var(--ink)] font-semibold ${ref.isVisible ? 'animate-fade-in-up animation-delay-100' : 'opacity-0'}`}
                         >
-                            Você faz a beleza.
+                            Enquanto você atende uma,
                             <br className="hidden md:block" />
-                            <span className="text-[var(--orange)]">A IA lota sua agenda.</span>
+                            <span className="text-[var(--orange)]">a IA agenda a próxima.</span>
                         </h1>
 
                         <p className={`mt-6 text-base md:text-lg text-[var(--ink-2)] leading-relaxed max-w-xl ${ref.isVisible ? 'animate-fade-in-up animation-delay-300' : 'opacity-0'}`}>
