@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         siteName: 'Weppy',
         title: 'Automação de WhatsApp para Beleza · IA que Agenda por Você | Weppy',
         description:
-            'Suas mãos na cliente, a IA no WhatsApp. A Weppy responde suas clientes na hora, passa valores e agenda enquanto você atende. Setup em 15 min.',
+            'Você faz a beleza, a IA lota sua agenda. A Weppy responde suas clientes na hora, passa valores e agenda no WhatsApp enquanto você atende. Setup em 15 min.',
         images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Weppy para Beleza' }],
     },
 };
