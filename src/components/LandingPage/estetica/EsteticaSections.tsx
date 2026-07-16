@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { ArrowRight, Star, Check, Plus, Minus, Clock, Shield, Zap } from 'lucide-react';
+import { ArrowRight, Star, Check, Plus, Minus, Clock, Shield, Zap, MessageCircle, Loader2 } from 'lucide-react';
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import { ChatMockup } from '../ChatMockup';
 import { VideoTestimonialCard } from '../VideoTestimonialCard';
@@ -16,6 +16,8 @@ import {
     esteticaVideo,
     esteticaFaqs,
     esteticaUrgencyFeatures,
+    esteticaDemo,
+    LANDING_LEADS_ENDPOINT,
 } from './EsteticaData';
 
 /* ========================= HERO ========================= */
@@ -64,8 +66,14 @@ export const EsteticaHero: React.FC = () => {
                                 <span>Encher minha agenda</span>
                                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
                             </a>
-                            <a href="#results" className="btn-ghost">
-                                <span>Ver demonstração</span>
+                            <a
+                                href={esteticaDemo.waLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn-ghost group"
+                            >
+                                <MessageCircle className="w-4 h-4 text-[var(--wa-green-deep,#25D366)]" />
+                                <span>Fale com a IA agora</span>
                             </a>
                         </div>
 
@@ -511,6 +519,154 @@ export const EsteticaClose: React.FC = () => {
                                 <span>Cancele quando quiser</span>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+/* ===================== CAPTURA DE LEAD (a IA te chama) ===================== */
+export const EsteticaLeadCapture: React.FC = () => {
+    const ref = useScrollAnimation(0.1);
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+    const [errorMsg, setErrorMsg] = useState('');
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const digits = phone.replace(/\D/g, '');
+        if (digits.length < 10) {
+            setStatus('error');
+            setErrorMsg('Digite seu WhatsApp com DDD, ex: 61 99999-9999.');
+            return;
+        }
+
+        setStatus('loading');
+        try {
+            const form = e.currentTarget;
+            const honeypot = (form.elements.namedItem('website') as HTMLInputElement)?.value || '';
+            const res = await fetch(LANDING_LEADS_ENDPOINT, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, phone: digits, source: '/estetica', website: honeypot }),
+            });
+            if (!res.ok) {
+                const data = await res.json().catch(() => null);
+                throw new Error(data?.message || 'Não conseguimos enviar agora.');
+            }
+            setStatus('success');
+        } catch (err) {
+            setStatus('error');
+            setErrorMsg(err instanceof Error ? err.message : 'Não conseguimos enviar agora. Tente de novo.');
+        }
+    };
+
+    return (
+        <section id="ia-te-chama" ref={ref.ref} className="py-24 md:py-32 bg-[var(--surface-2)] border-y border-[var(--line)]">
+            <div className="container-editorial">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                    <div className={`${ref.isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
+                        <p className="eyebrow mb-4">Prove antes de assinar</p>
+                        <h2 className="text-balance text-3xl md:text-5xl leading-[1.05] tracking-[-0.03em] text-[var(--ink)] font-semibold">
+                            Ainda na dúvida?{' '}
+                            <span className="text-[var(--orange)]">Deixa que a IA te chama.</span>
+                        </h2>
+                        <p className="mt-5 text-lg text-[var(--ink-2)] max-w-xl">
+                            Deixe seu WhatsApp e receba uma mensagem da nossa IA em instantes. Converse com ela como se
+                            fosse sua cliente: pergunte preço, peça horário, teste à vontade. É exatamente assim que ela
+                            vai atender as suas clientes.
+                        </p>
+                        <p className="mt-4 text-sm text-[var(--ink-3)]">
+                            Sem compromisso e sem spam: é uma conversa de demonstração, você para quando quiser.
+                        </p>
+                    </div>
+
+                    <div className={`${ref.isVisible ? 'animate-fade-in-up animation-delay-200' : 'opacity-0'}`}>
+                        {status === 'success' ? (
+                            <div className="p-8 md:p-10 rounded-2xl bg-[var(--surface)] ring-2 ring-[#25D366] text-center">
+                                <div className="w-14 h-14 mx-auto rounded-full bg-[#25D366] flex items-center justify-center mb-5">
+                                    <Check className="w-7 h-7 text-white" strokeWidth={3} />
+                                </div>
+                                <h3 className="text-xl font-semibold text-[var(--ink)] mb-2">
+                                    Prontinho! A IA já vai te chamar 💬
+                                </h3>
+                                <p className="text-sm text-[var(--ink-2)] leading-relaxed">
+                                    Abre seu WhatsApp: a mensagem chega em instantes. Responda e converse com ela à vontade.
+                                </p>
+                            </div>
+                        ) : (
+                            <form
+                                onSubmit={handleSubmit}
+                                className="p-8 md:p-10 rounded-2xl bg-[var(--surface)] border border-[var(--line)] shadow-[0_24px_60px_-20px_rgba(255,89,2,0.15)]"
+                            >
+                                <label className="block text-sm font-medium text-[var(--ink)] mb-1.5" htmlFor="lead-name">
+                                    Seu nome <span className="text-[var(--ink-3)] font-normal">(opcional)</span>
+                                </label>
+                                <input
+                                    id="lead-name"
+                                    type="text"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    placeholder="Como a IA deve te chamar?"
+                                    className="w-full mb-4 px-4 py-3 rounded-xl bg-[var(--surface-2)] border border-[var(--line)] text-[var(--ink)] placeholder:text-[var(--ink-3)] focus:outline-none focus:border-[var(--orange)] transition-colors"
+                                />
+
+                                <label className="block text-sm font-medium text-[var(--ink)] mb-1.5" htmlFor="lead-phone">
+                                    Seu WhatsApp
+                                </label>
+                                <input
+                                    id="lead-phone"
+                                    type="tel"
+                                    required
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
+                                    placeholder="(61) 99999-9999"
+                                    className="w-full mb-2 px-4 py-3 rounded-xl bg-[var(--surface-2)] border border-[var(--line)] text-[var(--ink)] placeholder:text-[var(--ink-3)] focus:outline-none focus:border-[var(--orange)] transition-colors"
+                                />
+
+                                {/* Honeypot anti-bot: humanos não veem este campo */}
+                                <input
+                                    type="text"
+                                    name="website"
+                                    tabIndex={-1}
+                                    autoComplete="off"
+                                    aria-hidden="true"
+                                    className="hidden"
+                                />
+
+                                {status === 'error' && (
+                                    <p className="text-sm text-red-500 mb-2">{errorMsg}</p>
+                                )}
+
+                                <button
+                                    type="submit"
+                                    disabled={status === 'loading'}
+                                    className="btn-orange w-full group mt-3 disabled:opacity-60 disabled:cursor-not-allowed"
+                                >
+                                    {status === 'loading' ? (
+                                        <Loader2 className="w-4 h-4 animate-spin" />
+                                    ) : (
+                                        <MessageCircle className="w-4 h-4" />
+                                    )}
+                                    <span>{status === 'loading' ? 'Enviando...' : 'Quero que a IA me chame'}</span>
+                                </button>
+
+                                <p className="mt-4 text-center text-xs text-[var(--ink-3)]">
+                                    Ou, se preferir,{' '}
+                                    <a
+                                        href={esteticaDemo.waLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="underline hover:text-[var(--ink)] transition-colors"
+                                    >
+                                        chame a IA você mesma agora
+                                    </a>
+                                    .
+                                </p>
+                            </form>
+                        )}
                     </div>
                 </div>
             </div>

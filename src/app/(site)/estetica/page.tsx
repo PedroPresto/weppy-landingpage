@@ -11,6 +11,7 @@ import {
     EsteticaBenefits,
     EsteticaTestimonials,
     EsteticaPricing,
+    EsteticaLeadCapture,
     EsteticaClose,
 } from '@/components/LandingPage/estetica/EsteticaSections';
 import { esteticaFaqs } from '@/components/LandingPage/estetica/EsteticaData';
@@ -78,6 +79,7 @@ export default function EsteticaPage() {
                     <EsteticaBenefits />
                     <EsteticaTestimonials />
                     <EsteticaPricing />
+                    <EsteticaLeadCapture />
                     <EsteticaClose />
                 </main>
                 <LandingFooter />

@@ -134,6 +134,23 @@ export const esteticaTestimonials = [
     },
 ];
 
+/* ===== DEMO AO VIVO — a IA da Weppy atendendo de verdade ===== */
+export const esteticaDemo = {
+    /** Número com a IA da Weppy conectada (conta pedroprestodev). */
+    whatsappNumber: '556192817914',
+    prefilledMessage:
+        'Oi! Vim do site da Weppy e quero ver a IA atendendo na prática 😄',
+    get waLink() {
+        return `https://wa.me/${this.whatsappNumber}?text=${encodeURIComponent(this.prefilledMessage)}`;
+    },
+};
+
+/** Endpoint público que dispara a primeira mensagem da IA pro lead. */
+export const LANDING_LEADS_ENDPOINT =
+    process.env.NEXT_PUBLIC_WEPPY_API_URL
+        ? `${process.env.NEXT_PUBLIC_WEPPY_API_URL}/public/landing-leads`
+        : 'https://app.weppy.com.br/api/public/landing-leads';
+
 /* ===== DEPOIMENTO EM VÍDEO (formato story) — cliente real de estética ===== */
 export const esteticaVideo = {
     name: 'Camila Borges',
