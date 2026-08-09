@@ -45,7 +45,7 @@ export const HeroSection: React.FC = () => {
                         <h1
                             className={`mt-6 text-balance text-[2.5rem] leading-[1.02] sm:text-5xl md:text-6xl lg:text-[4.5rem] lg:leading-[1.0] tracking-[-0.04em] text-[var(--ink)] font-semibold ${heroRef.isVisible ? 'animate-fade-in-up animation-delay-100' : 'opacity-0'}`}
                         >
-                            Nunca mais <span className="text-[var(--orange)]">perca uma venda</span>
+                            Nunca mais <span className="text-[var(--orange)]">perca uma venda</span>{' '}
                             <br className="hidden md:block" />
                             por demorar a responder.
                         </h1>
