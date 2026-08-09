@@ -479,6 +479,11 @@ h1, .display {
   0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
   50% { box-shadow: 0 0 0 6px rgba(37, 211, 102, 0); }
 }
+/* Régua de tempo do toast de compra */
+@keyframes weppyToastBar {
+  from { transform: scaleX(1); }
+  to   { transform: scaleX(0); }
+}
 
 .animate-fade-in { animation: fade-in 600ms cubic-bezier(0.32, 0.72, 0, 1) forwards; opacity: 0; }
 .animate-fade-in-up { animation: fade-in-up 700ms cubic-bezier(0.32, 0.72, 0, 1) forwards; opacity: 0; }

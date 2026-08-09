@@ -6,6 +6,8 @@ import { VslSection } from '@/components/LandingPage/VslSection';
 import { HowItWorksSection } from '@/components/LandingPage/HowItWorksSection';
 import { FeaturesSection } from '@/components/LandingPage/FeaturesSection';
 import { ConversionTrackingSection } from '@/components/LandingPage/ConversionTrackingSection';
+import { InstagramSection } from '@/components/LandingPage/InstagramSection';
+import { KiwifyRankSection } from '@/components/LandingPage/KiwifyRankSection';
 import { KnowledgeBaseSection } from '@/components/LandingPage/KnowledgeBaseSection';
 import { ComparisonSection } from '@/components/LandingPage/ComparisonSection';
 import { TestimonialsSection } from '@/components/LandingPage/TestimonialSection';
@@ -69,8 +71,10 @@ export default function Home() {
                     <ComparisonSection />
                     <KnowledgeBaseSection />
                     <ConversionTrackingSection />
+                    <InstagramSection />
                     <TestimonialsSection />
                     <VideoTestimonialsSection />
+                    <KiwifyRankSection />
                     <PricingSection />
                     <CloseSection />
                 </main>

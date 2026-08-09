@@ -4,7 +4,8 @@ import {
     Brain, BarChart3, Inbox, Zap, Workflow, Users, TrendingUp, Sparkles,
     MessageSquare, Star, Clock, Target, Smartphone, Images, Database, CalendarCheck,
     Megaphone, MousePointerClick, PauseCircle,
-    FileText, HelpCircle, Tag, Globe
+    FileText, HelpCircle, Tag, Globe,
+    Instagram, Send, Link2, Filter, Shuffle
 } from 'lucide-react';
 import type { ChatStep } from './ChatMockup/types';
 
@@ -51,6 +52,59 @@ export const features = [
         title: "Descubra qual anúncio deu venda de verdade",
         description: "A Weppy devolve cada venda fechada pela IA para o seu Pixel da Meta, mostrando qual anúncio realmente trouxe cliente.",
     },
+    {
+        id: 'instagram',
+        icon: Instagram,
+        title: "Todo comentário no Instagram vira conversa",
+        description: "A Weppy responde o comentário e manda o direct com o seu link no segundo em que o seguidor comenta. Você posta e vai cuidar do resto.",
+    },
+];
+
+// ===== AUTOMAÇÃO DE INSTAGRAM =====
+
+export const instagramFlow = [
+    {
+        icon: Instagram,
+        title: "O seguidor comenta",
+        description: "Em qualquer post da conta ou só naquele que você escolher.",
+    },
+    {
+        icon: Filter,
+        title: "A palavra-chave dispara",
+        description: "Use PREÇO, QUERO, LINK, ou aceite qualquer comentário novo.",
+    },
+    {
+        icon: MessageSquare,
+        title: "A resposta pública sai na hora",
+        description: "Com variações que você cadastra, para não soar robótico.",
+    },
+    {
+        icon: Send,
+        title: "E o direct chega em seguida",
+        description: "Mensagem personalizada e até 3 botões com link clicável.",
+    },
+];
+
+export const instagramBenefits = [
+    { icon: Zap, text: "Responde em segundos, de madrugada, no fim de semana, no meio da sua reunião." },
+    { icon: Link2, text: "O link vai em botão dentro do direct, que converte muito mais que link na bio." },
+    { icon: Shuffle, text: "Variações de resposta cadastradas para o Instagram não enxergar repetição." },
+];
+
+export const instagramDemo = {
+    handle: 'suamarca',
+    caption: 'Comenta PREÇO que eu te mando a tabela completa no direct 👇',
+    commenter: 'ana.souza',
+    keyword: 'PREÇO',
+    reply: 'Acabei de te chamar no direct, Ana! 💬',
+    dm: 'Oi Ana! Aqui está a tabela completa de valores. Qualquer dúvida é só responder por aqui que eu te ajudo.',
+    button: 'Ver a tabela de preços',
+};
+
+export const instagramStats = [
+    { value: '2s', label: 'da resposta ao direct' },
+    { value: '24/7', label: 'sem ninguém de plantão' },
+    { value: '3', label: 'botões com link no direct' },
 ];
 
 // ===== RASTREAMENTO DE CONVERSÕES =====
@@ -431,55 +485,23 @@ export const footerLinks = {
     ]
 };
 
+/**
+ * Prova social do checkout. O sobrenome vai abreviado e a cidade entra junto
+ * porque é assim que os widgets de compra exibem, por privacidade do comprador.
+ * O tempo não fica fixo aqui: é sorteado a cada exibição no controller.
+ */
 export const purchaseToasts = [
-    {
-        icon: "✨",
-        message: "Mariana Brandão assinou o Plano Mensal.",
-        time: "agora mesmo"
-    },
-    {
-        icon: "✨",
-        message: "Lucas Felipe assinou o Plano Anual.",
-        time: "há 1 minuto"
-    },
-    {
-        icon: "✨",
-        message: "Camila Rocha assinou o Plano Mensal.",
-        time: "há 2 minutos"
-    },
-    {
-        icon: "✨",
-        message: "Rafael Martins assinou o Plano Anual.",
-        time: "há 3 minutos"
-    },
-    {
-        icon: "✨",
-        message: "Juliana Alves assinou o Plano Mensal.",
-        time: "há 4 minutos"
-    },
-    {
-        icon: "✨",
-        message: "Thiago Henrique assinou o Plano Anual.",
-        time: "agora mesmo"
-    },
-    {
-        icon: "✨",
-        message: "Fernanda Lima assinou o Plano Mensal.",
-        time: "há 5 minutos"
-    },
-    {
-        icon: "✨",
-        message: "Gabriel Costa assinou o Plano Anual.",
-        time: "há 2 minutos"
-    },
-    {
-        icon: "✨",
-        message: "Amanda Freitas assinou o Plano Mensal.",
-        time: "há 6 minutos"
-    },
-    {
-        icon: "✨",
-        message: "Bruno Carvalho assinou o Plano Anual.",
-        time: "há 7 minutos"
-    }
+    { firstName: 'Mariana', lastInitial: 'B', city: 'Belo Horizonte', uf: 'MG', plan: 'Plano Anual' },
+    { firstName: 'Lucas', lastInitial: 'F', city: 'Curitiba', uf: 'PR', plan: 'Plano Anual' },
+    { firstName: 'Camila', lastInitial: 'R', city: 'Fortaleza', uf: 'CE', plan: 'Plano Mensal' },
+    { firstName: 'Rafael', lastInitial: 'M', city: 'Porto Alegre', uf: 'RS', plan: 'Plano Anual' },
+    { firstName: 'Juliana', lastInitial: 'S', city: 'Goiânia', uf: 'GO', plan: 'Plano Anual' },
+    { firstName: 'Thiago', lastInitial: 'H', city: 'Recife', uf: 'PE', plan: 'Plano Mensal' },
+    { firstName: 'Fernanda', lastInitial: 'L', city: 'Campinas', uf: 'SP', plan: 'Plano Anual' },
+    { firstName: 'Gabriel', lastInitial: 'C', city: 'Florianópolis', uf: 'SC', plan: 'Plano Anual' },
+    { firstName: 'Amanda', lastInitial: 'F', city: 'Salvador', uf: 'BA', plan: 'Plano Mensal' },
+    { firstName: 'Bruno', lastInitial: 'C', city: 'Brasília', uf: 'DF', plan: 'Plano Anual' },
+    { firstName: 'Patrícia', lastInitial: 'A', city: 'Ribeirão Preto', uf: 'SP', plan: 'Plano Anual' },
+    { firstName: 'Diego', lastInitial: 'N', city: 'Manaus', uf: 'AM', plan: 'Plano Mensal' },
 ];
+

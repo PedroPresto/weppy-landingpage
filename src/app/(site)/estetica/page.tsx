@@ -9,12 +9,16 @@ import {
     EsteticaScene,
     EsteticaHowItWorks,
     EsteticaBenefits,
+    EsteticaInstagram,
     EsteticaTestimonials,
     EsteticaPricing,
     EsteticaLeadCapture,
     EsteticaClose,
 } from '@/components/LandingPage/estetica/EsteticaSections';
-import { esteticaFaqs } from '@/components/LandingPage/estetica/EsteticaData';
+import { KiwifyRankSection } from '@/components/LandingPage/KiwifyRankSection';
+import { VideoTestimonialsSection } from '@/components/LandingPage/VideoTestimonialsSection';
+import { videoTestimonials } from '@/components/LandingPage/LandingPageData';
+import { esteticaFaqs, esteticaVideo } from '@/components/LandingPage/estetica/EsteticaData';
 import { SITE_URL } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -77,8 +81,15 @@ export default function EsteticaPage() {
                     <EsteticaScene />
                     <EsteticaHowItWorks />
                     <EsteticaBenefits />
+                    <EsteticaInstagram />
                     <EsteticaTestimonials />
+                    <KiwifyRankSection />
                     <EsteticaPricing />
+                    {/* A Camila já aparece nos depoimentos acima: sai do carrossel pra não repetir. */}
+                    <VideoTestimonialsSection
+                        items={videoTestimonials.filter((v) => v.name !== esteticaVideo.name)}
+                        description="Não é só beleza. Clínicas, dentistas, lojas e mentorias colocaram a IA da Weppy para atender no WhatsApp e contaram o que mudou."
+                    />
                     <EsteticaLeadCapture />
                     <EsteticaClose />
                 </main>

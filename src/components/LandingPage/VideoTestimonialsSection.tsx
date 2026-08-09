@@ -5,7 +5,22 @@ import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import { VideoTestimonialCard } from './VideoTestimonialCard';
 import { videoTestimonials } from './LandingPageData';
 
-export const VideoTestimonialsSection: React.FC = () => {
+interface VideoTestimonial {
+    name: string;
+    role: string;
+    videoUrl: string;
+}
+
+interface VideoTestimonialsSectionProps {
+    /** Permite reaproveitar a seção em outra LP sem repetir depoimento já exibido. */
+    items?: VideoTestimonial[];
+    description?: string;
+}
+
+export const VideoTestimonialsSection: React.FC<VideoTestimonialsSectionProps> = ({
+    items = videoTestimonials,
+    description = 'Depoimentos reais de clientes que automatizaram o WhatsApp com a Weppy, cada um do seu segmento.',
+}) => {
     const ref = useScrollAnimation(0.05);
 
     return (
@@ -18,12 +33,12 @@ export const VideoTestimonialsSection: React.FC = () => {
                         <span className="text-[var(--orange)]">Resultado no rosto de quem usa.</span>
                     </h2>
                     <p className={`mt-5 text-lg text-[var(--ink-2)] ${ref.isVisible ? 'animate-fade-in-up animation-delay-200' : 'opacity-0'}`}>
-                        Depoimentos reais de clientes que automatizaram o WhatsApp com a Weppy, cada um do seu segmento.
+                        {description}
                     </p>
                 </div>
 
                 <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                    {videoTestimonials.map((v, index) => (
+                    {items.map((v, index) => (
                         <div
                             key={v.name}
                             className={`shrink-0 w-[240px] sm:w-[260px] snap-start ${ref.isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}

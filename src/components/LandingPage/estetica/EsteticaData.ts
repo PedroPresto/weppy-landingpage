@@ -3,7 +3,10 @@
 // (lash, sobrancelha, esteticista, nail). Reaproveita os primitivos da home
 // (ChatMockup, plans/checkout) e carrega apenas a copy específica deste público.
 
-import { Zap, Megaphone, CalendarCheck, Smartphone, Sparkles, HandHeart } from 'lucide-react';
+import {
+    Zap, Megaphone, CalendarCheck, Smartphone, Sparkles, HandHeart,
+    Instagram, Filter, MessageSquare, Send, Link2, Moon,
+} from 'lucide-react';
 import type { ChatStep } from '../ChatMockup/types';
 
 /* ===== HERO — chat de demonstração (cabeleireira · luzes) ===== */
@@ -209,3 +212,44 @@ export const esteticaUrgencyFeatures = [
     '💰 Comece por R$97 com tudo liberado, sem precisar de cartão',
     '🎯 Garantia integral de 7 dias. Se a IA não vender pra você, devolvemos cada centavo.',
 ];
+
+/* ===== INSTAGRAM — comentário no post vira agendamento ===== */
+
+export const esteticaInstagramSteps = [
+    {
+        icon: Instagram,
+        title: 'Você posta o antes e depois',
+        description: 'Aquele resultado lindo que sempre enche a caixa de comentário.',
+    },
+    {
+        icon: Filter,
+        title: 'A cliente comenta PREÇO',
+        description: 'Você escolhe a palavra, ou deixa valer para qualquer comentário.',
+    },
+    {
+        icon: MessageSquare,
+        title: 'A IA responde ali mesmo',
+        description: 'Com variações do seu jeito de falar, para não parecer robô.',
+    },
+    {
+        icon: Send,
+        title: 'E chama no direct com os valores',
+        description: 'Com botão que leva direto para a sua agenda ou seu WhatsApp.',
+    },
+];
+
+export const esteticaInstagramBenefits = [
+    { icon: Zap, text: 'Você posta e vai atender. A IA cuida de cada comentário por você.' },
+    { icon: Link2, text: 'O botão no direct leva a cliente direto para o horário, sem link na bio.' },
+    { icon: Moon, text: 'Comentou 23h de domingo? Ela recebe os valores na mesma hora.' },
+];
+
+export const esteticaInstagramDemo = {
+    handle: 'marina.beauty',
+    caption: 'Comenta PREÇO que eu mando os valores no direct 💕',
+    commenter: 'bruna.alves',
+    keyword: 'PREÇO',
+    reply: 'Te mandei tudo no direct, linda! 💕',
+    dm: 'Oi Bruna! Alongamento de cílios a partir de R$120, e essa semana ainda tenho horário na quinta. Quer que eu já reserve pra você?',
+    button: 'Ver horários disponíveis',
+};
