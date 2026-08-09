@@ -7,6 +7,7 @@ import {
     Paperclip, FileText, Download,
 } from 'lucide-react';
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
+import { trackConversion, CONVERSIONS } from '@/lib/gtag';
 import { ChatMockup } from '../ChatMockup';
 import { InstagramMockup } from '../InstagramMockup';
 import { VideoTestimonialCard } from '../VideoTestimonialCard';
@@ -817,6 +818,8 @@ export const EsteticaLeadCapture: React.FC = () => {
                 throw new Error(data?.message || 'Não conseguimos enviar agora.');
             }
             setStatus('success');
+            // Só conta como conversão depois que o lead entrou de fato no backend.
+            trackConversion(CONVERSIONS.leadFormulario);
         } catch (err) {
             setStatus('error');
             setErrorMsg(err instanceof Error ? err.message : 'Não conseguimos enviar agora. Tente de novo.');

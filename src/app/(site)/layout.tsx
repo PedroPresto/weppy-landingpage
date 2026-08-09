@@ -4,6 +4,7 @@ import "../globals.css";
 import Script from "next/script";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { ConversionTracking } from "@/components/ConversionTracking";
 import { SITE_URL, SITE_TITLE, SITE_DESCRIPTION, ORGANIZATION_JSON_LD, WEBSITE_JSON_LD, SOFTWARE_APP_JSON_LD } from "@/lib/seo";
 
 const fraunces = Fraunces({
@@ -111,6 +112,8 @@ export default function SiteLayout({
                 }}
             />
             {children}
+
+            <ConversionTracking />
 
             <Script
                 strategy="afterInteractive"
