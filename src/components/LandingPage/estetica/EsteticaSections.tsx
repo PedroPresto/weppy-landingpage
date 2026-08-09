@@ -421,8 +421,8 @@ export const EsteticaWhoUses: React.FC = () => {
                         <span className="text-[var(--orange)]">a Weppy foi feita pra você.</span>
                     </h2>
                     <p className={`mt-5 text-lg text-[var(--ink-2)] ${ref.isVisible ? 'animate-fade-in-up animation-delay-200' : 'opacity-0'}`}>
-                        Não importa o que você faz com as mãos. O problema é sempre o mesmo: elas estão ocupadas quando
-                        a próxima cliente manda mensagem.
+                        Salão, studio, clínica ou consultório: quem vive de hora marcada perde do mesmo jeito. A
+                        mensagem chega bem quando você está com as mãos ocupadas, e quem espera duas horas some.
                     </p>
                 </div>
 

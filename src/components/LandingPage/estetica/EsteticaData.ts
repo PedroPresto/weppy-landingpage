@@ -6,7 +6,7 @@
 import {
     Zap, Megaphone, CalendarCheck, Smartphone, Sparkles, HandHeart,
     Instagram, Filter, MessageSquare, Send, Link2, Moon,
-    Scissors, Eye, Droplets, Flower2, Tag, FileText, HelpCircle, Brain, Database,
+    Syringe, Smile, HeartPulse, Tag, FileText, HelpCircle, Brain, Database,
 } from 'lucide-react';
 import type { ChatStep } from '../ChatMockup/types';
 
@@ -259,32 +259,32 @@ export const esteticaInstagramDemo = {
 
 export const esteticaSegments = [
     {
-        icon: Scissors,
-        title: 'Cabelo',
+        icon: Sparkles,
+        title: 'Salão e studio de beleza',
         description:
-            'Cabeleireira, colorista, trancista. A IA passa valores de luzes, progressiva ou corte, explica a duração do procedimento e fecha o horário enquanto você está com a mão na tinta.',
-        tags: ['Luzes e coloração', 'Progressiva', 'Corte'],
+            'Cabelo, unhas, cílios, sobrancelha, depilação, estética corporal. A IA passa o valor de cada serviço, explica quanto tempo dura, quando é a manutenção, e fecha o horário enquanto você está com a mão ocupada.',
+        tags: ['Cabelo', 'Unhas', 'Cílios e sobrancelha', 'Depilação', 'Estética corporal'],
     },
     {
-        icon: Flower2,
-        title: 'Unhas',
+        icon: Syringe,
+        title: 'Harmonização e estética avançada',
         description:
-            'Manicure e nail designer. Ela responde quanto custa o alongamento, quanto tempo dura, quando é a manutenção, e já reserva a cadeira para a próxima cliente.',
-        tags: ['Alongamento', 'Manutenção', 'Blindagem'],
+            'Biomédica esteta, dermato, injetáveis. Ela responde a dúvida de sempre sobre durabilidade e cuidado no pós, filtra quem só quer saber o preço e agenda a avaliação de quem está pronto para fechar.',
+        tags: ['Toxina botulínica', 'Preenchimento', 'Bioestimulador', 'Skinbooster'],
     },
     {
-        icon: Eye,
-        title: 'Cílios e Sobrancelhas',
+        icon: Smile,
+        title: 'Clínica odontológica',
         description:
-            'Lash designer e brow. Diferença entre volume russo e fio a fio, cuidados no pós, intervalo de retoque: a IA explica tudo do seu jeito e agenda a aplicação.',
-        tags: ['Volume russo', 'Lash lifting', 'Design de sobrancelha'],
+            'Da avaliação ao tratamento longo. A IA responde valor, forma de pagamento e convênio na hora, confirma a consulta na véspera e reduz a cadeira parada por falta.',
+        tags: ['Clareamento', 'Alinhador', 'Implante', 'Avaliação'],
     },
     {
-        icon: Droplets,
-        title: 'Estética e Corpo',
+        icon: HeartPulse,
+        title: 'Saúde e bem-estar',
         description:
-            'Esteticista, depilação, massagem. Ela tira as dúvidas de contraindicação, monta o pacote de sessões e mantém a agenda cheia sem você parar o atendimento.',
-        tags: ['Limpeza de pele', 'Depilação', 'Pacotes de sessão'],
+            'Fisioterapia, nutrição, podologia, massoterapia. Mesma lógica de quem vive de hora marcada: enquanto você está com um paciente, a IA atende o próximo e organiza a sua agenda.',
+        tags: ['Sessões e pacotes', 'Retorno', 'Convênio', 'Lembrete'],
     },
 ];
 
