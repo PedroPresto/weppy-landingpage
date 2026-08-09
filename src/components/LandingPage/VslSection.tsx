@@ -4,7 +4,19 @@ import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
-export const VslSection: React.FC = () => {
+interface VslSectionProps {
+    /** Marcador editorial da home. As LPs segmentadas não têm essa numeração. */
+    number?: string;
+    eyebrow?: string;
+    /** Headline própria, quando a seção é reaproveitada em outra LP. */
+    title?: React.ReactNode;
+}
+
+export const VslSection: React.FC<VslSectionProps> = ({
+    number = 'II.',
+    eyebrow = 'Em movimento',
+    title,
+}) => {
     const { ref, isVisible } = useScrollAnimation(0.2);
     const videoUrl = 'https://www.youtube.com/embed/4PNlI2Svlho?rel=0&modestbranding=1&color=white';
 
@@ -13,14 +25,18 @@ export const VslSection: React.FC = () => {
             <div className="container-editorial">
                 <div className="grid grid-cols-12 gap-8 mb-16">
                     <div className="col-span-12 md:col-span-3">
-                        <span className="editorial-number block">II.</span>
-                        <p className="eyebrow mt-3">Em movimento</p>
+                        {number && <span className="editorial-number block">{number}</span>}
+                        <p className={`eyebrow ${number ? 'mt-3' : ''}`}>{eyebrow}</p>
                     </div>
                     <div className={`col-span-12 md:col-span-9 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
                         <h2
                             className="text-balance text-3xl md:text-5xl leading-[1.1] tracking-[-0.03em] text-[var(--ink)]"
                         >
-                            Veja a <span className="text-[var(--orange)]">automação WhatsApp</span> da Weppy em ação: cada mensagem vira oportunidade.
+                            {title ?? (
+                                <>
+                                    Veja a <span className="text-[var(--orange)]">automação WhatsApp</span> da Weppy em ação: cada mensagem vira oportunidade.
+                                </>
+                            )}
                         </h2>
                     </div>
                 </div>

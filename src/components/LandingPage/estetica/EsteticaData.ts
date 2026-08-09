@@ -6,6 +6,7 @@
 import {
     Zap, Megaphone, CalendarCheck, Smartphone, Sparkles, HandHeart,
     Instagram, Filter, MessageSquare, Send, Link2, Moon,
+    Scissors, Eye, Droplets, Flower2, Tag, FileText, HelpCircle, Brain, Database,
 } from 'lucide-react';
 import type { ChatStep } from '../ChatMockup/types';
 
@@ -252,4 +253,59 @@ export const esteticaInstagramDemo = {
     reply: 'Te mandei tudo no direct, linda! 💕',
     dm: 'Oi Bruna! Alongamento de cílios a partir de R$120, e essa semana ainda tenho horário na quinta. Quer que eu já reserve pra você?',
     button: 'Ver horários disponíveis',
+};
+
+/* ===== PARA QUEM É (subnichos da beleza) ===== */
+
+export const esteticaSegments = [
+    {
+        icon: Scissors,
+        title: 'Cabelo',
+        description:
+            'Cabeleireira, colorista, trancista. A IA passa valores de luzes, progressiva ou corte, explica a duração do procedimento e fecha o horário enquanto você está com a mão na tinta.',
+        tags: ['Luzes e coloração', 'Progressiva', 'Corte'],
+    },
+    {
+        icon: Flower2,
+        title: 'Unhas',
+        description:
+            'Manicure e nail designer. Ela responde quanto custa o alongamento, quanto tempo dura, quando é a manutenção, e já reserva a cadeira para a próxima cliente.',
+        tags: ['Alongamento', 'Manutenção', 'Blindagem'],
+    },
+    {
+        icon: Eye,
+        title: 'Cílios e Sobrancelhas',
+        description:
+            'Lash designer e brow. Diferença entre volume russo e fio a fio, cuidados no pós, intervalo de retoque: a IA explica tudo do seu jeito e agenda a aplicação.',
+        tags: ['Volume russo', 'Lash lifting', 'Design de sobrancelha'],
+    },
+    {
+        icon: Droplets,
+        title: 'Estética e Corpo',
+        description:
+            'Esteticista, depilação, massagem. Ela tira as dúvidas de contraindicação, monta o pacote de sessões e mantém a agenda cheia sem você parar o atendimento.',
+        tags: ['Limpeza de pele', 'Depilação', 'Pacotes de sessão'],
+    },
+];
+
+/* ===== BASE DE CONHECIMENTO (a IA aprende o seu negócio) ===== */
+
+export const esteticaKnowledgeSources = [
+    { icon: Tag, label: 'Sua tabela', hint: 'Preço de cada serviço e pacote' },
+    { icon: FileText, label: 'Seus procedimentos', hint: 'Duração, cuidados, retoque' },
+    { icon: MessageSquare, label: 'Seu WhatsApp', hint: 'O seu jeito de conversar' },
+    { icon: HelpCircle, label: 'As dúvidas de sempre', hint: 'Aquelas que você já cansou de responder' },
+];
+
+export const esteticaKnowledgeBenefits = [
+    { icon: Brain, text: 'Ela fala como você fala, com o mesmo carinho e os mesmos emojis.' },
+    { icon: Database, text: 'Responde só com os seus valores e as suas regras, sem inventar preço.' },
+    { icon: Zap, text: 'Mudou a tabela? Atualiza num lugar só e a IA já responde o valor novo.' },
+];
+
+export const esteticaKnowledgeDemo = {
+    question: 'Oi! Quanto tempo dura o alongamento de cílios?',
+    answer:
+        'Dura de 3 a 4 semanas, linda 💕 Depois desse período a gente faz a manutenção, que sai R$80. Quer que eu já deixe um horário separado pra você?',
+    source: 'Tabela de serviços.pdf',
 };

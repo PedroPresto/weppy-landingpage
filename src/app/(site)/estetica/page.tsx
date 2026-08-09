@@ -9,6 +9,8 @@ import {
     EsteticaScene,
     EsteticaHowItWorks,
     EsteticaBenefits,
+    EsteticaWhoUses,
+    EsteticaKnowledge,
     EsteticaInstagram,
     EsteticaTestimonials,
     EsteticaPricing,
@@ -16,6 +18,7 @@ import {
     EsteticaClose,
 } from '@/components/LandingPage/estetica/EsteticaSections';
 import { KiwifyRankSection } from '@/components/LandingPage/KiwifyRankSection';
+import { VslSection } from '@/components/LandingPage/VslSection';
 import { VideoTestimonialsSection } from '@/components/LandingPage/VideoTestimonialsSection';
 import { videoTestimonials } from '@/components/LandingPage/LandingPageData';
 import { esteticaFaqs, esteticaVideo } from '@/components/LandingPage/estetica/EsteticaData';
@@ -81,6 +84,18 @@ export default function EsteticaPage() {
                     <EsteticaScene />
                     <EsteticaHowItWorks />
                     <EsteticaBenefits />
+                    <EsteticaWhoUses />
+                    <EsteticaKnowledge />
+                    <VslSection
+                        number=""
+                        eyebrow="Veja funcionando"
+                        title={
+                            <>
+                                Do primeiro &ldquo;oi, quanto custa?&rdquo; até o{' '}
+                                <span className="text-[var(--orange)]">horário fechado</span>, sem você tocar no celular.
+                            </>
+                        }
+                    />
                     <EsteticaInstagram />
                     <EsteticaTestimonials />
                     <KiwifyRankSection />
