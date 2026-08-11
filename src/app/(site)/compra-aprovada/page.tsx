@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 };
 
 const SUPPORT_WHATSAPP =
-    'https://wa.me/5561983123853?text=' +
+    'https://wa.me/5561992817914?text=' +
     encodeURIComponent('Oi! Acabei de assinar a Weppy e quero configurar minha IA.');
 
 const steps = [

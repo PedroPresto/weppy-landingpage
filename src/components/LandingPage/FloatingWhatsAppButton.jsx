@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 
 export const FloatingWhatsAppButton = () => {
-    const phoneNumber = '5561983123853';
+    const phoneNumber = '5561992817914';
     const message = 'Olá! Gostaria de mais informações sobre a Weppy.';
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;

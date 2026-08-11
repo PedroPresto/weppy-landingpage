@@ -474,7 +474,7 @@ export const footerLinks = {
         { name: "Como Funciona", href: "#how-it-works" },
     ],
     support: [
-        { name: "Fale Conosco", href: "https://wa.me/5561983123853" },
+        { name: "Fale Conosco", href: "https://wa.me/5561992817914" },
         { name: "Resultados", href: "#results" },
         { name: "Depoimentos", href: "#testimonials" },
     ],
