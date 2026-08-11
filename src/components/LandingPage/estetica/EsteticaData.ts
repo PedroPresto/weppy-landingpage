@@ -141,7 +141,7 @@ export const esteticaTestimonials = [
 /* ===== DEMO AO VIVO — a IA da Weppy atendendo de verdade ===== */
 export const esteticaDemo = {
     /** Número com a IA da Weppy conectada (conta pedroprestodev). */
-    whatsappNumber: '556192817914',
+    whatsappNumber: '5561992817914',
     prefilledMessage:
         'Oi! Vim do site da Weppy e quero ver a IA atendendo na prática 😄',
     get waLink() {
